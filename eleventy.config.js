@@ -1,3 +1,5 @@
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 // Configuration du générateur de site. Vous n'avez pas besoin de modifier ce fichier.
 export default function (eleventyConfig) {
   // Sécurité : tout texte saisi dans l'administration est échappé avant d'être affiché
@@ -46,6 +48,11 @@ export default function (eleventyConfig) {
   // Numéro chronologique : la plus ancienne réalisation porte le n° 01
   eleventyConfig.addFilter("rang", (coll, url) => { const i = coll.findIndex((p) => p.url === url); return i < 0 ? 0 : coll.length - i; });
   eleventyConfig.addFilter("vitrines", (coll) => (coll || []).filter((p) => p.data.vitrine));
+  // Version d'un fichier du site d'après son contenu : le navigateur recharge le CSS ou le JS dès qu'il change
+  eleventyConfig.addFilter("v", (u) => {
+    try { return `${u}?v=${createHash("sha256").update(readFileSync(`src${u}`)).digest("hex").slice(0, 10)}`; }
+    catch { return u; }
+  });
   eleventyConfig.addFilter("pad", (n) => String(n).padStart(2, "0"));
 
   const visibles = (items) => items.filter((p) => p.data.publie !== false);

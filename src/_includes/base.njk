@@ -29,7 +29,7 @@
 <link rel="alternate" type="application/atom+xml" title="Journal {{ site.agence }}" href="/journal/flux.xml">
 <link rel="preload" href="/assets/fonts/jost-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | v }}">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,6 +97,6 @@
   <img id="visionneuse-img" src="data:," alt="">
   <p id="visionneuse-legende"></p>
 </dialog>
-<script src="/assets/js/main.js" defer></script>
+<script src="{{ '/assets/js/main.js' | v }}" defer></script>
 </body>
 </html>
