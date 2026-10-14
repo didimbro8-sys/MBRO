@@ -4,3 +4,6 @@
 - Médias publiés : branche am-digital-medias (URLs raw.githubusercontent.com utilisées par Metricool)
 - Restauration : copier fonts/woff2 -> scratchpad/fonts/package/files, fonts/*.ttf -> scratchpad/fonts/, logo -> scratchpad/ds/project/assets/Logos/
 - Journal de publication : JOURNAL.md
+
+## Format de la veille (consigne du 14 oct.)
+La veille quotidienne = une INFOGRAPHIE 1080x1350 aux couleurs AM.Digital (gen/infog.py) : version publique publiée à 15:00 Africa/Abidjan sur FB+IG, et version interne (décisions stratégiques) envoyée à l'utilisateur. Plus de carrousel ni de PDF pour la veille.
