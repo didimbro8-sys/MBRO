@@ -34,5 +34,5 @@ C=(card(1,"Tendance · Recherche & IA",f"Google répond désormais {G('à la pla
   "Meta crée des vidéos pub à partir de vos visuels fixes (6 oct.) ; Adobe crée et retouche vos visuels dans ChatGPT (1er oct.).",
   "produisez plus vite, mais gardez votre charte : couleurs, logo, ton.",
   "Meta, Advertising Week New York, 6 oct. 2026 · MarTech, 1er oct. 2026"))
-pub=infog("Veille AM.Digital · 15 octobre 2026",f"Quand l'IA décide {G('qui on voit')}","Tendances mondiales com & marketing, décryptées pour les pros et les PME",C,"La veille AM.Digital · chaque jour à 15 h")
-render([("AM-Digital_veille_15oct_infographie-v2",pub)]); print("ok")
+pub=infog("Veille AM.Digital · 14 octobre 2026",f"Quand l'IA décide {G('qui on voit')}","Tendances mondiales com & marketing, décryptées pour les pros et les PME",C,"La veille AM.Digital · chaque jour à 15 h")
+render([("AM-Digital_veille_14oct_infographie",pub)]); print("ok")
