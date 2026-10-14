@@ -1,0 +1,37 @@
+<section class="section contact" id="contact" aria-labelledby="ct-t">
+  <div class="wrap contact-grid">
+    <div class="section-head flush">
+      <p class="label">Contact</p>
+      <h2 id="ct-t">Parlons de votre équipe ou de votre projet.</h2>
+      <p class="lede">Recruteur, entreprise ou organisation : je réponds sous 24 heures ouvrées.</p>
+      <ul class="channels">
+        <li><span class="label">WhatsApp / téléphone</span><span class="val"><a href="https://wa.me/{{ site.whatsapp | replace(r/[^0-9]/g, "") }}" rel="noopener noreferrer" target="_blank">{{ site.telephone_affiche }}</a></span></li>
+        <li><span class="label">E-mail</span><span class="val" id="email-slot" data-u="{{ site.email_nom }}" data-d="{{ site.email_domaine }}">{{ site.email_nom }} [at] {{ site.email_domaine }}</span></li>
+        <li><span class="label">Suivre {{ site.agence }}</span>{% set variante = "contact" %}{% include "reseaux.njk" %}</li>
+        <li><span class="label">Basé à</span><span class="val">{{ site.ville }}, {{ site.pays }}</span></li>
+      </ul>
+    </div>
+    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="{{ site.cle_formulaire }}">
+      <input type="hidden" name="subject" value="Nouveau message depuis le portfolio {{ site.agence }}">
+      <input type="hidden" name="redirect" value="{{ site.url }}/merci/">
+      <div class="hp" aria-hidden="true"><label for="botcheck">Ne pas remplir</label><input type="checkbox" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off"></div>
+      <div class="row2">
+        <div class="field"><label for="nom">Nom et organisation</label><input id="nom" name="name" type="text" required maxlength="120" autocomplete="name"></div>
+        <div class="field"><label for="mail">E-mail</label><input id="mail" name="email" type="email" required maxlength="160" autocomplete="email"></div>
+      </div>
+      <div class="field"><label for="objet">Objet</label>
+        <select id="objet" name="objet" required>
+          <option value="Recrutement">Proposition de poste</option>
+          <option value="Stage">Proposition de stage</option>
+          <option value="Mission">Mission pour {{ site.agence }}</option>
+          <option value="Autre">Autre demande</option>
+        </select>
+      </div>
+      <div class="field"><label for="msg">Message</label><textarea id="msg" name="message" required minlength="20" maxlength="3000"></textarea></div>
+      <label class="consent" for="rgpd"><input type="checkbox" id="rgpd" name="consentement" value="oui" required><span>J'accepte que mes informations servent uniquement à répondre à ma demande. Voir les <a class="form-link" href="/mentions-legales/">mentions légales</a>.</span></label>
+      <button class="btn btn-gold" type="submit">Envoyer le message</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

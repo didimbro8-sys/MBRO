@@ -1,0 +1,16 @@
+{
+  "name": "am-digital",
+  "type": "module",
+  "private": true,
+  "description": "Portfolio du fondateur d'AM.Digital, Abidjan",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

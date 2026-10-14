@@ -1,0 +1,18 @@
+---
+layout: base.njk
+og_type: article
+---
+<article class="study">
+  <header class="study-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/journal/">Journal</a></nav>
+      <p class="label"><time datetime="{{ page.date | iso }}">{{ page.date | dateFr }}</time></p>
+      <h1>{{ title }}</h1>
+      {% if resume %}<p class="intro">{{ resume | todo | safe }}</p>{% endif %}
+    </div>
+  </header>
+  {% if couverture | localUrl %}<div class="wrap"><figure class="study-cover"><img src="{{ couverture | localUrl }}" alt="{{ couverture_alt }}" width="1200" height="700"></figure></div>{% endif %}
+  <div class="wrap"><div class="prose-body article-body">{{ content | todoHtml | safe }}</div>
+  <p class="signature">{{ site.nom | todo | safe }}, fondateur d'{{ site.agence }}</p></div>
+</article>
+{% include "contact.njk" %}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{%- set pageTitre = (titre_seo or (title + " | " + site.agence)) if title else (site.nom + " — Communication des organisations & digitale | " + site.agence + " " + site.ville) %}
+{%- set pageDesc = description or resume or (site.nom + ", fondateur d'" + site.agence + " à " + site.ville + " : communication des organisations, stratégie digitale, création de contenu, community management et branding. Portfolio et études de cas.") %}
+{%- set pageUrl = site.url + page.url %}
+{%- set cover = couverture | localUrl %}
+{%- set pageImage = (site.url + cover) if (cover and cover.startsWith("/")) else (cover or (site.url + "/assets/img/og-image.png")) %}
+<title>{{ pageTitre }}</title>
+<meta name="description" content="{{ pageDesc }}">
+<meta name="author" content="{{ site.nom }}">
+<meta name="robots" content="{{ robots or 'index, follow, max-image-preview:large' }}">
+<link rel="canonical" href="{{ pageUrl }}">
+<meta name="theme-color" content="#66004A">
+<meta property="og:type" content="{{ og_type or 'website' }}">
+<meta property="og:locale" content="fr_CI">
+<meta property="og:site_name" content="{{ site.agence }}">
+<meta property="og:title" content="{{ pageTitre }}">
+<meta property="og:description" content="{{ pageDesc }}">
+<meta property="og:url" content="{{ pageUrl }}">
+<meta property="og:image" content="{{ pageImage }}">
+<meta property="og:image:alt" content="{{ couverture_alt or (site.agence + ' — portfolio du fondateur, ' + site.ville) }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="Journal {{ site.agence }}" href="/journal/flux.xml">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person", "@id": "{{ site.url }}/#moi", "name": {{ site.nom | json | safe }},
+      "jobTitle": {{ site.titre_pro | json | safe }}, "url": "{{ site.url }}/",{% if site.photo | localUrl %} "image": "{{ site.url }}{{ site.photo | localUrl }}",{% endif %}
+      "address": { "@type": "PostalAddress", "addressLocality": {{ site.ville | json | safe }}, "addressCountry": "CI" },
+      "worksFor": { "@id": "{{ site.url }}/#agence" },
+      "knowsAbout": ["Communication des organisations", "Communication interne", "Communication institutionnelle", "Stratégie digitale", "Community management", "Création de contenu", "Publicité en ligne", "Branding"],
+      "sameAs": [{{ site.facebook | safeUrl | json | safe }}, {{ site.instagram | safeUrl | json | safe }}, {{ site.tiktok | safeUrl | json | safe }}{% if site.linkedin | safeUrl %}, {{ site.linkedin | safeUrl | json | safe }}{% endif %}]
+    },
+    {
+      "@type": "ProfessionalService", "@id": "{{ site.url }}/#agence", "name": {{ site.agence | json | safe }},
+      "slogan": {{ site.slogan | json | safe }}, "url": "{{ site.url }}/", "logo": "{{ site.url }}/assets/uploads/am-digital-logo.jpg",
+      "image": "{{ site.url }}/assets/img/og-image.png",
+      "telephone": {{ site.telephone | json | safe }}, "founder": { "@id": "{{ site.url }}/#moi" },
+      "address": { "@type": "PostalAddress", "addressLocality": {{ site.ville | json | safe }}, "addressCountry": "CI" },
+      "areaServed": { "@type": "Country", "name": "Côte d'Ivoire" },
+      "sameAs": [{{ site.facebook | safeUrl | json | safe }}, {{ site.instagram | safeUrl | json | safe }}, {{ site.tiktok | safeUrl | json | safe }}],
+      "makesOffer": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stratégie digitale"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Création de contenu"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community management"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Publicité en ligne"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Branding & identité visuelle"}}
+      ]
+    }{% if schema_page %},
+    {{ schema_page | safe }}{% endif %}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="{{ site.agence }}, accueil">
+      <img src="/assets/img/logo-am.png" alt="" width="36" height="36">
+      <span>AM<b>.</b>Digital</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" data-open="false" aria-label="Navigation principale">
+      <a href="/#profil">Profil</a>
+      <a href="/#creations">Créations</a>
+      <a href="/realisations/"{% if page.url and page.url.startsWith('/realisations/') %} aria-current="page"{% endif %}>Réalisations</a>
+      <a href="/journal/"{% if page.url and page.url.startsWith('/journal/') %} aria-current="page"{% endif %}>Journal</a>
+      <a class="nav-cta" href="/#contact">Me recruter</a>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+{{ content | safe }}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p><span class="slogan">{{ site.slogan }}</span><br>© <span id="year">2026</span> {{ site.nom | todo | safe }} · {{ site.agence }}, {{ site.ville }}</p>
+    {% set variante = "pied" %}{% include "reseaux.njk" %}
+    <p class="socials"><a href="/realisations/">Réalisations</a><a href="/journal/">Journal</a><a href="/mentions-legales/">Mentions légales</a></p>
+  </div>
+</footer>
+<dialog class="visionneuse" id="visionneuse" aria-label="Image agrandie">
+  <form method="dialog"><button class="fermer" type="submit" aria-label="Fermer">×</button></form>
+  <img id="visionneuse-img" src="data:," alt="">
+  <p id="visionneuse-legende"></p>
+</dialog>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+# Espace d'administration du site (Pages CMS : https://app.pagescms.org)
+# Chaque entrée ci-dessous devient un menu dans l'interface. Ne modifiez ce fichier que si vous ajoutez un nouveau type de contenu.
+
+media:
+  input: src/assets/uploads
+  output: /assets/uploads
+  extensions: [jpg, jpeg, png, webp, gif, pdf, mp4, webm]
+
+content:
+  - name: realisations
+    label: Réalisations
+    type: collection
+    path: src/realisations
+    filename: "{fields.title}.md"
+    exclude: [index.njk, realisations.11tydata.js]
+    view:
+      primary: title
+      fields: [title, nature, date, publie]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Titre de la réalisation
+        type: string
+        required: true
+      - name: date
+        label: Date du projet
+        type: date
+        required: true
+      - name: publie
+        label: Publier sur le site (décochez pour garder en brouillon)
+        type: boolean
+        default: true
+      - name: a_la_une
+        label: Afficher sur la page d'accueil (3 maximum)
+        type: boolean
+        default: false
+      - name: priorite
+        label: Ordre sur la page d'accueil (1 = en premier ; ses chiffres s'affichent sous le titre du site)
+        type: number
+      - name: vitrine
+        label: Montrer sa galerie dans la section « Créations » de l'accueil
+        type: boolean
+        default: false
+      - name: nature
+        label: Nature du projet
+        type: select
+        required: true
+        options:
+          values: [Projet réel, Stage professionnel, Projet académique, Projet personnel, Bénévolat]
+      - name: categories
+        label: Catégories
+        type: select
+        options:
+          multiple: true
+          values: [Stratégie, Audit digital, Calendrier éditorial, Branding, Identité visuelle, Création graphique, Motion design, Social media, Création de contenu, Community management, Publicité en ligne, Communication interne, Communication institutionnelle, Communication interne et externe, Relations presse, Événementiel, Communication de crise, Site web]
+      - name: client
+        label: Client ou organisation
+        type: string
+      - name: role
+        label: Mon rôle
+        type: string
+      - name: canaux
+        label: Canaux utilisés
+        type: string
+        list: true
+      - name: resume
+        label: Résumé en une phrase (visible sur Google et dans les partages)
+        type: text
+        required: true
+        options:
+          maxlength: 180
+      - name: contexte
+        label: Contexte (la situation de départ)
+        type: text
+        required: true
+      - name: objectif
+        label: Objectif (idéalement chiffré et daté)
+        type: text
+        required: true
+      - name: dispositif
+        label: Dispositif (une action par ligne)
+        type: string
+        list: true
+      - name: resultats
+        label: Résultats chiffrés
+        type: object
+        list:
+          collapsible:
+            collapsed: false
+            summary: "{valeur} — {indicateur}"
+        fields:
+          - name: valeur
+            label: Chiffre (ex. +1 200, 8 %, x3)
+            type: string
+          - name: indicateur
+            label: Ce que mesure ce chiffre (ex. abonnés gagnés en 3 mois)
+            type: string
+      - name: enseignement
+        label: Ce que j'en retiens (deux phrases)
+        type: text
+      - name: couverture
+        label: Image de couverture (paysage, 1600 px de large conseillés)
+        type: image
+      - name: couverture_alt
+        label: Description de l'image de couverture (pour l'accessibilité et Google)
+        type: string
+      - name: galerie
+        label: Galerie (visuels, captures, photos)
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Image (ou image d'aperçu de la vidéo)
+            type: image
+          - name: video
+            label: Vidéo MP4 (facultatif, moins de 25 Mo)
+            type: file
+          - name: legende
+            label: Légende
+            type: string
+          - name: lien
+            label: Lien vers la publication (TikTok, Instagram, Facebook), facultatif
+            type: string
+      - name: body
+        label: Récit détaillé du projet (facultatif)
+        type: rich-text
+        options:
+          format: markdown
+          switcher: false
+
+  - name: journal
+    label: Journal (articles)
+    type: collection
+    path: src/journal
+    filename: "{fields.title}.md"
+    exclude: [index.njk, flux.njk, journal.11tydata.js]
+    view:
+      primary: title
+      fields: [title, date, publie]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Titre de l'article
+        type: string
+        required: true
+      - name: date
+        label: Date de publication
+        type: date
+        required: true
+      - name: publie
+        label: Publier sur le site
+        type: boolean
+        default: true
+      - name: resume
+        label: Résumé en une phrase
+        type: text
+        required: true
+        options:
+          maxlength: 180
+      - name: couverture
+        label: Image de couverture
+        type: image
+      - name: couverture_alt
+        label: Description de l'image
+        type: string
+      - name: body
+        label: Texte de l'article
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: false
+
+  - name: profil
+    label: Mon profil et parcours
+    type: file
+    path: src/_data/profil.json
+    format: json
+    fields:
+      - name: titre
+        label: Titre de la section Profil
+        type: string
+      - name: citation
+        label: Phrase mise en avant
+        type: text
+      - name: paragraphes
+        label: Paragraphes de présentation
+        type: text
+        list: true
+      - name: parcours
+        label: Parcours (du plus ancien au plus récent)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{periode} — {titre}"
+        fields:
+          - name: periode
+            label: Période (ex. 2023 – 2025)
+            type: string
+          - name: titre
+            label: Diplôme ou poste
+            type: string
+          - name: detail
+            label: Établissement, entreprise ou précision
+            type: string
+      - name: methode
+        label: Ma méthode (étapes dans l'ordre)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{etape}"
+        fields:
+          - name: etape
+            label: Étape
+            type: string
+          - name: detail
+            label: Explication en une phrase
+            type: string
+      - name: outils
+        label: Outils maîtrisés
+        type: string
+        list: true
+      - name: cv
+        label: Mon CV en PDF (facultatif)
+        type: file
+
+  - name: site
+    label: Réglages du site
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - name: nom
+        label: Mon nom complet
+        type: string
+        required: true
+      - name: titre_pro
+        label: Mon titre professionnel
+        type: string
+      - name: photo
+        label: Ma photo (carrée, visage centré)
+        type: image
+      - name: signature
+        label: Ma signature (phrase courte sous mon nom)
+        type: string
+      - name: accroche
+        label: Titre de la page d'accueil (début, en blanc)
+        type: string
+      - name: accroche_or
+        label: Titre de la page d'accueil (fin, en or)
+        type: string
+      - name: presentation
+        label: Présentation sous le titre
+        type: text
+      - name: disponibilites
+        label: Je suis ouvert à
+        type: string
+        list: true
+      - name: telephone_affiche
+        label: Téléphone tel qu'affiché
+        type: string
+      - name: telephone
+        label: Téléphone au format international sans espace (ex. +2250171954523)
+        type: string
+      - name: whatsapp
+        label: Numéro WhatsApp sans + ni espace (ex. 2250171954523)
+        type: string
+      - name: email_nom
+        label: E-mail, partie avant le @
+        type: string
+      - name: email_domaine
+        label: E-mail, partie après le @
+        type: string
+      - name: facebook
+        label: Lien Facebook
+        type: string
+      - name: instagram
+        label: Lien Instagram
+        type: string
+      - name: tiktok
+        label: Lien TikTok
+        type: string
+      - name: linkedin
+        label: Lien LinkedIn
+        type: string
+      - name: cle_formulaire
+        label: Clé du formulaire Web3Forms
+        type: string
+      - name: url
+        label: Adresse du site (ne changer qu'en cas de nouveau nom de domaine)
+        type: string
+      - name: agence
+        label: Nom de l'agence
+        type: string
+      - name: slogan
+        label: Slogan
+        type: string
+      - name: ville
+        label: Ville
+        type: string
+      - name: pays
+        label: Pays
+        type: string

@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Journal
+description: Notes de terrain sur la communication des organisations et le marketing digital à Abidjan, par le fondateur d'AM.Digital.
+permalink: /journal/
+publie: false
+---
+<header class="study-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a></nav>
+    <p class="label">{{ collections.journal.length }} article{% if collections.journal.length > 1 %}s{% endif %}</p>
+    <h1>Journal</h1>
+    <p class="intro">Notes de terrain sur la communication des organisations et le digital.</p>
+  </div>
+</header>
+<section class="section first"><div class="wrap">
+  <ul class="posts">
+    {% for a in collections.journal %}<li><time datetime="{{ a.date | iso }}">{{ a.date | dateFr }}</time><a href="{{ a.url }}">{{ a.data.title }}</a><p>{{ a.data.resume }}</p></li>{% endfor %}
+  </ul>
+</div></section>

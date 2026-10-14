@@ -1,0 +1,17 @@
+---
+permalink: /journal/flux.xml
+eleventyExcludeFromCollections: true
+publie: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Journal {{ site.agence }}</title>
+  <link href="{{ site.url }}/journal/flux.xml" rel="self"/>
+  <link href="{{ site.url }}/journal/"/>
+  <id>{{ site.url }}/journal/</id>
+  <updated>{% if collections.journal.length %}{{ collections.journal[0].date | iso }}{% else %}2026-10-14{% endif %}T00:00:00Z</updated>
+  <author><name>{{ site.nom }}</name></author>
+  {%- for a in collections.journal %}
+  <entry><title>{{ a.data.title }}</title><link href="{{ site.url }}{{ a.url }}"/><id>{{ site.url }}{{ a.url }}</id><updated>{{ a.date | iso }}T00:00:00Z</updated><summary>{{ a.data.resume }}</summary></entry>
+  {%- endfor %}
+</feed>

@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Réalisations
+description: Études de cas en communication des organisations et communication digitale, menées avec AM.Digital à Abidjan.
+permalink: /realisations/
+publie: false
+---
+<header class="study-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a></nav>
+    <p class="label">{{ collections.realisations.length }} étude{% if collections.realisations.length > 1 %}s{% endif %} de cas</p>
+    <h1>Réalisations</h1>
+    <p class="intro">Chaque projet suit la grille d'un dossier de communication : contexte, objectif, dispositif, résultats.</p>
+  </div>
+</header>
+<section class="section first">
+  <div class="wrap cases">
+    {% for item in collections.realisations %}{% set numero = loop.length - loop.index0 %}{% include "carte-realisation.njk" %}{% endfor %}
+  </div>
+</section>

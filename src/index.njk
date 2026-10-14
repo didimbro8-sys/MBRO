@@ -1,0 +1,172 @@
+---
+layout: base.njk
+og_type: profile
+---
+<section class="hero" id="top" aria-labelledby="titre">
+  <div class="wrap">
+    <div>
+      <p class="label">Communication des organisations · Communication digitale · {{ site.ville }}</p>
+      <h1 id="titre">{{ site.accroche }} <em>{{ site.accroche_or }}</em></h1>
+      <p class="intro">{{ site.presentation }}</p>
+      <p class="who"><strong>{{ site.nom | todo | safe }}</strong> · {{ site.titre_pro }}</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#realisations">Voir mes réalisations</a>
+        <a class="btn btn-ghost" href="#creations">Mes créations</a>
+                {% if profil.cv | localUrl %}<a class="btn btn-ghost" href="{{ profil.cv | localUrl }}">Télécharger mon CV</a>{% endif %}
+      </div>
+    </div>
+    <aside class="brief" aria-label="Mon profil résumé sous forme de brief">
+      <div class="brief-top"><strong>Brief candidat</strong><span>Réf. AM-{{ collections.realisations.length | pad }}</span></div>
+      {% if site.photo | localUrl %}<div class="brief-id"><img src="{{ site.photo | localUrl }}" alt="Portrait de {{ site.nom }}" width="72" height="72"><div><strong>{{ site.nom }}</strong><span>{{ site.signature }}</span></div></div>{% endif %}
+      <dl>
+                <div><dt>Cible</dt><dd>Recruteurs, directions de la communication, entreprises et organisations</dd></div>
+        <div><dt>Message</dt><dd>Un communicant formé à la stratégie, qui sait aussi produire et piloter le digital</dd></div>
+        <div><dt>Preuves</dt><dd>{{ collections.realisations.length }} étude{% if collections.realisations.length > 1 %}s{% endif %} de cas publiée{% if collections.realisations.length > 1 %}s{% endif %}{% if collections.journal.length %}, {{ collections.journal.length }} article{% if collections.journal.length > 1 %}s{% endif %} au journal{% endif %}</dd></div>
+        <div><dt>Indicateur</dt><dd>Un entretien décroché</dd></div>
+      </dl>
+      <span class="stamp">Disponible</span>
+    </aside>
+  </div>
+</section>
+
+{%- set vedette = (collections.aLaUne | first) if collections.aLaUne.length else (collections.realisations | first) %}
+{% if vedette and vedette.data.resultats and vedette.data.resultats.length %}
+<section class="preuves" aria-labelledby="preuves-t">
+  <div class="wrap">
+    <p class="label" id="preuves-t">En chiffres · <a href="{{ vedette.url }}">{{ vedette.data.title }}</a></p>
+    <ul>{% for r in vedette.data.resultats %}<li><strong>{{ r.valeur | todo | safe }}</strong><span>{{ r.indicateur | todo | safe }}</span></li>{% endfor %}</ul>
+  </div>
+</section>
+{% endif %}
+
+<div class="avail" aria-label="Disponibilités">
+  <div class="wrap">
+    <span class="label">Ouvert à</span>
+    <ul>{% for d in site.disponibilites %}<li>{{ d }}</li>{% endfor %}</ul>
+  </div>
+</div>
+
+<section class="section" id="profil" aria-labelledby="profil-t">
+  <div class="wrap profile-grid">
+    <div class="profile-text">
+      <p class="label">Profil</p>
+      <h2 id="profil-t">{{ profil.titre }}</h2>
+      <p class="pull">{{ profil.citation }}</p>
+      {% for p in profil.paragraphes %}<p>{{ p }}</p>{% endfor %}
+    </div>
+    <div>
+      <p class="label mb">Parcours</p>
+      <ol class="timeline">
+        {% for e in profil.parcours %}<li><span class="when">{{ e.periode | todo | safe }}</span><strong>{{ e.titre | todo | safe }}</strong><p>{{ e.detail | todo | safe }}</p></li>{% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="expertises" aria-labelledby="exp-t">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Expertises</p>
+      <h2 id="exp-t">Deux métiers, une même exigence de résultat.</h2>
+    </div>
+    <div class="expertise">
+      <article>
+        <p class="label tag">Formation</p>
+        <h3>Communication des organisations</h3>
+        <p>Donner une voix cohérente à une structure, auprès de ses équipes comme de ses publics externes.</p>
+        <ul class="skills">
+          <li><span>Plan de communication</span><span>diagnostic → évaluation</span></li>
+          <li><span>Communication interne</span><span>supports, cohésion</span></li>
+          <li><span>Communication institutionnelle</span><span>image, réputation</span></li>
+          <li><span>Relations presse et publiques</span><span>communiqués, dossiers</span></li>
+          <li><span>Événementiel</span><span>conception, logistique</span></li>
+          <li><span>Communication de crise</span><span>veille, réponse</span></li>
+        </ul>
+      </article>
+      <article>
+        <p class="label tag">Pratique · {{ site.agence }}</p>
+        <h3>Communication digitale</h3>
+        <p>Transformer une stratégie en présence en ligne visible, régulière et mesurée.</p>
+        <ul class="skills">
+          <li><span>Stratégie digitale</span><span>objectifs, cibles, KPI</span></li>
+          <li><span>Création de contenu</span><span>visuels, vidéos courtes</span></li>
+          <li><span>Community management</span><span>FB · IG · TikTok</span></li>
+          <li><span>Publicité en ligne</span><span>ciblage, budget</span></li>
+          <li><span>Branding et identité visuelle</span><span>logo, charte</span></li>
+          <li><span>Audit digital et reporting</span><span>SWOT, KPI, bilans</span></li>
+          <li><span>Gestion de site web</span><span>publication, SEO</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="realisations" aria-labelledby="real-t">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Réalisations</p>
+      <h2 id="real-t">Études de cas</h2>
+      <p class="lede">Chaque projet suit la grille d'un dossier de communication : contexte, objectif, dispositif, résultats.</p>
+    </div>
+    <div class="cases">
+      {%- set liste = collections.aLaUne if collections.aLaUne.length else collections.realisations.slice(0, 3) %}
+      {%- for item in liste %}{% set numero = loop.index %}{% include "carte-realisation.njk" %}{% endfor %}
+    </div>
+    {% if collections.realisations.length > liste.length %}<p class="more-link"><a class="btn btn-outline" href="/realisations/">Toutes les réalisations ({{ collections.realisations.length }})</a></p>{% endif %}
+  </div>
+</section>
+
+{%- set vitrines = collections.realisations | vitrines %}
+{% if vitrines.length %}
+<section class="section creations" id="creations" aria-labelledby="crea-t">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Créations · {{ site.agence }}</p>
+      <h2 id="crea-t">Conceptions graphiques et vidéo</h2>
+      <p class="lede">Visuels, carrousels, infographies et animations conçus pour {{ site.agence }}. Touchez une image pour l'agrandir.</p>
+    </div>
+    {% for v in vitrines %}{% set items = v.data.galerie %}{% include "galerie.njk" %}{% endfor %}
+    <p class="more-link">{% for v in vitrines %}<a class="btn btn-outline" href="{{ v.url }}">Voir le projet complet</a>{% endfor %}</p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" id="methode" aria-labelledby="meth-t">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Méthode</p>
+      <h2 id="meth-t">Comprendre avant de produire</h2>
+    </div>
+    <ol class="steps">
+      {% for e in profil.methode %}<li><h3>{{ e.etape }}</h3><p>{{ e.detail }}</p></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+
+{% if collections.journal.length %}
+<section class="section" id="journal" aria-labelledby="jr-t">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Journal</p>
+      <h2 id="jr-t">Notes de terrain</h2>
+    </div>
+    <ul class="posts">
+      {% for a in collections.journal.slice(0, 3) %}
+      <li><time datetime="{{ a.date | iso }}">{{ a.date | dateFr }}</time><a href="{{ a.url }}">{{ a.data.title }}</a><p>{{ a.data.resume }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" id="outils" aria-labelledby="out-t">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Boîte à outils</p>
+      <h2 id="out-t">Outils du quotidien</h2>
+    </div>
+    <ul class="tools">{% for o in profil.outils %}<li>{{ o }}</li>{% endfor %}</ul>
+  </div>
+</section>
+
+{% include "contact.njk" %}

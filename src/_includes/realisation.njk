@@ -1,0 +1,54 @@
+---
+layout: base.njk
+og_type: article
+---
+{%- set rang = collections.realisations | rang(page.url) %}
+<article class="study">
+  <header class="study-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/realisations/">Réalisations</a></nav>
+      <p class="label">Étude de cas {{ rang | pad }} · {{ date | moisAnnee }}</p>
+      <h1>{{ title }}</h1>
+      <p class="intro">{{ resume | todo | safe }}</p>
+      <div class="chips on-plum"><span class="chip real">{{ nature }}</span>{% for c in categories %}<span class="chip">{{ c }}</span>{% endfor %}</div>
+    </div>
+  </header>
+  {% if couverture | localUrl %}<div class="wrap"><figure class="study-cover"><img src="{{ couverture | localUrl }}" alt="{{ couverture_alt }}" width="1200" height="700"></figure></div>{% endif %}
+  <div class="wrap study-grid">
+    <aside class="fiche" aria-label="Fiche technique">
+      <p class="label">Fiche technique</p>
+      <dl>
+        {% if client %}<div><dt>Client</dt><dd>{{ client | todo | safe }}</dd></div>{% endif %}
+        <div><dt>Nature</dt><dd>{{ nature }}</dd></div>
+        <div><dt>Période</dt><dd>{{ date | moisAnnee }}</dd></div>
+        {% if role %}<div><dt>Mon rôle</dt><dd>{{ role | todo | safe }}</dd></div>{% endif %}
+        {% if canaux and canaux.length %}<div><dt>Canaux</dt><dd>{{ canaux | join(", ") }}</dd></div>{% endif %}
+      </dl>
+    </aside>
+    <div class="study-body">
+      <section><h2>Contexte</h2><p>{{ contexte | todo | safe }}</p></section>
+      <section><h2>Objectif</h2><p>{{ objectif | todo | safe }}</p></section>
+      {% if dispositif and dispositif.length %}<section><h2>Dispositif</h2><ul>{% for d in dispositif %}<li>{{ d | todo | safe }}</li>{% endfor %}</ul></section>{% endif %}
+      {% if resultats and resultats.length %}<section><h2>Résultats</h2><ul class="kpis big">{% for r in resultats %}<li><strong>{{ r.valeur | todo | safe }}</strong><span>{{ r.indicateur | todo | safe }}</span></li>{% endfor %}</ul></section>
+      {% elif resultats is undefined %}<section><h2>Résultats</h2><p><span class="todo">résultats à publier</span></p></section>{% endif %}
+      {% if content | trim %}<section class="prose-body"><h2>Le récit du projet</h2>{{ content | todoHtml | safe }}</section>{% endif %}
+      {% if galerie and galerie.length %}<section><h2>Galerie</h2>{% set items = galerie %}{% include "galerie.njk" %}</section>{% endif %}
+      {% if enseignement %}<section class="lesson"><p class="label">Ce que j'en retiens</p><p>{{ enseignement | todo | safe }}</p></section>{% endif %}
+    </div>
+  </div>
+  <div class="wrap partage">
+    <p class="label">Partager cette étude de cas</p>
+    {%- set lienPage = (site.url + page.url) | urlencode %}{% set titrePage = title | urlencode %}
+    <ul>
+      <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ lienPage }}" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ lienPage }}" rel="noopener noreferrer" target="_blank">Facebook</a></li>
+      <li><a href="https://wa.me/?text={{ titrePage }}%20{{ lienPage }}" rel="noopener noreferrer" target="_blank">WhatsApp</a></li>
+    </ul>
+  </div>
+  <div class="wrap study-nav">
+    {% set prev = collections.realisations | getPreviousCollectionItem(page) %}{% set next = collections.realisations | getNextCollectionItem(page) %}
+    {% if prev %}<a href="{{ prev.url }}"><span class="label">Plus récente</span>{{ prev.data.title }}</a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="nx" href="{{ next.url }}"><span class="label">Plus ancienne</span>{{ next.data.title }}</a>{% endif %}
+  </div>
+</article>
+{% include "contact.njk" %}

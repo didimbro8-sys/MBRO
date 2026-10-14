@@ -1,0 +1,9 @@
+# GitHub vérifie chaque semaine si le moteur du site a une mise à jour de sécurité
+# et vous propose la correction (bouton « Merge »).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
