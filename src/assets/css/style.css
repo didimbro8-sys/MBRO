@@ -1,13 +1,11 @@
 /* Polices hébergées sur le site : aucune donnée des visiteurs n'est envoyée à un tiers (licence SIL OFL, voir assets/licences) */
-@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/bricolage-grotesque-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/bricolage-grotesque-latin-700-normal.woff2") format("woff2"); }
-@font-face { font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2"); }
-@font-face { font-family: "Figtree"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/figtree-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "Figtree"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/figtree-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "Figtree"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/figtree-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Figtree"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/figtree-latin-700-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/jost-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/jost-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/jost-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/inter-latin-700-normal.woff2") format("woff2"); }
 
 /* AM.Digital — portfolio
    Layout : bandeau héros prune pleine largeur (signature de marque), puis colonnes éditoriales calmes sur fond papier teinté de prune. L'or ne sert qu'à souligner. */
@@ -25,9 +23,9 @@
   --on-plum: #FFF7FB;
   --on-plum-muted: #E6CDDD;
 
-  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --f-body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --f-display: "Jost", "Futura", "Century Gothic", system-ui, sans-serif;
+  --f-body: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --f-mono: "Inter", "Helvetica Neue", Arial, sans-serif;
 
   --s-1: clamp(.82rem, .8rem + .1vw, .88rem);
   --s0: clamp(1rem, .96rem + .2vw, 1.08rem);
@@ -77,7 +75,7 @@ p { margin: 0; }
 @media (min-width: 720px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
 
 .label {
-  font-family: var(--f-mono); font-size: var(--s-1); letter-spacing: .08em;
+  font-family: var(--f-mono); font-size: var(--s-1); letter-spacing: .12em; font-weight: 600;
   text-transform: uppercase; color: var(--muted);
 }
 .section { padding-block: clamp(4rem, 3rem + 5vw, 7.5rem); border-top: 1px solid var(--line); }
@@ -124,7 +122,7 @@ p { margin: 0; }
   align-items: center; padding-block: clamp(3.5rem, 2.5rem + 5vw, 7rem); position: relative; z-index: 1;
 }
 .hero .label { color: var(--gold-soft); }
-.hero h1 { font-size: var(--s4); font-weight: 800; margin-block: 1.1rem 1.4rem; }
+.hero h1 { font-size: var(--s4); font-weight: 700; margin-block: 1.1rem 1.4rem; }
 .hero h1 em { font-style: normal; color: var(--gold-soft); }
 .hero .intro { font-size: var(--s1); line-height: 1.5; color: var(--on-plum-muted); max-width: 36rem; }
 .hero .who { margin-top: 1.6rem; font-size: var(--s0); color: var(--on-plum); }
@@ -203,7 +201,7 @@ p { margin: 0; }
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 1rem + 2vw, 2.6rem);
 }
 .case-meta { display: grid; gap: .9rem; align-content: start; }
-.case-meta .num { font-family: var(--f-display); font-size: var(--s3); font-weight: 800; color: var(--gold); line-height: 1; }
+.case-meta .num { font-family: var(--f-display); font-size: var(--s3); font-weight: 700; color: var(--gold); line-height: 1; }
 .case-meta h3 { font-size: var(--s2); }
 .chips { display: flex; flex-wrap: wrap; gap: .4rem; }
 .chip { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; padding: .25rem .55rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
@@ -311,7 +309,7 @@ form .btn-gold { justify-self: start; }
 .study-head { background: var(--plum); color: var(--on-plum); }
 .study-head .wrap { padding-block: clamp(2.5rem, 2rem + 4vw, 5rem); display: grid; gap: 1rem; max-width: var(--wrap); }
 .study-head .label { color: var(--gold-soft); }
-.study-head h1 { font-size: var(--s4); font-weight: 800; max-width: 22ch; }
+.study-head h1 { font-size: var(--s4); font-weight: 700; max-width: 22ch; }
 .study-head .intro { font-size: var(--s1); color: var(--on-plum-muted); max-width: 40rem; line-height: 1.5; }
 .crumbs { font-size: .9rem; color: var(--on-plum-muted); }
 .crumbs a { color: var(--on-plum); }
@@ -385,7 +383,7 @@ ul.kpis { display: flex; flex-wrap: wrap; padding-left: 0; }
 .preuves .label a { color: var(--on-plum); }
 .preuves ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: 1.2rem 2rem; }
 .preuves li { display: grid; gap: .2rem; border-left: 2px solid var(--gold); padding-left: .9rem; min-width: 0; }
-.preuves strong { font-family: var(--f-display); font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.6rem); font-weight: 800; color: var(--gold-soft); line-height: 1; font-variant-numeric: tabular-nums; }
+.preuves strong { font-family: var(--f-display); font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.6rem); font-weight: 700; color: var(--gold-soft); line-height: 1; font-variant-numeric: tabular-nums; }
 .preuves span { color: var(--on-plum-muted); font-size: .92rem; }
 .avail { border-top: 1px solid rgba(255,255,255,.08); }
 
