@@ -5,5 +5,6 @@
 - Restauration : copier fonts/woff2 -> scratchpad/fonts/package/files, fonts/*.ttf -> scratchpad/fonts/, logo -> scratchpad/ds/project/assets/Logos/
 - Journal de publication : JOURNAL.md
 
-## Format de la veille (consigne du 14 oct.)
-La veille quotidienne = une INFOGRAPHIE 1080x1350 aux couleurs AM.Digital (gen/infog.py) : version publique publiée à 15:00 Africa/Abidjan sur FB+IG, et version interne (décisions stratégiques) envoyée à l'utilisateur. Plus de carrousel ni de PDF pour la veille.
+## Format de la veille (consigne du 14 oct., précisée)
+Sujet : tendances MONDIALES de la communication et du marketing digital + outils d'IA pour les communicants. Public : communicants, agences, entreprises, entrepreneurs, PME. PAS de veille interne.
+Forme : UNE infographie 1080x1350 aux couleurs AM.Digital (modèle gen/infog2.py) : 4 signaux (3 tendances + outils IA du jour), chacun avec Décryptage, « Décision pour votre entreprise » et Source sur la créa. Publiée à 15:00 Africa/Abidjan sur FB+IG avec une description de post (résumé + sources). Vérifier chaque fait (date, chiffre, statut) avant publication.
