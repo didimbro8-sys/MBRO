@@ -122,8 +122,8 @@ og_type: profile
   <div class="wrap">
     <div class="section-head">
       <p class="label">Créations · {{ site.agence }}</p>
-      <h2 id="crea-t">Conceptions graphiques et vidéo</h2>
-      <p class="lede">Visuels, carrousels, infographies et animations conçus pour {{ site.agence }}. Touchez une image pour l'agrandir.</p>
+      <h2 id="crea-t">Mes dernières publications</h2>
+      <p class="lede">Contenus conçus et publiés sur les pages Facebook et Instagram d’{{ site.agence }}. Touchez une image pour l’agrandir.</p>
     </div>
     {% for v in vitrines %}{% set items = v.data.galerie %}{% include "galerie.njk" %}{% endfor %}
     <p class="more-link">{% for v in vitrines %}<a class="btn btn-outline" href="{{ v.url }}">Voir le projet complet</a>{% endfor %}</p>

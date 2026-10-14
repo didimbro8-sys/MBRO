@@ -22,15 +22,21 @@ resultats:
   - indicateur: taux d'engagement
     valeur: "[à compléter]"
 enseignement: "[Ce que cette relance vous a appris, en deux phrases.]"
-couverture: /assets/uploads/am-digital-checklist.jpg
+couverture: /assets/uploads/am-digital-5-erreurs-6.jpg
 couverture_alt: Dernière page du carrousel AM.Digital « 5 erreurs qui font fuir les clients », la checklist à enregistrer
 galerie:
-  - image: /assets/uploads/am-digital-erreur-1.jpg
+  - image: /assets/uploads/am-digital-visibilite-audit.jpg
+    legende: "Diagnostic express « Votre entreprise est-elle vraiment visible ? », avec l'appel à l'action « Écrivez AUDIT »"
+    lien: https://www.instagram.com/p/DeZpyHoiCCT/
+  - image: /assets/uploads/am-digital-5-erreurs-1.jpg
     legende: "Carrousel « 5 erreurs qui font fuir les clients », page 1"
-  - image: /assets/uploads/am-digital-checklist.jpg
+    lien: https://www.facebook.com/122236556318562810/posts/122242335032562810
+  - image: /assets/uploads/am-digital-5-erreurs-6.jpg
     legende: La checklist finale du carrousel, conçue pour être enregistrée
-  - image: /assets/uploads/am-digital-affiche-strategie.jpg
-    legende: "Affiche d'offre « Développez votre entreprise avec une stratégie digitale performante »"
+    lien: https://www.facebook.com/122236556318562810/posts/122242335032562810
+  - image: /assets/uploads/am-digital-calendrier-octobre.jpg
+    legende: Calendrier éditorial d'octobre partagé avec la communauté
+    lien: https://www.instagram.com/p/DeT6UndiV12/
   - image: /assets/uploads/am-digital-bon-debut-semaine.jpg
     legende: Visuel de rendez-vous « Bon début de semaine »
 a_la_une: false
