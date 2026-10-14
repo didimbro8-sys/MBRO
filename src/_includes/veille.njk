@@ -1,0 +1,45 @@
+---
+layout: base.njk
+og_type: article
+---
+{%- set fb = lien_facebook | safeUrl %}{% set ig = lien_instagram | safeUrl %}
+<article class="study">
+  <header class="study-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/veille/">Veille stratégique</a></nav>
+      <p class="label">La Veille AM.Digital · <time datetime="{{ page.date | iso }}">{{ page.date | dateFr }}</time></p>
+      <h1>{{ title }}</h1>
+      {% if resume %}<p class="intro">{{ resume }}</p>{% endif %}
+    </div>
+  </header>
+  <div class="wrap veille-layout">
+    <div>
+      <ol class="signaux">
+        {%- for s in signaux %}
+        <li>
+          <span class="signal-num" aria-hidden="true">{{ loop.index }}</span>
+          <div>
+            {% if s.rubrique %}<p class="label">{{ s.rubrique }}</p>{% endif %}
+            <h2>{{ s.titre }}</h2>
+            {% if s.decryptage %}<p>{{ s.decryptage }}</p>{% endif %}
+            {% if s.decision %}<p class="decision"><strong>Décision pour votre entreprise.</strong> {{ s.decision }}</p>{% endif %}
+            {% if s.source %}<p class="source">Source : {{ s.source }}</p>{% endif %}
+          </div>
+        </li>
+        {%- endfor %}
+      </ol>
+      {%- if content | trim %}
+      <section class="veille-analyse prose-body"><h2>L'analyse AM.Digital</h2>{{ content | safe }}</section>
+      {%- endif %}
+      <p class="signature">{{ site.nom | todo | safe }}, fondateur d'{{ site.agence }}</p>
+      <p class="more-link"><a class="btn btn-outline" href="/veille/">Toutes les veilles</a></p>
+    </div>
+    {%- if couverture | localUrl %}
+    <figure class="veille-visuel">
+      <button type="button" class="zoom" data-src="{{ couverture | localUrl }}" data-legende="{{ couverture_alt }}" aria-label="Agrandir le visuel"><img src="{{ couverture | localUrl }}" alt="{{ couverture_alt }}" width="1080" height="1350"></button>
+      {%- if fb or ig %}<figcaption class="veille-liens">{% if fb %}<a href="{{ fb }}" rel="noopener noreferrer" target="_blank">Voir sur Facebook ↗</a>{% endif %}{% if ig %}<a href="{{ ig }}" rel="noopener noreferrer" target="_blank">Voir sur Instagram ↗</a>{% endif %}</figcaption>{% endif %}
+    </figure>
+    {%- endif %}
+  </div>
+</article>
+{% include "contact.njk" %}

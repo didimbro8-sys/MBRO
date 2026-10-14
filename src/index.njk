@@ -131,6 +131,32 @@ og_type: profile
 </section>
 {% endif %}
 
+{%- set derniere = collections.veille | first %}
+{% if derniere %}
+<section class="section" id="veille" aria-labelledby="veille-t">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Veille stratégique · <time datetime="{{ derniere.date | iso }}">{{ derniere.date | dateFr }}</time></p>
+      <h2 id="veille-t">{{ derniere.data.title }}</h2>
+      <p class="lede">Chaque jour, les signaux de la communication et du marketing digital, vérifiés et traduits en décisions concrètes pour les entreprises.</p>
+    </div>
+    <div class="home-veille">
+      <div>
+        {%- if derniere.data.signaux and derniere.data.signaux.length %}
+        <ol class="signaux">
+          {%- for s in derniere.data.signaux %}
+          <li><span class="signal-num" aria-hidden="true">{{ loop.index }}</span><div>{% if s.rubrique %}<p class="label">{{ s.rubrique }}</p>{% endif %}<h3>{{ s.titre }}</h3>{% if s.decision %}<p class="decision"><strong>Décision.</strong> {{ s.decision }}</p>{% endif %}</div></li>
+          {%- endfor %}
+        </ol>
+        {%- endif %}
+        <p class="more-link"><a class="btn btn-outline" href="{{ derniere.url }}">Lire la veille complète</a>{% if collections.veille.length > 1 %} <a class="btn btn-outline" href="/veille/">Toutes les veilles ({{ collections.veille.length }})</a>{% endif %}</p>
+      </div>
+      {%- if derniere.data.couverture | localUrl %}<figure><a href="{{ derniere.url }}"><img src="{{ derniere.data.couverture | localUrl }}" alt="{{ derniere.data.couverture_alt }}" loading="lazy" decoding="async" width="1080" height="1350"></a></figure>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="section" id="methode" aria-labelledby="meth-t">
   <div class="wrap">
     <div class="section-head">

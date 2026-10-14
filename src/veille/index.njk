@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Veille stratégique
+description: La Veille AM.Digital, chaque jour les signaux de la communication et du marketing digital vérifiés et traduits en décisions concrètes pour les entreprises de Côte d'Ivoire.
+permalink: /veille/
+publie: false
+---
+<header class="study-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a></nav>
+    <p class="label">Veille stratégique · {{ collections.veille.length }} édition{% if collections.veille.length > 1 %}s{% endif %}</p>
+    <h1>La Veille AM.Digital</h1>
+    <p class="intro">Les signaux mondiaux de la communication et du marketing digital, décryptés pour les communicants, les entrepreneurs et les PME de Côte d'Ivoire. Pour chaque signal : le fait vérifié, et la décision à prendre.</p>
+  </div>
+</header>
+<section class="section first"><div class="wrap">
+  <ul class="veilles">
+    {%- for v in collections.veille %}
+    <li>
+      <a class="veille-card" href="{{ v.url }}">
+        {%- if v.data.couverture | localUrl %}<img src="{{ v.data.couverture | localUrl }}" alt="" loading="lazy" decoding="async" width="1080" height="1350">{% endif %}
+        <div>
+          <p class="label"><time datetime="{{ v.date | iso }}">{{ v.date | dateFr }}</time></p>
+          <h2>{{ v.data.title }}</h2>
+          {%- if v.data.signaux and v.data.signaux.length %}
+          <ol class="veille-titres">{% for s in v.data.signaux %}<li>{{ s.titre }}</li>{% endfor %}</ol>
+          {%- else %}<p>{{ v.data.resume }}</p>{% endif %}
+          <span class="veille-lire">Lire la veille →</span>
+        </div>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</div></section>

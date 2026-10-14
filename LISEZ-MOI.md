@@ -80,6 +80,14 @@ Pour le logo animé : téléchargez-le depuis Canva en **MP4**, puis ajoutez-le 
 ## Travaux réalisés pour une organisation (OSEP)
 Avant d'envoyer le site aux recruteurs, faites valider par votre ancien responsable à l'OSEP la publication de l'étude de cas et de ses chiffres. Si un élément doit rester interne, retirez-le de la réalisation ou mettez-la en brouillon.
 
+## Publier une veille stratégique
+Menu **Veille stratégique** de l'administration : une entrée par veille publiée sur Facebook ou Instagram.
+- **Titre** : l'idée qui relie les signaux (« Quand l'IA décide qui on voit »).
+- **Visuel publié** : le carrousel ou l'affiche tel qu'il est paru sur les réseaux, avec les liens Facebook et Instagram.
+- **Signaux** (3 ou 4) : rubrique, titre, décryptage chiffré et daté, décision pour l'entreprise, source.
+- **Analyse** (facultatif) : le fil conducteur de la veille.
+La veille apparaît sur la page d'accueil (la plus récente) et dans le menu **Veille**.
+
 ## Publier un article dans le Journal
 Même principe, menu **Journal (articles)**. Visez un article par mois : c'est ce qui fait progresser le site sur Google.
 

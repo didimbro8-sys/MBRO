@@ -56,6 +56,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("aLaUne", (api) =>
     visibles(api.getFilteredByGlob("src/realisations/*.md")).filter((p) => p.data.a_la_une)
       .sort((a, b) => (a.data.priorite ?? 99) - (b.data.priorite ?? 99) || recentes(a, b)).slice(0, 3));
+  eleventyConfig.addCollection("veille", (api) =>
+    visibles(api.getFilteredByGlob("src/veille/*.md")).sort(recentes));
   eleventyConfig.addCollection("journal", (api) =>
     visibles(api.getFilteredByGlob("src/journal/*.md")).sort(recentes));
 

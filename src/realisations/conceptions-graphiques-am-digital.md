@@ -13,7 +13,6 @@ dispositif:
   - "Diagnostic express : 5 signes à vérifier, avec un appel à l'action « Écrivez AUDIT »"
   - "Carrousel en 6 pages : 5 erreurs qui font fuir les clients en ligne, et la checklist à enregistrer"
   - Calendrier éditorial d'octobre annoncé à la communauté
-  - "« Veille AM.Digital » : les tendances mondiales de la communication décryptées pour les PME"
   - Rendez-vous hebdomadaire « Bon début de semaine »
 resultats: []
 enseignement: Un contenu utile se partage et s'enregistre. Une seule idée par visuel, un appel à l'action clair et un rythme régulier comptent plus que la quantité.
@@ -44,9 +43,6 @@ galerie:
   - image: /assets/uploads/am-digital-calendrier-octobre.jpg
     legende: "Calendrier éditorial d'octobre : les thématiques du mois (10 octobre 2026)"
     lien: https://www.instagram.com/p/DeT6UndiV12/
-  - image: /assets/uploads/am-digital-veille-14-octobre.jpg
-    legende: "Veille AM.Digital du 14 octobre 2026 : quand l'IA décide qui on voit"
-    lien: https://www.facebook.com/photo/?fbid=122242526570562810
   - image: /assets/uploads/am-digital-bon-debut-semaine.jpg
     legende: Rendez-vous hebdomadaire « Bon début de semaine »
 vitrine: true

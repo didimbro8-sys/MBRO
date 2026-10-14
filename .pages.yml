@@ -131,6 +131,79 @@ content:
           format: markdown
           switcher: false
 
+  - name: veille
+    label: Veille stratégique
+    type: collection
+    path: src/veille
+    filename: "veille-{year}-{month}-{day}.md"
+    exclude: [index.njk, veille.11tydata.js]
+    view:
+      primary: title
+      fields: [title, date, publie]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Titre de la veille (l'idée qui relie les signaux)
+        type: string
+        required: true
+      - name: date
+        label: Date de publication
+        type: date
+        required: true
+      - name: publie
+        label: Publier sur le site
+        type: boolean
+        default: true
+      - name: resume
+        label: Résumé en une phrase (visible sur Google)
+        type: text
+        required: true
+        options:
+          maxlength: 300
+      - name: couverture
+        label: Visuel publié sur les réseaux (carrousel ou affiche)
+        type: image
+      - name: couverture_alt
+        label: Description du visuel
+        type: string
+      - name: lien_facebook
+        label: Lien de la publication Facebook
+        type: string
+      - name: lien_instagram
+        label: Lien de la publication Instagram
+        type: string
+      - name: signaux
+        label: Signaux décryptés (3 ou 4)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titre}"
+        fields:
+          - name: rubrique
+            label: Rubrique (ex. Recherche & IA)
+            type: string
+          - name: titre
+            label: Titre du signal
+            type: string
+          - name: decryptage
+            label: Décryptage (le fait, chiffré et daté)
+            type: text
+          - name: decision
+            label: Décision pour votre entreprise
+            type: text
+          - name: source
+            label: Source (média, date)
+            type: string
+      - name: body
+        label: Analyse (facultatif)
+        type: rich-text
+        options:
+          format: markdown
+          switcher: false
+
   - name: journal
     label: Journal (articles)
     type: collection
