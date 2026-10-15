@@ -688,3 +688,4 @@ ul.kpis { display: flex; flex-wrap: wrap; padding-left: 0; }
 .chip { font-size: .8rem; }
 .case-body dt, .fiche dt { font-size: .92rem; font-weight: 600; }
 section[id], .section { scroll-margin-top: 4.5rem; }
+.case-date { font-weight: 600; color: var(--brand-text); text-transform: capitalize; }

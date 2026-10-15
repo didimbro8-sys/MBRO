@@ -15,6 +15,6 @@ publie: false
 </header>
 <section class="section first">
   <div class="wrap cases">
-    {% for item in collections.realisations %}{% set numero = loop.length - loop.index0 %}{% include "carte-realisation.njk" %}{% endfor %}
+    {% for item in collections.realisations %}{% include "carte-realisation.njk" %}{% endfor %}
   </div>
 </section>

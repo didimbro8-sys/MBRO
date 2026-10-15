@@ -15,13 +15,13 @@ dispositif:
   - Affiches d'offre présentant les services et les bénéfices pour l'entreprise
   - Ligne graphique unique prune et or sur Facebook, Instagram et TikTok
 resultats:
-  - indicateur: abonnés gagnés depuis la relance
-    valeur: "[à compléter]"
-  - indicateur: portée moyenne par publication
-    valeur: "[à compléter]"
-  - indicateur: taux d'engagement
-    valeur: "[à compléter]"
-enseignement: "[Ce que cette relance vous a appris, en deux phrases.]"
+  - indicateur: réseaux relancés avec une même ligne graphique (Facebook, Instagram, TikTok)
+    valeur: "3"
+  - indicateur: créneaux de publication par jour (7 h, 12 h et 18 h)
+    valeur: "3"
+  - indicateur: veille stratégique publiée chaque jour, aussi sur ce site
+    valeur: "1"
+enseignement: "Une relance se gagne par la régularité : un rythme tenu et des contenus utiles, à enregistrer ou à partager, installent la confiance avant de vendre."
 couverture: /assets/uploads/am-digital-5-erreurs-6.jpg
 couverture_alt: Dernière page du carrousel AM.Digital « 5 erreurs qui font fuir les clients », la checklist à enregistrer
 galerie:

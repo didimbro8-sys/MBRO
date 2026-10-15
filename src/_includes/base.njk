@@ -74,10 +74,10 @@
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" class="nav" data-open="false" aria-label="Navigation principale">
-      <a href="/#profil">Profil</a>
-      <a href="/#creations">Créations</a>
       <a href="/realisations/"{% if page.url and page.url.startsWith('/realisations/') %} aria-current="page"{% endif %}>Réalisations</a>
+      <a href="/#creations">Créations</a>
       <a href="/veille/"{% if page.url and page.url.startsWith('/veille/') %} aria-current="page"{% endif %}>Veille</a>
+      <a href="/#profil">Profil</a>
       <a href="/journal/"{% if page.url and page.url.startsWith('/journal/') %} aria-current="page"{% endif %}>Journal</a>
       <a class="nav-cta" href="/#contact">Me recruter</a>
     </nav>

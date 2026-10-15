@@ -1,8 +1,7 @@
 {#- Carte d'une réalisation : grille d'un dossier de communication -#}
-{%- set numero = collections.realisations | rang(item.url) %}
 <article class="case">
   <div class="case-meta">
-    <span class="num">{{ numero | pad }}</span>
+    <p class="case-date"><time datetime="{{ item.date | iso }}">{{ item.date | moisAnnee }}</time></p>
     <h3><a class="case-link" href="{{ item.url }}">{{ item.data.title }}</a></h3>
     <div class="chips">
       <span class="chip{% if item.data.nature == 'Projet réel' %} real{% endif %}">{{ item.data.nature }}</span>

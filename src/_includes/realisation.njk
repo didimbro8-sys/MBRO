@@ -7,7 +7,7 @@ og_type: article
   <header class="study-head">
     <div class="wrap">
       <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/realisations/">Réalisations</a></nav>
-      <p class="label">Étude de cas {{ rang | pad }} · {{ date | moisAnnee }}</p>
+      <p class="label">Étude de cas, <time datetime="{{ page.date | iso }}">{{ date | moisAnnee }}</time></p>
       <h1>{{ title }}</h1>
       <p class="intro">{{ resume | todo | safe }}</p>
       <div class="chips on-plum"><span class="chip real">{{ nature }}</span>{% for c in categories %}<span class="chip">{{ c }}</span>{% endfor %}</div>
