@@ -22,3 +22,9 @@ Objectif mensuel : ~400 publications (FB ~120, IG ~120, TikTok ~100 quand le com
 - Musique : vidiq_compose (vidéo GitHub raw → vidiq_video_upload → compose avec piste afro-house ou trap-afrobeat, volume 1). Coût 1 crédit / 4 s ; crédits gratuits renouvelés le 31 de chaque mois.
 - Gratuit : TikTok autoAddMusic=true fonctionne UNIQUEMENT pour les carrousels photo (pas les vidéos). Utiliser des carrousels photo TikTok quand les crédits manquent.
 - Moteur motion design : gen/motion2.py (exemples dans gen/mo_batch1.py).
+
+## Vidéos « cinéma » (demande du 15 oct. 2026, 22h26) — RÈGLE POUR TOUTES LES VIDÉOS À VENIR
+- Toutes les nouvelles vidéos utilisent gen/motion3.py (caméra 3D, sol néon, cubes 3D, typo lettre par lettre, flare, slam + onde de choc, transitions cube/iris/tranches/zoom, logo en pixels volants). Exemple : gen/v16_m3.py.
+- Son : musique seule (pas de voix off). Par défaut musique afro-house synthétisée gen/music.py (gratuite, impacts calés sur les chiffres), normalisée à -14 LUFS ; ou pistes vidIQ si crédits.
+- Avant publication : extraire 6-9 images de contrôle et vérifier lisibilité, chevauchements et transitions.
+- Adobe (connecteur) : pas d'effets Premiere/After Effects disponibles ; option : importer la vidéo finie dans Firefly Video Editor (import-claude-motion-from-url) si le client veut retoucher.
