@@ -1,4 +1,7 @@
+# Signaler une faille de sécurité sur am-digital.pages.dev
+Contact: mailto:didimbro8@gmail.com
 Contact: https://wa.me/2250171954523
 Expires: 2027-10-14T00:00:00.000Z
 Preferred-Languages: fr, en
 Canonical: https://am-digital.pages.dev/.well-known/security.txt
+Policy: https://am-digital.pages.dev/mentions-legales/
