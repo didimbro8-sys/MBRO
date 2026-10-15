@@ -8,7 +8,7 @@
       <span class="chip{% if item.data.nature == 'Projet réel' %} real{% endif %}">{{ item.data.nature }}</span>
       {%- for c in item.data.categories %}<span class="chip">{{ c }}</span>{% endfor %}
     </div>
-    {% if item.data.couverture | localUrl %}<img class="case-cover" src="{{ item.data.couverture | localUrl }}" alt="{{ item.data.couverture_alt }}" loading="lazy" width="640" height="400">{% endif %}
+    {% if item.data.couverture | localUrl %}<span class="case-cover-wrap tilt"><img class="case-cover" src="{{ item.data.couverture | localUrl }}" alt="{{ item.data.couverture_alt }}" loading="lazy" width="640" height="400"></span>{% endif %}
   </div>
   <dl class="case-body">
     <div><dt>Contexte</dt><dd>{{ item.data.contexte | todo | safe }}</dd></div>
@@ -19,6 +19,6 @@
     {%- elif item.data.resultats is undefined %}
     <div><dt>Résultats</dt><dd><span class="todo">résultats à publier</span></dd></div>
     {%- endif %}
-    <div class="case-more"><dt></dt><dd><a href="{{ item.url }}">Lire l'étude de cas complète <span aria-hidden="true">→</span></a></dd></div>
+    <div class="case-more"><dt></dt><dd><a href="{{ item.url }}">Lire l'étude de cas complète</a></dd></div>
   </dl>
 </article>

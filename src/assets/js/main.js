@@ -110,3 +110,191 @@
       .catch(function () { say("Connexion impossible. Vérifiez votre réseau ou écrivez-moi sur WhatsApp.", "error"); });
   });
 })();
+
+// ---------- Effets et assistant (« Le Signal ») ----------
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var body = document.body;
+
+  // En-tête : transparent sur le cosmos de l'accueil, plein ensuite ; barre de progression de lecture
+  var header = document.getElementById("site-header");
+  var bar = header ? header.querySelector(".progress") : null;
+  var hero = document.querySelector(".hero");
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      var y = window.scrollY, max = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.transform = "scaleX(" + (max > 0 ? Math.min(1, y / max) : 0) + ")";
+      if (header && hero) header.classList.toggle("on-hero", y < hero.offsetHeight - 80);
+      steps();
+    });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
+
+  // Méthode : la ligne d'or progresse avec la lecture
+  var stepsEl = document.querySelector(".methode .steps");
+  function steps() {
+    if (!stepsEl) return;
+    var r = stepsEl.getBoundingClientRect(), vh = window.innerHeight;
+    var p = Math.max(0, Math.min(1, (vh * 0.85 - r.top) / (r.height + vh * 0.35)));
+    stepsEl.style.setProperty("--p", reduce ? 1 : p.toFixed(3));
+    var lis = stepsEl.children, n = lis.length;
+    for (var i = 0; i < n; i++) lis[i].classList.toggle("lit", reduce || p >= (i + 0.5) / n);
+  }
+
+  // Chiffres qui défilent jusqu'à leur valeur quand ils entrent à l'écran
+  var counts = document.querySelectorAll(".count");
+  if (counts.length && "IntersectionObserver" in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        countUp(en.target);
+      });
+    }, { threshold: 0.6 });
+    counts.forEach(function (el) {
+      if (el.querySelector(".todo")) return;
+      var m = el.textContent.trim().match(/^([^\d]*)(\d[\d\s  ]*)(.*)$/);
+      if (!m) return;
+      el.dataset.pre = m[1]; el.dataset.num = m[2].replace(/\D/g, ""); el.dataset.post = m[3];
+      el.dataset.final = el.textContent;
+      io.observe(el);
+    });
+  }
+  function countUp(el) {
+    var target = parseInt(el.dataset.num, 10), t0 = performance.now(), dur = 1600;
+    var fmt = new Intl.NumberFormat("fr-FR");
+    (function step(now) {
+      var k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(2, -10 * k);
+      el.textContent = el.dataset.pre + fmt.format(Math.round(target * (k === 1 ? 1 : e))) + el.dataset.post;
+      if (k < 1) requestAnimationFrame(step); else el.textContent = el.dataset.final;
+    })(t0);
+  }
+
+  // Inclinaison en 3D des visuels, qui suit le pointeur
+  if (fine && !reduce) {
+    document.querySelectorAll(".tilt").forEach(function (el) {
+      el.addEventListener("pointermove", function (e) {
+        var r = el.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = "perspective(900px) rotateY(" + (x * 10).toFixed(2) + "deg) rotateX(" + (-y * 8).toFixed(2) + "deg) translateZ(0)";
+        el.style.setProperty("--gx", ((x + 0.5) * 100).toFixed(1) + "%");
+        el.style.setProperty("--gy", ((y + 0.5) * 100).toFixed(1) + "%");
+        el.classList.add("tilting");
+      });
+      el.addEventListener("pointerleave", function () { el.style.transform = ""; el.classList.remove("tilting"); });
+    });
+    // Boutons « aimantés »
+    document.querySelectorAll(".magnet").forEach(function (b) {
+      b.addEventListener("pointermove", function (e) {
+        var r = b.getBoundingClientRect();
+        b.style.transform = "translate(" + ((e.clientX - r.left - r.width / 2) * 0.18).toFixed(1) + "px," + ((e.clientY - r.top - r.height / 2) * 0.25).toFixed(1) + "px)";
+      });
+      b.addEventListener("pointerleave", function () { b.style.transform = ""; });
+    });
+  }
+
+  // Rail des publications : boutons, glisser à la souris
+  var rail = document.querySelector(".rail");
+  if (rail) {
+    document.querySelectorAll(".rail-btn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var item = rail.querySelector(".rail-item");
+        var w = item ? item.getBoundingClientRect().width + 16 : 300;
+        rail.scrollBy({ left: w * Number(b.dataset.dir) * (window.innerWidth > 900 ? 2 : 1), behavior: reduce ? "auto" : "smooth" });
+      });
+    });
+    var down = false, sx = 0, sl = 0, moved = 0;
+    rail.addEventListener("pointerdown", function (e) { if (e.pointerType !== "mouse") return; down = true; moved = 0; sx = e.clientX; sl = rail.scrollLeft; rail.classList.add("dragging"); });
+    window.addEventListener("pointermove", function (e) { if (!down) return; moved = Math.abs(e.clientX - sx); rail.scrollLeft = sl - (e.clientX - sx); });
+    window.addEventListener("pointerup", function () { down = false; rail.classList.remove("dragging"); });
+    rail.addEventListener("click", function (e) { if (moved > 6) { e.preventDefault(); e.stopPropagation(); moved = 0; } }, true);
+  }
+
+  // ---------- Assistant ----------
+  var box = document.getElementById("assistant");
+  if (!box) return;
+  var toggle = box.querySelector(".assistant-toggle");
+  var panel = box.querySelector(".assistant-panel");
+  var log = box.querySelector(".assistant-log");
+  var chips = box.querySelector(".assistant-chips");
+  var form = box.querySelector(".assistant-form");
+  var input = form.querySelector("input");
+  var tpls = Array.prototype.slice.call(box.querySelectorAll("template[data-q]"));
+  var fallback = box.querySelector("template[data-fallback]");
+  var asked = {};
+
+  function norm(s) { return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function open(state) {
+    toggle.setAttribute("aria-expanded", String(state));
+    panel.hidden = !state;
+    box.classList.toggle("open", state);
+    if (state) setTimeout(function () { input.focus(); }, 60);
+  }
+  toggle.addEventListener("click", function () { open(panel.hidden); });
+  box.querySelector(".assistant-close").addEventListener("click", function () { open(false); toggle.focus(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !panel.hidden) { open(false); toggle.focus(); } });
+
+  function renderChips() {
+    chips.textContent = "";
+    tpls.forEach(function (t, i) {
+      if (asked[i]) return;
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "chip-q"; b.textContent = t.dataset.q;
+      b.addEventListener("click", function () { ask(t.dataset.q, i); });
+      chips.appendChild(b);
+    });
+  }
+  function bubble(cls, node) {
+    var d = document.createElement("div");
+    d.className = "msg " + cls;
+    if (typeof node === "string") { var p = document.createElement("p"); p.textContent = node; d.appendChild(p); }
+    else d.appendChild(node);
+    log.appendChild(d);
+    log.scrollTop = log.scrollHeight;
+    return d;
+  }
+  function fillMail(root) {
+    root.querySelectorAll(".mail-js").forEach(function (s) {
+      var a = document.createElement("a"), addr = s.dataset.u + "@" + s.dataset.d;
+      a.href = "mailto:" + addr; a.textContent = addr; s.textContent = ""; s.appendChild(a);
+    });
+  }
+  function match(q) {
+    var n = norm(q), best = -1, score = 0;
+    tpls.forEach(function (t, i) {
+      var s = 0;
+      t.dataset.k.split(",").forEach(function (k) { if (k && n.indexOf(norm(k)) !== -1) s += k.length > 4 ? 2 : 1; });
+      if (s > score) { score = s; best = i; }
+    });
+    return best;
+  }
+  function ask(q, idx) {
+    bubble("me", q);
+    if (idx === undefined) idx = match(q);
+    if (idx >= 0) asked[idx] = true;
+    renderChips();
+    var typing = bubble("bot typing", document.createElement("span"));
+    typing.firstChild.className = "dots";
+    setTimeout(function () {
+      typing.remove();
+      var frag = (idx >= 0 ? tpls[idx] : fallback).content.cloneNode(true);
+      fillMail(frag);
+      bubble("bot", frag);
+    }, reduce ? 0 : 650);
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = input.value.trim();
+    if (!q) return;
+    input.value = "";
+    ask(q);
+  });
+  renderChips();
+})();

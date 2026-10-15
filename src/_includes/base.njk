@@ -63,9 +63,10 @@
 }
 </script>
 </head>
-<body>
+<body class="{{ 'is-home' if page.url == '/' else 'is-page' }}">
 <a class="skip" href="#contenu">Aller au contenu</a>
-<header class="site-header">
+<header class="site-header" id="site-header">
+  <span class="progress" aria-hidden="true"></span>
   <div class="wrap">
     <a class="brand" href="/" aria-label="{{ site.agence }}, accueil">
       <img src="/assets/img/logo-am.png" alt="" width="36" height="36">
@@ -97,6 +98,10 @@
   <img id="visionneuse-img" src="data:," alt="">
   <p id="visionneuse-legende"></p>
 </dialog>
+{% include "assistant.njk" %}
 <script src="{{ '/assets/js/main.js' | v }}" defer></script>
+{%- for s in page_scripts %}
+<script src="{{ s | v }}" defer></script>
+{%- endfor %}
 </body>
 </html>
