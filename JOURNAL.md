@@ -23,3 +23,8 @@ Notes :
 - Formats « vraie personne » remplacés : décryptage campagne → méthode en 4 questions ; live 23/10 → « Vos questions » ; audit #2 → audit express ; coups de projecteur → règles du challenge.
 - Crédits vidIQ : ~0 (renouvellement 31 oct.). Jusque-là : TikTok en carrousels photo.
 - Routine unique suivante : 16/10 09:00 UTC (trig_017XcU87u893TqxRTwcYRpsX).
+
+## 15 oct. 2026 (23h Paris) — modèle cinéma validé par le client (« superbe, incroyable »)
+- 16/10 07h, 12h, 18h refaits en motion3 (FB+IG reels + TikTok). Fichiers *_v3.mp4.
+- À FAIRE (session du 16/10) : refaire en motion3 toutes les vidéos programmées du 20 au 26/10 (mo_ligne-editoriale, mo_quel-reseau, mo_3-secondes, mo_plateforme-marque, mo_interne-externe, mo_persona, 3-idees, challenge, 30s-2) et mettre à jour les posts Metricool. Transformer aussi certains visuels fixes en vidéos cinéma.
+- Voix off : le client veut sa propre voix ; aucun enregistrement reçu (seul le texte de ses messages vocaux nous parvient). Pipeline prêt : gen/voice.py (mastering + ducking). Tant qu'aucun fichier audio n'est reçu : musique seule.
