@@ -16,3 +16,9 @@ Le site est le dépôt didimbro8-sys/mbro, branche main (Eleventy + Cloudflare P
 - Chaque jour : 1 article dans src/journal/<slug>.md (title, date, resume ≤180 car., couverture 1200x700 aux couleurs AM.Digital, corps markdown avec H2/H3, sources avec liens, appel WhatsApp DIAGNOSTIC).
 - Toujours `npm ci && npm run build` sans erreur avant de pousser ; vérifier la page en ligne après déploiement.
 Objectif mensuel : ~400 publications (FB ~120, IG ~120, TikTok ~100 quand le compte @am.digital204 sera relié dans Metricool, site ~60).
+
+## Son des vidéos (décision du 15 oct. 2026)
+- PAS de voix off (demande explicite). Musique seule.
+- Musique : vidiq_compose (vidéo GitHub raw → vidiq_video_upload → compose avec piste afro-house ou trap-afrobeat, volume 1). Coût 1 crédit / 4 s ; crédits gratuits renouvelés le 31 de chaque mois.
+- Gratuit : TikTok autoAddMusic=true fonctionne UNIQUEMENT pour les carrousels photo (pas les vidéos). Utiliser des carrousels photo TikTok quand les crédits manquent.
+- Moteur motion design : gen/motion2.py (exemples dans gen/mo_batch1.py).

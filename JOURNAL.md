@@ -10,3 +10,9 @@
 Notes :
 - 14 oct. 20h01 : veille « Quand l'IA décide qui on voit » publiée immédiatement (FB+IG).
 - 15 oct. 07:00 FB : « Le chiffre du jour : 3 secondes » (avancé depuis le 21 oct., car le visuel « entreprise visible » était déjà sur FB). Le 21 oct. 07:00 : publier « 3 secondes » sur IG uniquement et prévoir un autre visuel du calendrier pour FB.
+
+## 15 oct. 2026 (après-midi)
+- Veille du 15 oct. publiée 15h28 Abidjan (FB 122242717010562810, IG DehR_DliBy6) + site /veille/veille-2026-10-15/.
+- 6 vidéos motion design (motion2) avec musique, programmées : 20/10 07h ligne éditoriale, 20/10 18h quel réseau, 21/10 07h 3 secondes (IG+TikTok) + FB visuel « vitrine », 21/10 18h plateforme de marque, 22/10 07h interne/externe, 22/10 12h 3 idées boutique, 23/10 07h persona.
+- 20/10 12h story sondage ; 21/10 12h carrousel 3 communications FB+IG + TikTok photo (musique auto).
+- Reste à faire : 22/10 18h (décryptage campagne), 23/10 12h et 18h, puis la suite à partir du 24/10. Crédits vidIQ restants : ~12 (renouvellement 31 oct.).
