@@ -28,3 +28,9 @@ Objectif mensuel : ~400 publications (FB ~120, IG ~120, TikTok ~100 quand le com
 - Son : musique seule (pas de voix off). Par défaut musique afro-house synthétisée gen/music.py (gratuite, impacts calés sur les chiffres), normalisée à -14 LUFS ; ou pistes vidIQ si crédits.
 - Avant publication : extraire 6-9 images de contrôle et vérifier lisibilité, chevauchements et transitions.
 - Adobe (connecteur) : pas d'effets Premiere/After Effects disponibles ; option : importer la vidéo finie dans Firefly Video Editor (import-claude-motion-from-url) si le client veut retoucher.
+
+## Dépôts GitHub connectés (20 oct. 2026, depuis les DM Instagram)
+Clonés dans scratchpad/repos (git clone --depth 1 https://github.com/<dépôt>.git) :
+- Instagram : Jakeschincariol/instagram-agent-skill (MIT) — 13 skills /ig-reel, /ig-viral, /ig-caption, /ig-carousel, /ig-story, /ig-profile, /ig-plan, /ig-human, /ig-comment, /ig-reply, /ig-dm, /ig-repurpose, /ig-audit + outils Python sans dépendance (hookscore.py, beats.py, caption.py, detect.py, humanize.py). Avant chaque légende : `python3 skills/ig-caption/caption.py fichier.txt` et `python3 skills/ig-human/detect.py fichier.txt`. Accroches de reels : `python3 skills/ig-reel/hookscore.py --hook "..."`.
+- Motion / vidéo (envoyés par Simon De Lima) : heygen-com/hyperframes, AbubakrChan/product-launch-motion, charlie947/motion-graphics-skills, Barty-Bart/motion-graphics, cth9191/animate, whaleyxbt/claude-motion, motiondivision/motion, LottieFiles/motion-design-skill.
+- Liens non lisibles sur le web (boutons ManyChat visibles seulement dans l'app mobile) : Henri ExplorIA (skills, lien GitHub « Claude », documents, guide montage), Louise Mourey (10 skills contenu, prompt), Titouan, Arms, Wissam, Dryxio (prompts, Buzzy), Wendy (Runway, code promo — pas GitHub).
