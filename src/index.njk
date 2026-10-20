@@ -16,9 +16,9 @@ page_scripts: ["/assets/js/halo.js"]
     </div>
     <div class="hero-col hero-c">
       <div class="pp{% if site.photo_detouree | localUrl %} pp--cut{% endif %}">
-        <div class="pp-circle"><canvas class="pp-bg" id="halo" aria-hidden="true"></canvas></div>
+        <div class="pp-circle"><canvas class="pp-bg" id="halo" aria-hidden="true"></canvas>
+        {%- if photo %}<img class="pp-img" src="{{ photo }}" alt="Portrait de {{ site.nom }}" width="642" height="702" fetchpriority="high">{% endif %}</div>
         <span class="pp-stroke" aria-hidden="true"></span>
-        {%- if photo %}<img class="pp-img" src="{{ photo }}" alt="Portrait de {{ site.nom }}" width="642" height="702" fetchpriority="high">{% endif %}
       </div>
     </div>
     <div class="hero-col hero-r">
