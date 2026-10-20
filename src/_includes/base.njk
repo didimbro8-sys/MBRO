@@ -13,7 +13,7 @@
 <meta name="author" content="{{ site.nom }}">
 <meta name="robots" content="{{ robots or 'index, follow, max-image-preview:large' }}">
 <link rel="canonical" href="{{ pageUrl }}">
-<meta name="theme-color" content="#66004A">
+<meta name="theme-color" content="#110510">
 <meta property="og:type" content="{{ og_type or 'website' }}">
 <meta property="og:locale" content="fr_CI">
 <meta property="og:site_name" content="{{ site.agence }}">
@@ -27,8 +27,8 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="Journal {{ site.agence }}" href="/journal/flux.xml">
-<link rel="preload" href="/assets/fonts/jost-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/sofia-sans-extra-condensed-latin-200-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/hanken-grotesk-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | v }}">
 <script type="application/ld+json">
 {
@@ -63,23 +63,27 @@
 }
 </script>
 </head>
-<body class="{{ 'is-home' if page.url == '/' else 'is-page' }}">
+{%- set rub = 'accueil' if page.url == '/' else ('realisations' if page.url and page.url.startsWith('/realisations/') else ('veille' if page.url and page.url.startsWith('/veille/') else ('journal' if page.url and page.url.startsWith('/journal/') else 'autre'))) %}
+<body class="{{ 'is-home' if page.url == '/' else 'is-page' }}{% if page_class %} {{ page_class }}{% endif %}">
 <a class="skip" href="#contenu">Aller au contenu</a>
+{#- Rideau de transition : se lève à chaque arrivée sur une page (CSS seul), retombe au clic sur un lien interne (JS) -#}
+<div class="curtain" aria-hidden="true">
+  <div class="curtain-panel"><span class="curtain-count"></span><span class="curtain-bar"><i></i></span><span class="curtain-brand">AM<b>.</b>Digital</span></div>
+</div>
+<div class="pointer" aria-hidden="true"><span class="pointer-dot"></span><span class="pointer-ring"><span class="pointer-text">Voir</span></span></div>
 <header class="site-header" id="site-header">
-  <span class="progress" aria-hidden="true"></span>
-  <div class="wrap">
-    <a class="brand" href="/" aria-label="{{ site.agence }}, accueil">
-      <img src="/assets/img/logo-am.png" alt="" width="36" height="36">
-      <span>AM<b>.</b>Digital</span>
+  <div class="wrap header-in">
+    <a class="brand roll" href="/" aria-label="{{ site.agence }}, accueil">
+      <img src="/assets/img/logo-am.png" alt="" width="34" height="34">
+      <span class="roll-box" aria-hidden="true"><span class="roll-in">AM.Digital</span><span class="roll-in">AM.Digital</span></span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><span class="nav-toggle-l">Menu</span><i aria-hidden="true"></i></button>
     <nav id="nav" class="nav" data-open="false" aria-label="Navigation principale">
-      <a href="/realisations/"{% if page.url and page.url.startsWith('/realisations/') %} aria-current="page"{% endif %}>Réalisations</a>
-      <a href="/#creations">Créations</a>
-      <a href="/veille/"{% if page.url and page.url.startsWith('/veille/') %} aria-current="page"{% endif %}>Veille</a>
-      <a href="/#profil">Profil</a>
-      <a href="/journal/"{% if page.url and page.url.startsWith('/journal/') %} aria-current="page"{% endif %}>Journal</a>
-      <a class="nav-cta" href="/#contact">Me recruter</a>
+      <ul>
+        {%- for l in [["accueil","/","Accueil"],["realisations","/realisations/","Réalisations"],["veille","/veille/","Veille"],["journal","/journal/","Journal"],["contact","/#contact","Contact"]] %}
+        <li><a class="roll{% if rub == l[0] %} is-active{% endif %}" href="{{ l[1] }}"{% if rub == l[0] %} aria-current="page"{% endif %}><span class="roll-box"><span class="roll-in">{{ l[2] }}</span><span class="roll-in" aria-hidden="true">{{ l[2] }}</span></span></a></li>
+        {%- endfor %}
+      </ul>
     </nav>
   </div>
 </header>
@@ -87,10 +91,10 @@
 {{ content | safe }}
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <p><span class="slogan">{{ site.slogan }}</span><br>© <span id="year">2026</span> {{ site.nom | todo | safe }} · {{ site.agence }}, {{ site.ville }}</p>
-    {% set variante = "pied" %}{% include "reseaux.njk" %}
-    <p class="socials"><a href="/realisations/">Réalisations</a><a href="/veille/">Veille</a><a href="/journal/">Journal</a><a href="/mentions-legales/">Mentions légales</a></p>
+  <div class="wrap foot-in">
+    <p>© <span id="year">2026</span> {{ site.nom }}</p>
+    <p class="foot-status"><span class="live" aria-hidden="true"></span>{{ site.statut or (site.disponibilites | first) }}</p>
+    <p class="foot-links"><a href="/mentions-legales/">Mentions légales</a><span>Conçu par {{ site.agence }}</span></p>
   </div>
 </footer>
 <dialog class="visionneuse" id="visionneuse" aria-label="Image agrandie">

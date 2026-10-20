@@ -1,72 +1,85 @@
 ---
 layout: base.njk
 og_type: profile
-page_scripts: ["/assets/js/cosmos.js"]
+page_scripts: ["/assets/js/halo.js"]
 ---
-{#- Accueil — « Le Signal » : un cosmos interactif en ouverture, puis les preuves dans l'ordre où un recruteur les cherche :
-    chiffres, études de cas, publications, veille, profil, expertises, méthode, contact. -#}
+{#- Accueil : un portrait, deux titres, puis les preuves dans l'ordre où un recruteur les cherche.
+    Mise en scène inspirée des portfolios primés : grand titre condensé, défilements, rideau de transition. -#}
+{%- set photo = (site.photo_detouree | localUrl) or (site.photo | localUrl) %}
+{%- set titreHero = site.titre_hero or site.titre_pro %}
 <section class="hero" id="top" aria-labelledby="titre">
-  <canvas id="cosmos" class="cosmos" aria-hidden="true"></canvas>
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="hero-who">
-        {%- if site.photo | localUrl %}<img src="{{ site.photo | localUrl }}" alt="" width="44" height="44">{% endif -%}
-        <span><strong>{{ site.nom | todo | safe }}</strong>{{ site.titre_pro }}, {{ site.ville }}</span>
-      </p>
-      <h1 id="titre"><span class="h1-a">{{ site.accroche }}</span> <span class="h1-b">{{ site.accroche_or }}</span></h1>
-      <p class="intro">{{ site.presentation }}</p>
-      <div class="actions">
-        <a class="btn btn-gold magnet" href="#realisations">Voir mes réalisations</a>
-        <a class="btn btn-ghost magnet" href="#contact">Me contacter</a>
-        {% if profil.cv | localUrl %}<a class="btn btn-ghost magnet" href="{{ profil.cv | localUrl }}">Télécharger mon CV</a>{% endif %}
+  <div class="wrap hero-in">
+    <div class="hero-col hero-l">
+      <h1 id="titre" class="hero-name">{{ site.nom | lettres | safe }}</h1>
+      <p class="hero-info lift" data-d="5">Basé à {{ site.ville }}, {{ site.pays }}</p>
+      <p class="hero-info lift" data-d="6"><span class="live" aria-hidden="true"></span>{{ site.statut or (site.disponibilites | first) }}</p>
+    </div>
+    <div class="hero-col hero-c">
+      <div class="pp{% if site.photo_detouree | localUrl %} pp--cut{% endif %}">
+        <div class="pp-circle"><canvas class="pp-bg" id="halo" aria-hidden="true"></canvas></div>
+        <span class="pp-stroke" aria-hidden="true"></span>
+        {%- if photo %}<img class="pp-img" src="{{ photo }}" alt="Portrait de {{ site.nom }}" width="642" height="702" fetchpriority="high">{% endif %}
       </div>
     </div>
+    <div class="hero-col hero-r">
+      {%- set parts = titreHero.split(" & ") %}
+      <p class="hero-title">{% for p in parts %}{% if not loop.first %}<br>{% endif %}{{ (("& " if not loop.first else "") + p) | lettres | safe }}{% endfor %}</p>
+    </div>
   </div>
-  <div class="wrap hero-foot">
-    <div class="dispo"><p><span class="pulse" aria-hidden="true"></span>Disponible pour</p><ul>{% for d in site.disponibilites %}<li>{{ d }}</li>{% endfor %}</ul></div>
-    <a class="scroll-cue" href="#preuves"><span>Explorer</span><i aria-hidden="true"></i></a>
+  <a class="scroll-line" href="#apropos"><span class="sr">Découvrir la suite</span></a>
+</section>
+
+<section class="about" id="apropos" aria-label="Présentation">
+  <div class="wrap">
+    <p class="manifeste words"><span class="indent" aria-hidden="true"></span>{{ (site.manifeste or site.presentation) | gras | safe }}</p>
+    <div class="center-cta">
+      <a class="link-dot magnet" href="#profil"><span class="dot" aria-hidden="true"></span><span class="roll-box"><span class="roll-in">En savoir plus</span><span class="roll-in" aria-hidden="true">En savoir plus</span></span></a>
+      {% if profil.cv | localUrl %}<a class="link-dot magnet" href="{{ profil.cv | localUrl }}"><span class="dot" aria-hidden="true"></span><span class="roll-box"><span class="roll-in">Télécharger mon CV</span><span class="roll-in" aria-hidden="true">Télécharger mon CV</span></span></a>{% endif %}
+    </div>
   </div>
 </section>
 
 {%- set vedette = (collections.aLaUne | first) if collections.aLaUne.length else (collections.realisations | first) %}
 {% if vedette and vedette.data.resultats and vedette.data.resultats.length %}
-<section class="preuves" id="preuves" aria-labelledby="preuves-t">
+<section class="block preuves" id="preuves" aria-labelledby="preuves-t">
   <div class="wrap">
-    <h2 class="preuves-t" id="preuves-t">Mesuré sur le terrain : <a href="{{ vedette.url }}">{{ vedette.data.title }}</a></h2>
-    <ul>{% for r in vedette.data.resultats %}<li><strong class="count">{{ r.valeur | todo | safe }}</strong><span>{{ r.indicateur | todo | safe }}</span></li>{% endfor %}</ul>
+    <div class="divider"><i></i><h2 id="preuves-t">Mesuré sur le terrain</h2><i></i></div>
+    <p class="block-lede">Les chiffres de « <a href="{{ vedette.url }}">{{ vedette.data.title }}</a> »</p>
+    <ul class="counts">{% for r in vedette.data.resultats %}<li class="lift-on"><strong class="count">{{ r.valeur | todo | safe }}</strong><span>{{ r.indicateur | todo | safe }}</span></li>{% endfor %}</ul>
   </div>
 </section>
 {% endif %}
 
-<section class="section" id="realisations" aria-labelledby="real-t">
+{%- set liste = collections.realisations | aLaUneDabord %}
+<section class="block work" id="realisations" aria-labelledby="real-t">
   <div class="wrap">
-    <div class="section-head">
-      <p class="label">Réalisations</p>
-      <h2 id="real-t">Des dossiers de communication, de l'audit aux résultats</h2>
-      <p class="lede">Chaque projet suit la grille d'un dossier : contexte, objectif, dispositif, résultats.</p>
-    </div>
-    <div class="cases">
-      {%- set liste = collections.aLaUne if collections.aLaUne.length else collections.realisations.slice(0, 3) %}
-      {%- for item in liste %}{% include "carte-realisation.njk" %}{% endfor %}
-    </div>
-    {% if collections.realisations.length > liste.length %}<p class="more-link"><a class="btn btn-outline" href="/realisations/">Toutes les réalisations ({{ collections.realisations.length }})</a></p>{% endif %}
+    <div class="divider"><i></i><h2 id="real-t">Découvrez mes réalisations</h2><i></i></div>
+    <p class="block-lede">Chaque projet suit la grille d'un dossier de communication : contexte, objectif, dispositif, résultats.</p>
   </div>
+  <ul class="mq-list">
+    {%- for item in liste %}
+    <li class="mq-item">
+      <a class="mq-row" href="{{ item.url }}" data-cover="{{ item.data.couverture | localUrl }}" data-cursor="Ouvrir">
+        <span class="sr">{{ item.data.title }}, {{ item.data.nature }}, {{ item.date | moisAnnee }}</span>
+        <span class="mq-track{% if loop.index % 2 == 0 %} mq-rev{% endif %}" aria-hidden="true">
+          {%- for k in range(0, 2) %}<span class="mq-seq">{% for n in range(0, 3) %}<span class="mq-t">{{ item.data.title }}</span><span class="mq-dot"></span>{% endfor %}</span>{% endfor -%}
+        </span>
+      </a>
+      <p class="mq-meta" aria-hidden="true"><i></i><span>{{ item.data.nature }} · {{ item.date | moisAnnee }}</span><i></i></p>
+    </li>
+    {%- endfor %}
+  </ul>
+  <div class="mq-preview" aria-hidden="true"><img alt="" src="data:," width="420" height="300"></div>
 </section>
 
 {%- set vitrines = collections.realisations | vitrines %}
 {% if vitrines.length %}
-<section class="section creations" id="creations" aria-labelledby="crea-t">
+<section class="block creations" id="creations" aria-labelledby="crea-t">
   <div class="wrap">
-    <div class="section-head rail-head">
-      <div>
-        <p class="label">Créations</p>
-        <h2 id="crea-t">Mes dernières publications</h2>
-        <p class="lede">Conçues et publiées sur les pages Facebook et Instagram d'{{ site.agence }}. Faites glisser, touchez une image pour l'agrandir.</p>
-      </div>
-      <div class="rail-ctrl" aria-hidden="true"><button type="button" class="rail-btn" data-dir="-1" tabindex="-1">‹</button><button type="button" class="rail-btn" data-dir="1" tabindex="-1">›</button></div>
-    </div>
+    <div class="divider"><i></i><h2 id="crea-t">Mes dernières créations</h2><i></i></div>
+    <p class="block-lede">Conçues et publiées sur les pages Facebook et Instagram d'{{ site.agence }}. Faites glisser, touchez une image pour l'agrandir.</p>
   </div>
-  <div class="rail" tabindex="0" aria-label="Publications, défilement horizontal">
+  <div class="rail" tabindex="0" aria-label="Publications, défilement horizontal" data-cursor="Glisser">
     <ul class="rail-track">
       {%- for v in vitrines %}{% for g in v.data.galerie %}{% set img = g.image | localUrl %}{% set lien = g.lien | safeUrl %}{% if img %}
       <li class="rail-item">
@@ -78,63 +91,60 @@ page_scripts: ["/assets/js/cosmos.js"]
       {%- endif %}{% endfor %}{% endfor %}
     </ul>
   </div>
-  <div class="wrap"><p class="more-link">{% for v in vitrines %}<a class="btn btn-outline" href="{{ v.url }}">Voir le projet complet</a>{% endfor %}</p></div>
+  <div class="wrap rail-foot">
+    <div class="rail-ctrl"><button type="button" class="rail-btn magnet" data-dir="-1" aria-label="Publications précédentes">←</button><button type="button" class="rail-btn magnet" data-dir="1" aria-label="Publications suivantes">→</button></div>
+    {% for v in vitrines %}<a class="link-dot" href="{{ v.url }}"><span class="dot" aria-hidden="true"></span><span class="roll-box"><span class="roll-in">Voir le projet complet</span><span class="roll-in" aria-hidden="true">Voir le projet complet</span></span></a>{% endfor %}
+  </div>
 </section>
 {% endif %}
 
 {%- set derniere = collections.veille | first %}
 {% if derniere %}
-<section class="section veille-home" id="veille" aria-labelledby="veille-t">
+<section class="block veille-home" id="veille" aria-labelledby="veille-t">
   <div class="wrap">
-    <div class="section-head">
-      <p class="label">Veille stratégique du <time datetime="{{ derniere.date | iso }}">{{ derniere.date | dateFr }}</time></p>
-      <h2 id="veille-t">{{ derniere.data.title }}</h2>
-      <p class="lede">Chaque jour, les signaux de la communication et du marketing digital, vérifiés et traduits en décisions concrètes pour les entreprises.</p>
-    </div>
+    <div class="divider"><i></i><h2 id="veille-t">La veille du jour</h2><i></i></div>
+    <p class="block-lede">Veille stratégique du <time datetime="{{ derniere.date | iso }}">{{ derniere.date | dateFr }}</time> : les signaux de la communication et du marketing digital, traduits en décisions.</p>
     <div class="home-veille">
       <div>
+        <h3 class="big-t"><a href="{{ derniere.url }}">{{ derniere.data.title }}</a></h3>
         {%- if derniere.data.signaux and derniere.data.signaux.length %}
         <ol class="signaux">
           {%- for s in derniere.data.signaux %}
-          <li><span class="signal-num" aria-hidden="true">{{ loop.index }}</span><div>{% if s.rubrique %}<p class="label">{{ s.rubrique }}</p>{% endif %}<h3>{{ s.titre }}</h3>{% if s.decision %}<p class="decision"><strong>Décision.</strong> {{ s.decision }}</p>{% endif %}</div></li>
+          <li class="lift-on"><span class="signal-num" aria-hidden="true">{{ loop.index | pad }}</span><div>{% if s.rubrique %}<p class="label">{{ s.rubrique }}</p>{% endif %}<h4>{{ s.titre }}</h4>{% if s.decision %}<p class="decision"><strong>Décision.</strong> {{ s.decision }}</p>{% endif %}</div></li>
           {%- endfor %}
         </ol>
         {%- endif %}
-        <p class="more-link"><a class="btn btn-outline" href="{{ derniere.url }}">Lire la veille complète</a>{% if collections.veille.length > 1 %} <a class="btn btn-outline" href="/veille/">Toutes les veilles ({{ collections.veille.length }})</a>{% endif %}</p>
+        <p class="links-row"><a class="link-dot" href="{{ derniere.url }}"><span class="dot" aria-hidden="true"></span><span class="roll-box"><span class="roll-in">Lire la veille complète</span><span class="roll-in" aria-hidden="true">Lire la veille complète</span></span></a>{% if collections.veille.length > 1 %}<a class="link-dot" href="/veille/"><span class="dot" aria-hidden="true"></span><span class="roll-box"><span class="roll-in">Toutes les veilles ({{ collections.veille.length }})</span><span class="roll-in" aria-hidden="true">Toutes les veilles ({{ collections.veille.length }})</span></span></a>{% endif %}</p>
       </div>
-      {%- if derniere.data.couverture | localUrl %}<figure class="tilt"><a href="{{ derniere.url }}"><img src="{{ derniere.data.couverture | localUrl }}" alt="{{ derniere.data.couverture_alt }}" loading="lazy" decoding="async" width="1080" height="1350"></a></figure>{% endif %}
+      {%- if derniere.data.couverture | localUrl %}<figure class="veille-fig tilt"><a href="{{ derniere.url }}" data-cursor="Lire"><img src="{{ derniere.data.couverture | localUrl }}" alt="{{ derniere.data.couverture_alt }}" loading="lazy" decoding="async" width="1080" height="1350"></a></figure>{% endif %}
     </div>
   </div>
 </section>
 {% endif %}
 
-<section class="section" id="profil" aria-labelledby="profil-t">
-  <div class="wrap profile-grid">
-    <div class="profile-text">
-      <p class="label">Profil</p>
-      <h2 id="profil-t">{{ profil.titre }}</h2>
-      <p class="pull">{{ profil.citation }}</p>
-      {% for p in profil.paragraphes %}<p>{{ p }}</p>{% endfor %}
-    </div>
-    <div>
-      <h3 class="side-t">Parcours</h3>
+<section class="block profil" id="profil" aria-labelledby="profil-t">
+  <div class="wrap">
+    <div class="divider"><i></i><h2 id="profil-t">Mon profil</h2><i></i></div>
+    <p class="quote words">{{ profil.citation }}</p>
+    <div class="profile-grid">
+      <div class="profile-text">
+        <h3 class="big-t">{{ profil.titre }}</h3>
+        {% for p in profil.paragraphes %}<p>{{ p }}</p>{% endfor %}
+      </div>
       <ol class="timeline">
-        {% for e in profil.parcours %}<li><span class="when">{{ e.periode | todo | safe }}</span><strong>{{ e.titre | todo | safe }}</strong><p>{{ e.detail | todo | safe }}</p></li>{% endfor %}
+        {% for e in profil.parcours %}<li class="lift-on"><span class="when">{{ e.periode | todo | safe }}</span><strong>{{ e.titre | todo | safe }}</strong><p>{{ e.detail | todo | safe }}</p></li>{% endfor %}
       </ol>
     </div>
   </div>
 </section>
 
-<section class="section expertises" id="expertises" aria-labelledby="exp-t">
+<section class="block expertises" id="expertises" aria-labelledby="exp-t">
   <div class="wrap">
-    <div class="section-head">
-      <p class="label">Expertises</p>
-      <h2 id="exp-t">Deux métiers, une même exigence de résultat</h2>
-    </div>
+    <div class="divider"><i></i><h2 id="exp-t">Deux métiers, une même exigence</h2><i></i></div>
     <div class="expertise">
       <article>
-        <p class="tag">Ma formation</p>
-        <h3>Communication des organisations</h3>
+        <p class="label">Ma formation</p>
+        <h3 class="big-t">Communication des organisations</h3>
         <p>Donner une voix cohérente à une structure, auprès de ses équipes comme de ses publics externes.</p>
         <ul class="skills">
           <li><span>Plan de communication</span><span>du diagnostic à l'évaluation</span></li>
@@ -146,8 +156,8 @@ page_scripts: ["/assets/js/cosmos.js"]
         </ul>
       </article>
       <article>
-        <p class="tag">Ma pratique chez {{ site.agence }}</p>
-        <h3>Communication digitale</h3>
+        <p class="label">Ma pratique chez {{ site.agence }}</p>
+        <h3 class="big-t">Communication digitale</h3>
         <p>Transformer une stratégie en présence en ligne visible, régulière et mesurée.</p>
         <ul class="skills">
           <li><span>Stratégie digitale</span><span>objectifs, cibles, KPI</span></li>
@@ -160,34 +170,30 @@ page_scripts: ["/assets/js/cosmos.js"]
         </ul>
       </article>
     </div>
-    <h3 class="side-t tools-t">Outils du quotidien</h3>
-    <ul class="tools">{% for o in profil.outils %}<li>{{ o }}</li>{% endfor %}</ul>
+    <div class="tools-marquee" aria-label="Outils du quotidien">
+      <p class="label">Outils du quotidien</p>
+      <ul class="tools">{% for o in profil.outils %}<li>{{ o }}</li>{% endfor %}</ul>
+    </div>
   </div>
 </section>
 
-<section class="section methode" id="methode" aria-labelledby="meth-t">
+<section class="block methode" id="methode" aria-labelledby="meth-t">
   <div class="wrap">
-    <div class="section-head">
-      <p class="label">Méthode</p>
-      <h2 id="meth-t">Comprendre avant de produire</h2>
-      <p class="lede">Sept étapes, toujours dans cet ordre, de l'audit à l'optimisation.</p>
-    </div>
+    <div class="divider"><i></i><h2 id="meth-t">Comprendre avant de produire</h2><i></i></div>
+    <p class="block-lede">Sept étapes, toujours dans cet ordre, de l'audit à l'optimisation.</p>
     <ol class="steps">
-      {% for e in profil.methode %}<li><span class="step-n" aria-hidden="true">{{ loop.index }}</span><h3>{{ e.etape }}</h3><p>{{ e.detail }}</p></li>{% endfor %}
+      {% for e in profil.methode %}<li><span class="step-n" aria-hidden="true">{{ loop.index | pad }}</span><h3>{{ e.etape }}</h3><p>{{ e.detail }}</p></li>{% endfor %}
     </ol>
   </div>
 </section>
 
 {% if collections.journal.length %}
-<section class="section" id="journal" aria-labelledby="jr-t">
+<section class="block journal-home" id="journal" aria-labelledby="jr-t">
   <div class="wrap">
-    <div class="section-head">
-      <p class="label">Journal</p>
-      <h2 id="jr-t">Notes de terrain</h2>
-    </div>
+    <div class="divider"><i></i><h2 id="jr-t">Notes de terrain</h2><i></i></div>
     <ul class="posts">
       {% for a in collections.journal.slice(0, 3) %}
-      <li><time datetime="{{ a.date | iso }}">{{ a.date | dateFr }}</time><a href="{{ a.url }}">{{ a.data.title }}</a><p>{{ a.data.resume }}</p></li>
+      <li><a href="{{ a.url }}" data-cursor="Lire"><time datetime="{{ a.date | iso }}">{{ a.date | dateFr }}</time><strong>{{ a.data.title }}</strong><span>{{ a.data.resume }}</span><i class="arrow" aria-hidden="true">→</i></a></li>
       {% endfor %}
     </ul>
   </div>

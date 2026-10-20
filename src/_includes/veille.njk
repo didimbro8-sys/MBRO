@@ -17,7 +17,7 @@ og_type: article
       <ol class="signaux">
         {%- for s in signaux %}
         <li>
-          <span class="signal-num" aria-hidden="true">{{ loop.index }}</span>
+          <span class="signal-num" aria-hidden="true">{{ loop.index | pad }}</span>
           <div>
             {% if s.rubrique %}<p class="label">{{ s.rubrique }}</p>{% endif %}
             <h2>{{ s.titre }}</h2>

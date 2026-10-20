@@ -53,6 +53,20 @@ export default function (eleventyConfig) {
     try { return `${u}?v=${createHash("sha256").update(readFileSync(`src${u}`)).digest("hex").slice(0, 10)}`; }
     catch { return u; }
   });
+  // **mot** devient un mot en gras, après échappement : le webmaster ne peut pas injecter de HTML
+  eleventyConfig.addFilter("gras", (s) => escape(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>"));
+  // Découpe un titre en lettres pour l'animation d'entrée (texte lisible conservé en aria-label)
+  eleventyConfig.addFilter("lettres", (s) => {
+    let n = 0;
+    const mots = String(s ?? "").trim().split(/\s+/).map((m) => '<span class="w">' +
+      Array.from(m).map((c) => `<span class="ch" data-i="${n++}">${escape(c)}</span>`).join("") + "</span>");
+    return `<span class="sr">${escape(s)}</span><span class="split" aria-hidden="true">${mots.join(" ")}</span>`;
+  });
+  // Réalisations à la une d'abord (dans l'ordre choisi), puis les autres des plus récentes aux plus anciennes
+  eleventyConfig.addFilter("aLaUneDabord", (coll) => {
+    const une = (coll || []).filter((p) => p.data.a_la_une).sort((a, b) => (a.data.priorite ?? 99) - (b.data.priorite ?? 99));
+    return une.concat((coll || []).filter((p) => !p.data.a_la_une));
+  });
   eleventyConfig.addFilter("pad", (n) => String(n).padStart(2, "0"));
 
   const visibles = (items) => items.filter((p) => p.data.publie !== false);

@@ -122,3 +122,13 @@ Même principe, menu **Journal (articles)**. Visez un article par mois : c'est c
 | `src/_includes/` | Gabarits des pages (ne pas modifier sans raison) |
 | `src/_headers` | Boucliers de sécurité du navigateur |
 | `eleventy.config.js`, `package.json` | Moteur de fabrication du site |
+
+## L'accueil « plein écran » (octobre 2026)
+L'accueil s'ouvre sur votre portrait dans un cercle animé, entre votre nom et votre titre. Tout se règle dans **Réglages du site** :
+- **Ma photo détourée** : une photo sans fond (PNG ou WebP transparent). Sans elle, la photo carrée s'affiche dans le cercle.
+- **Titre à droite de ma photo** : le signe « & » fait passer la suite à la ligne (ex. « Community Manager & Stratège digital »).
+- **Ma disponibilité** : la phrase à côté de la pastille verte, reprise dans le pied de page.
+- **Grand paragraphe de présentation** : entourez un mot de deux étoiles pour le mettre en gras, par exemple `**stratégie**`.
+
+Les réalisations défilent en grands bandeaux : leur ordre suit « Ordre sur la page d'accueil », puis les plus récentes. L'image de couverture apparaît au survol.
+Couleurs (relevées sur le logo) : prune #46043A, or #D39C16. Polices auto-hébergées : Sofia Sans Extra Condensed (titres) et Hanken Grotesk (texte), licence libre OFL.

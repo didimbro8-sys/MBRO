@@ -17,7 +17,7 @@ publie: false
   <ul class="veilles">
     {%- for v in collections.veille %}
     <li>
-      <a class="veille-card" href="{{ v.url }}">
+      <a class="veille-card" href="{{ v.url }}" data-cursor="Lire">
         {%- if v.data.couverture | localUrl %}<img src="{{ v.data.couverture | localUrl }}" alt="" loading="lazy" decoding="async" width="1080" height="1350">{% endif %}
         <div>
           <p class="label"><time datetime="{{ v.date | iso }}">{{ v.date | dateFr }}</time></p>

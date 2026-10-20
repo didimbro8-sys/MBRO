@@ -1,9 +1,12 @@
 {
   "nom": "M'BRO Israël Ebénézer",
   "titre_pro": "Community Manager · Stratège en communication digitale",
+  "titre_hero": "Community Manager & Stratège digital",
   "accroche": "Je construis la parole des organisations,",
   "accroche_or": "du plan de communication au dernier post.",
   "presentation": "Titulaire d'un master en communication, j'allie la rigueur de la communication des organisations et la réactivité du digital. AM.Digital, l'agence que j'ai fondée, est mon terrain d'application.",
+  "manifeste": "Je suis communicant, titulaire d'un master en communication des organisations et spécialisé en marketing digital. À la croisée de la **stratégie**, de la **création de contenu** et de l'**image de marque**, je fais émerger des identités, je crée de l'engagement et je rapproche les organisations de leurs publics.",
+  "statut": "Disponible pour un poste en communication",
   "url": "https://am-digital.pages.dev",
   "agence": "AM.Digital",
   "slogan": "Boostez votre présence. Démarquez-vous. Gagnez plus.",
@@ -25,5 +28,6 @@
   ],
   "cle_formulaire": "VOTRE_CLE_WEB3FORMS",
   "signature": "Des idées qui créent du lien.",
-  "photo": "/assets/uploads/portrait.jpg"
+  "photo": "/assets/uploads/portrait.jpg",
+  "photo_detouree": "/assets/uploads/portrait-detoure.webp"
 }

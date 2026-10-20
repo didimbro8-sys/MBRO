@@ -320,6 +320,18 @@ content:
       - name: photo
         label: Ma photo (carrée, visage centré)
         type: image
+      - name: photo_detouree
+        label: Ma photo détourée, fond transparent (PNG ou WebP), affichée dans le cercle de l'accueil
+        type: image
+      - name: titre_hero
+        label: Titre à droite de ma photo (« & » passe à la ligne)
+        type: string
+      - name: statut
+        label: Ma disponibilité (pastille verte)
+        type: string
+      - name: manifeste
+        label: Grand paragraphe de présentation (entourez un mot de **deux étoiles** pour le mettre en gras)
+        type: text
       - name: signature
         label: Ma signature (phrase courte sous mon nom)
         type: string

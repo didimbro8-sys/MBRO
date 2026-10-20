@@ -15,6 +15,6 @@ publie: false
 </header>
 <section class="section first"><div class="wrap">
   <ul class="posts">
-    {% for a in collections.journal %}<li><time datetime="{{ a.date | iso }}">{{ a.date | dateFr }}</time><a href="{{ a.url }}">{{ a.data.title }}</a><p>{{ a.data.resume }}</p></li>{% endfor %}
+    {% for a in collections.journal %}<li><a href="{{ a.url }}" data-cursor="Lire"><time datetime="{{ a.date | iso }}">{{ a.date | dateFr }}</time><strong>{{ a.data.title }}</strong><span>{{ a.data.resume }}</span><i class="arrow" aria-hidden="true">→</i></a></li>{% endfor %}
   </ul>
 </div></section>
