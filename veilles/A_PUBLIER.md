@@ -1,5 +1,30 @@
 # Veilles en attente de publication Facebook/Instagram
 
+## 2026-10-20 — « L'algorithme se commande, l'attention se réserve »
+- Image : `kit/veilles/img/AM-Digital_veille_2026-10-20.jpg`
+- Page site : https://am-digital.pages.dev/veille/veille-2026-10-20/
+- Raison : clic « Publier » fait le 20/10 vers 21h, mais publication non retrouvée ensuite (Chrome instable). AVANT de publier, vérifier dans published_posts qu'elle n'y est pas déjà (titre « La veille AM.Digital du 20 octobre » + « L'algorithme se commande ») ; si elle y est, la retirer simplement de la liste.
+- Légende :
+
+```
+🔎 La veille AM.Digital du 20 octobre
+
+L'algorithme se commande, l'attention se réserve.
+
+1️⃣ Facebook : chacun peut désormais décrire en langage courant ce qu'il veut voir dans son fil.
+2️⃣ Meta lance Ads Super Burst : 3 à 24 h de visibilité massive, exclusive par secteur.
+3️⃣ Instagram : refaire un Reel qui marche en 1 clic avec « Utiliser comme référence ».
+4️⃣ Outil IA du jour : vos produits portés par des mannequins virtuels.
+
+Notre conseil pour les PME d'Abidjan : tenez 2 ou 3 thèmes clairs, concentrez vos budgets sur vos jours clés et inspirez-vous des formats gagnants avec votre propre message.
+
+📌 Enregistrez et partagez à un entrepreneur.
+
+Sources : TechCrunch, Social Media Today, MarTech (13-15 oct. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+```
+
 ## 2026-10-20-21h — « Moins de friction, plus de confiance »
 - Image : `kit/veilles/img/AM-Digital_veille_2026-10-20-21h.jpg` (aussi sur le site : https://am-digital.pages.dev/assets/uploads/am-digital-veille-20-octobre-21h.jpg)
 - Page site : https://am-digital.pages.dev/veille/veille-20-octobre-2026-21h/
