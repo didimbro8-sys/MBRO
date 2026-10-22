@@ -44,8 +44,19 @@ Si le script répond « DEBORDEMENT », raccourcir les textes et relancer. Ouvri
 ## 6. Site
 Créer `site/src/veille/veille-AAAA-MM-JJ-HHh.md` sur le modèle de `veille-2026-10-20.md` (front matter : title, date, publie, resume, couverture, couverture_alt, lien_facebook/lien_instagram si connus, signaux, puis un paragraphe « fil conducteur » et les sources en liens). Copier l'image dans `site/src/assets/uploads/`. `npx --yes @11ty/eleventy --quiet` doit passer, puis commit + push sur main.
 
+## 6 bis. Recommandations stratégiques pour AM.Digital (consigne du fondateur, 22 oct.)
+La veille n'est pas seulement de l'information : elle sert à adapter en continu la communication d'AM.Digital elle-même, en visant l'excellence.
+- À chaque veille, ajouter dans `kit/RECOS_AMDIGITAL.md` une section datée avec 2 ou 3 recommandations **pour AM.Digital** (pas pour les PME). Pour chacune : priorité, action concrète, tendance d'origine (veille + source), échéance, statut.
+- Une recommandation doit changer quelque chose dans la façon dont AM.Digital communique : formats, canaux, messages, cibles, calendrier, site, présence dans les IA. Toutes doivent rester gratuites (aucune pub payante) et servir l'objectif des 10 000 abonnés au 14 nov. et des nouveaux clients.
+- Ne pas répéter une recommandation déjà listée : mettre à jour son statut si elle est faite ou dépassée.
+- Les recommandations figurent dans l'e-mail de compte rendu, dans une section « Pour AM.Digital ».
+
+## Règle : travailler même si l'ordinateur est éteint (consigne du 22 oct.)
+Chaque passage fait toujours tout le travail : recherche, JSON, visuel, page du site, recommandations, commit et e-mail. Seule l'étape 5 (Facebook + Instagram via Chrome) dépend de l'ordinateur. Si Chrome ne répond pas, la veille va dans A_PUBLIER.md et tout le reste est fait quand même. Ne jamais sauter un passage.
+Décision du fondateur (22 oct.) : ne PAS publier les veilles via Metricool quand Chrome est indisponible ; on attend Chrome.
+
 ## 7. Clôture
-- Commit + push du JSON (et de A_PUBLIER.md) sur la branche am-digital-kit.
-- E-mail de compte rendu à didimbro8@gmail.com (Gmail) : titre de la veille, où elle est publiée, ce qui est en attente.
+- Commit + push du JSON, de A_PUBLIER.md et de RECOS_AMDIGITAL.md sur la branche am-digital-kit.
+- E-mail de compte rendu à didimbro8@gmail.com (Gmail) : titre de la veille, où elle est publiée, ce qui est en attente, et la section « Pour AM.Digital » (nouvelles recommandations).
 
 Règles permanentes : ne jamais saisir de mot de passe ; aucun service payant ; aucune publicité boostée ; publier seulement sur les comptes AM.Digital.
