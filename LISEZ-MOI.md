@@ -17,8 +17,8 @@ Le site est le dépôt didimbro8-sys/mbro, branche main (Eleventy + Cloudflare P
 - Toujours `npm ci && npm run build` sans erreur avant de pousser ; vérifier la page en ligne après déploiement.
 Objectif mensuel : ~400 publications (FB ~120, IG ~120, TikTok ~100 quand le compte @am.digital204 sera relié dans Metricool, site ~60).
 
-## Son des vidéos (décision du 15 oct. 2026)
-- PAS de voix off (demande explicite). Musique seule.
+## Son des vidéos (décision du 15 oct. 2026, REMPLACÉE le 22 oct. 2026)
+- NOUVELLE RÈGLE (22 oct.) : voix off + fond sonore + sous-titres sur toutes les vidéos. Voir PROPOSITIONS_S44.md. L'ancienne règle « pas de voix off, musique seule » ne s'applique plus.
 - Musique : vidiq_compose (vidéo GitHub raw → vidiq_video_upload → compose avec piste afro-house ou trap-afrobeat, volume 1). Coût 1 crédit / 4 s ; crédits gratuits renouvelés le 31 de chaque mois.
 - Gratuit : TikTok autoAddMusic=true fonctionne UNIQUEMENT pour les carrousels photo (pas les vidéos). Utiliser des carrousels photo TikTok quand les crédits manquent.
 - Moteur motion design : gen/motion2.py (exemples dans gen/mo_batch1.py).
