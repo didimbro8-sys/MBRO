@@ -1,7 +1,7 @@
 # Propositions de contenus — semaine du 27 oct. au 2 nov. 2026
 
 - Document de choix (Claude Docs) : https://claude.ai/artifact/FuegkGWXfQE7irFjsdnuag
-- Statut : EN ATTENTE DE VALIDATION par le fondateur (demandée avant le samedi 24 oct., 12h).
+- Statut : EN ATTENTE DE VALIDATION par le fondateur (demandée avant le samedi 24 oct., 12h). Étape 1 : valider les 6 échantillons (3 vidéos, 3 visuels, propositions/echantillons/) avant de produire le reste.
 - Contenu : 12 propositions vidéo (V1-V12, scripts de voix off inclus), 12 propositions graphiques (G1-G12), 3 directions artistiques (échantillons : propositions/planche_directions.png, script propositions/directions_artistiques.py), une grille recommandée de 21 publications, 5 décisions (voix, direction artistique, photos V6, V4 ChatGPT, live du 29 oct.).
 - Règle : ne rien programmer pour cette semaine qui n'ait pas été validé dans ce document. Sans validation, produire la grille recommandée et l'envoyer au fondateur pour accord, sans la programmer.
 
