@@ -27,3 +27,26 @@ Votre marque, vue par l'IA 🤖
 Sources : PR Daily (20 oct.), SocialBee (21 oct.), Agile Brand Guide (21 oct.)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-10-22-13h — « Meta grandit, l'IA s'installe » (EN ATTENTE FB + IG)
+- Image : `veilles/img/AM-Digital_veille_2026-10-22-13h.jpg` (à copier vers /mnt/user-data/uploads/amd/ avant l'upload)
+- Site : https://am-digital.pages.dev/veille/veille-22-octobre-2026-13h/
+- Raison : passage de 13h30 exécuté dans le cloud, Chrome du fondateur non joignable.
+- Légende :
+
+🔎 La veille AM.Digital du 22 octobre (midi)
+
+Meta grandit, l'IA s'installe 📈
+
+1️⃣ Meta : 3,64 milliards de personnes utilisent chaque jour une de ses applis (+40 millions), et Threads dépasse désormais X en utilisateurs mensuels.
+2️⃣ Pub Meta : chaque image ou vidéo d'une publicité peut maintenant viser sa propre tranche d'âge et son genre.
+3️⃣ YouTube : selon une étude NRG (près de 700 créateurs de 14 à 44 ans), 72 % utilisent l'IA sur leurs vidéos ou images.
+4️⃣ Outil IA du jour : Meta prépare Edits Plus, abonnement payant de l'appli Edits (200 Go de stockage, plus d'usage de l'IA). Prix pas encore annoncé.
+
+💡 Le conseil pour les PME d'Abidjan : ouvrez un compte Threads, préparez un visuel par profil de client, utilisez l'IA pour gagner du temps… mais gardez votre visage et votre voix, c'est ce qui crée la confiance 😉
+
+📌 Enregistrez et partagez cette veille.
+
+Sources : Social Media Today (21 oct.)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
