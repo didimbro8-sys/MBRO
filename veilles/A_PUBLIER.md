@@ -50,3 +50,26 @@ Meta grandit, l'IA s'installe 📈
 Sources : Social Media Today (21 oct.)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-10-22-18h — « Où sont vos clients ? » (EN ATTENTE FB + IG)
+- Image : `veilles/img/AM-Digital_veille_2026-10-22-18h.jpg` (à copier vers /mnt/user-data/uploads/amd/ avant l'upload)
+- Site : https://am-digital.pages.dev/veille/veille-22-octobre-2026-18h/
+- Raison : passage de 18h30 exécuté dans le cloud, Chrome du fondateur non joignable.
+- Légende :
+
+🔎 La veille AM.Digital du 22 octobre (soir)
+
+Où sont vos clients ? 🎯
+
+1️⃣ Côte d'Ivoire : 8,4 millions de profils actifs sur les réseaux sociaux (DataReportal, oct. 2025), dont 1,8 million sur LinkedIn et 895 000 sur Instagram.
+2️⃣ Recherche : sur 100 sites étudiés, ChatGPT n'apporte que l'équivalent de 0,62 % des visites venues de Google… mais ses visiteurs achètent plus (13,8 % contre 3,02 %).
+3️⃣ YouTube : une chaîne soupçonnée d'être piratée est mise en pause (plus de mise en ligne ni de direct) le temps d'une vérification, en général sous 24 h.
+4️⃣ Outil IA du jour : Anthropic lance Claude Duet, une appli à agents pour les pros et les PME (briefing du jour, tableaux de bord), en aperçu sur liste d'attente.
+
+💡 Le conseil pour les PME d'Abidjan : allez là où sont vos clients, soignez d'abord votre fiche Google, activez la double authentification sur vos comptes… et listez 3 tâches répétitives à confier à l'IA 😉
+
+📌 Enregistrez et partagez cette veille.
+
+Sources : Digital Mag CI (21 oct.), Search Engine Land (21 oct.), Social Media Today (21 oct.), TechCrunch (22 oct.)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
