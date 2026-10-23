@@ -7,7 +7,7 @@
 
 <!-- 22/10 ~20h50 Paris : 2026-10-22-06h, 2026-10-22-13h et 2026-10-22-18h publiées FB+IG (Meta Business Suite, vérifiées dans Publié) + TikTok @am.digital204 (photos). -->
 
-## 2026-10-23-06h — « Votre vitrine passe à l'image » (Facebook : programmé via Metricool le 23/10 à 08h50 Abidjan sur demande du fondateur, post 403926624 ; Instagram + TikTok : en attente)
+## 2026-10-23-06h — « Votre vitrine passe à l'image » (en attente FB+IG : à publier via Meta Business Suite dès que Chrome est relié ; brouillon Metricool annulé le 23/10 à la demande du fondateur, ne pas l'utiliser)
 - Image : `kit/veilles/img/AM-Digital_veille_2026-10-23-06h.jpg` (à copier dans `/mnt/user-data/uploads/amd/` pour l'envoi)
 - Site : https://am-digital.pages.dev/veille/veille-23-octobre-2026-06h/
 - Légende :
