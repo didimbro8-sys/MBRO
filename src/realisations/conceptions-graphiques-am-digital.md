@@ -48,5 +48,5 @@ galerie:
 vitrine: true
 a_la_une: true
 priorite: 2
-publie: true
+publie: false
 ---

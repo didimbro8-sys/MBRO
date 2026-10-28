@@ -1,0 +1,12 @@
+{#- En-tête de page : hero(fil, meta, titre, intro, long, extra) -#}
+{% macro hero(fil, meta, titre, intro, long=false, extra="") %}
+<section class="page-hero g{{ extra }}" aria-labelledby="t-page">
+  <div class="aurora" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+  <div class="in">
+    {% if fil %}<p class="crumb">{{ fil | safe }}</p>{% endif %}
+    <p class="meta-line">{{ meta | safe }}</p>
+    <h1 id="t-page"{% if long %} class="long"{% endif %} aria-label="{{ titre }}"><span aria-hidden="true">{% for w in titre.split(" ") %}<span class="w"><span data-split>{{ w }}</span></span> {% endfor %}</span></h1>
+    {% if intro %}<p class="lead">{{ intro }}</p>{% endif %}
+  </div>
+</section>
+{% endmacro %}

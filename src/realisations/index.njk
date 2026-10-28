@@ -5,16 +5,15 @@ description: Études de cas en communication des organisations et communication 
 permalink: /realisations/
 publie: false
 ---
-<header class="study-head">
-  <div class="wrap">
-    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a></nav>
-    <p class="label">{{ collections.realisations.length }} étude{% if collections.realisations.length > 1 %}s{% endif %} de cas</p>
-    <h1>Réalisations</h1>
-    <p class="intro">Chaque projet suit la grille d'un dossier de communication : contexte, objectif, dispositif, résultats.</p>
-  </div>
-</header>
-<section class="section first">
-  <div class="wrap cases">
-    {% for item in collections.realisations %}{% include "carte-realisation.njk" %}{% endfor %}
+{%- from "hero.njk" import hero %}
+{{ hero('<a href="/">Accueil</a><span aria-hidden="true">/</span><span>Réalisations</span>', 'Études de cas <span>·</span> ' + collections.realisations.length + ' dossiers', 'Des dossiers, une méthode', "Chaque projet suit la grille d'un dossier de communication : contexte, objectif, dispositif, résultats.") }}
+<section class="case-sec g" aria-label="Toutes les études de cas">
+  <div class="in">
+    <ul class="notes">
+      {%- for n in collections.realisations | aLaUneDabord %}
+      <li><a href="{{ n.url }}"><span><span class="dt">{{ n.data.nature }} · {{ n.date | moisAnnee }}</span><h2>{{ n.data.title }}</h2><p>{{ n.data.resume | todo | safe }}</p></span><span class="arr" aria-hidden="true">→</span></a></li>
+      {%- endfor %}
+    </ul>
   </div>
 </section>
+{% include "mini-cta.njk" %}

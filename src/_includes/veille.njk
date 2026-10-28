@@ -2,44 +2,39 @@
 layout: base.njk
 og_type: article
 ---
+{#- Une édition de la veille : signaux (fait, décryptage, décision, source), analyse, visuel publié. -#}
+{%- from "hero.njk" import hero %}
 {%- set fb = lien_facebook | safeUrl %}{% set ig = lien_instagram | safeUrl %}
-<article class="study">
-  <header class="study-head">
-    <div class="wrap">
-      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/veille/">Veille stratégique</a></nav>
-      <p class="label">La Veille AM.Digital · <time datetime="{{ page.date | iso }}">{{ page.date | dateFr }}</time></p>
-      <h1>{{ title }}</h1>
-      {% if resume %}<p class="intro">{{ resume }}</p>{% endif %}
-    </div>
-  </header>
-  <div class="wrap veille-layout">
+{{ hero('<a href="/">Accueil</a><span aria-hidden="true">/</span><a href="/veille/">Veille stratégique</a>', 'La Veille ' + site.agence + ' <span>·</span> <time datetime="' + (page.date | iso) + '">' + (page.date | dateFr) + '</time>', title, resume, title.length > 60) }}
+<section class="case-sec g" aria-label="Les signaux">
+  <div class="in v-layout">
     <div>
       <ol class="signaux">
         {%- for s in signaux %}
-        <li>
-          <span class="signal-num" aria-hidden="true">{{ loop.index | pad }}</span>
-          <div>
-            {% if s.rubrique %}<p class="label">{{ s.rubrique }}</p>{% endif %}
-            <h2>{{ s.titre }}</h2>
-            {% if s.decryptage %}<p>{{ s.decryptage }}</p>{% endif %}
-            {% if s.decision %}<p class="decision"><strong>Décision pour votre entreprise.</strong> {{ s.decision }}</p>{% endif %}
-            {% if s.source %}<p class="source">Source : {{ s.source }}</p>{% endif %}
-          </div>
-        </li>
+        <li class="signal"><span class="sn" aria-hidden="true">{{ loop.index | pad }}</span><div>
+          {% if s.rubrique %}<span class="cat">{{ s.rubrique }}</span>{% endif %}
+          <h2>{{ s.titre }}</h2>
+          {% if s.decryptage %}<p>{{ s.decryptage }}</p>{% endif %}
+          {% if s.decision %}<p class="decision"><b>Décision pour votre entreprise</b>{{ s.decision }}</p>{% endif %}
+          {% if s.source %}<p class="src">Source : {{ s.source }}</p>{% endif %}
+        </div></li>
         {%- endfor %}
       </ol>
-      {%- if content | trim %}
-      <section class="veille-analyse prose-body"><h2>L'analyse AM.Digital</h2>{{ content | safe }}</section>
-      {%- endif %}
-      <p class="signature">{{ site.nom | todo | safe }}, fondateur d'{{ site.agence }}</p>
-      <p class="more-link"><a class="btn btn-outline" href="/veille/">Toutes les veilles</a></p>
+      {% if content | trim %}<div class="analyse"><div class="prose">{{ content | safe }}</div></div>{% endif %}
+      <p class="signature">{{ site.nom }}, fondateur d'{{ site.agence }}</p>
+      {% if fb or ig %}<p class="row-links">{% if fb %}<a class="pill ghost" href="{{ fb }}" rel="noopener noreferrer" target="_blank">Voir sur Facebook</a>{% endif %}{% if ig %}<a class="pill ghost" href="{{ ig }}" rel="noopener noreferrer" target="_blank">Voir sur Instagram</a>{% endif %}</p>{% endif %}
     </div>
-    {%- if couverture | localUrl %}
-    <figure class="veille-visuel">
-      <button type="button" class="zoom" data-src="{{ couverture | localUrl }}" data-legende="{{ couverture_alt }}" aria-label="Agrandir le visuel"><img src="{{ couverture | localUrl }}" alt="{{ couverture_alt }}" width="1080" height="1350"></button>
-      {%- if fb or ig %}<figcaption class="veille-liens">{% if fb %}<a href="{{ fb }}" rel="noopener noreferrer" target="_blank">Voir sur Facebook ↗</a>{% endif %}{% if ig %}<a href="{{ ig }}" rel="noopener noreferrer" target="_blank">Voir sur Instagram ↗</a>{% endif %}</figcaption>{% endif %}
-    </figure>
-    {%- endif %}
+    {% if couverture | localUrl %}<figure class="v-visual"><button class="shot-btn" type="button" data-full="{{ couverture | localUrl }}"><img src="{{ couverture | localUrl }}" alt="{{ couverture_alt }}" width="1080" height="1350"><span>Le visuel publié sur les réseaux · touchez pour agrandir</span></button></figure>{% endif %}
   </div>
-</article>
-{% include "contact.njk" %}
+</section>
+{%- set prev = collections.veille | getPreviousCollectionItem(page) %}{% set next = collections.veille | getNextCollectionItem(page) %}
+<section class="case-sec g" aria-label="Autres veilles">
+  <div class="in">
+  <nav class="pager" aria-label="Autres veilles">
+    {% if prev %}<a class="prev" href="{{ prev.url }}">{% if prev.data.couverture | localUrl %}<img src="{{ prev.data.couverture | localUrl }}" alt="" width="96" height="96" loading="lazy">{% endif %}<span><small>← Plus récente</small><b>{{ prev.data.title }}</b></span></a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url }}">{% if next.data.couverture | localUrl %}<img src="{{ next.data.couverture | localUrl }}" alt="" width="96" height="96" loading="lazy">{% endif %}<span><small>Plus ancienne →</small><b>{{ next.data.title }}</b></span></a>{% else %}<span></span>{% endif %}
+  </nav>
+  <p class="row-links end"><a class="pill ghost" href="/veille/">Toutes les veilles</a></p>
+  </div>
+</section>
+{% include "mini-cta.njk" %}

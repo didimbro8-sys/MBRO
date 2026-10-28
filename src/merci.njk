@@ -5,9 +5,8 @@ permalink: /merci/
 robots: noindex
 eleventyExcludeFromCollections: true
 ---
-<section class="page"><div class="wrap"><div class="prose">
-<p class="label">Message reçu</p>
-<h1>Merci, votre message est bien arrivé.</h1>
-<p>Je vous réponds sous 24 heures ouvrées. Pour une demande urgente, écrivez-moi sur WhatsApp au {{ site.telephone_affiche }}.</p>
-<p><a class="btn btn-gold" href="/">Retour à l'accueil</a></p>
-</div></div></section>
+{%- from "hero.njk" import hero %}
+{{ hero('', 'Message reçu <span>·</span> réponse sous 24 heures ouvrées', 'Merci, votre message est bien arrivé.', 'Je vous réponds sous 24 heures ouvrées. Pour une demande urgente, écrivez-moi sur WhatsApp au ' + site.telephone_affiche + '.', false, ' tall') }}
+<section class="case-sec g" aria-label="Pour continuer">
+  <div class="in"><p class="row-links"><a class="pill gold mag" href="/">Retour à l'accueil</a><a class="pill ghost" href="https://wa.me/{{ site.whatsapp | replace(r/[^0-9]/g, '') }}" rel="noopener noreferrer" target="_blank">Écrire sur WhatsApp</a><a class="pill ghost" href="/veille/">Lire la veille du jour</a></p></div>
+</section>

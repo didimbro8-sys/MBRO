@@ -22,23 +22,29 @@ resultats:
   - indicateur: veille stratégique publiée chaque jour, aussi sur ce site
     valeur: "1"
 enseignement: "Une relance se gagne par la régularité : un rythme tenu et des contenus utiles, à enregistrer ou à partager, installent la confiance avant de vendre."
-couverture: /assets/uploads/am-digital-5-erreurs-6.jpg
-couverture_alt: Dernière page du carrousel AM.Digital « 5 erreurs qui font fuir les clients », la checklist à enregistrer
+couverture: /assets/uploads/am-digital-calendrier-octobre.jpg
+couverture_alt: Calendrier éditorial d'octobre publié par AM.Digital sur Instagram
 galerie:
   - image: /assets/uploads/am-digital-visibilite-audit.jpg
     legende: "Diagnostic express « Votre entreprise est-elle vraiment visible ? », avec l'appel à l'action « Écrivez AUDIT »"
     lien: https://www.instagram.com/p/DeZpyHoiCCT/
-  - image: /assets/uploads/am-digital-5-erreurs-1.jpg
-    legende: "Carrousel « 5 erreurs qui font fuir les clients », page 1"
-    lien: https://www.facebook.com/122236556318562810/posts/122242335032562810
-  - image: /assets/uploads/am-digital-5-erreurs-6.jpg
-    legende: La checklist finale du carrousel, conçue pour être enregistrée
-    lien: https://www.facebook.com/122236556318562810/posts/122242335032562810
   - image: /assets/uploads/am-digital-calendrier-octobre.jpg
     legende: Calendrier éditorial d'octobre partagé avec la communauté
     lien: https://www.instagram.com/p/DeT6UndiV12/
   - image: /assets/uploads/am-digital-bon-debut-semaine.jpg
     legende: Visuel de rendez-vous « Bon début de semaine »
+  - image: /assets/uploads/ig/nos-offres.jpg
+    legende: Les offres AM.Digital, présentées en un visuel
+    lien: https://www.instagram.com/amdigital204/
+  - image: /assets/uploads/ig/dimanche-inspiration.jpg
+    legende: Dimanche inspiration, le rendez-vous d'engagement de la semaine
+    lien: https://www.instagram.com/amdigital204/
+  - image: /assets/uploads/ig/une-tache-15-minutes.jpg
+    legende: Une tâche de 15 minutes pour votre visibilité
+    lien: https://www.instagram.com/amdigital204/
+  - image: /assets/uploads/ig/audit-express-5-points.jpg
+    legende: L'audit express en 5 points
+    lien: https://www.instagram.com/amdigital204/
 a_la_une: false
 publie: true
 ---

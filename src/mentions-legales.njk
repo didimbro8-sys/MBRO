@@ -3,9 +3,9 @@ layout: base.njk
 title: Mentions légales
 permalink: /mentions-legales/
 ---
-<section class="page"><div class="wrap"><div class="prose">
-<p class="label">Informations légales</p>
-<h1>Mentions légales</h1>
+{%- from "hero.njk" import hero %}
+{{ hero('<a href="/">Accueil</a><span aria-hidden="true">/</span><span>Mentions légales</span>', 'Informations légales', 'Mentions légales') }}
+<section class="case-sec g" aria-label="Mentions légales"><div class="in"><div class="prose">
 <h2>Éditeur du site</h2>
 <p>{{ site.nom | todo | safe }}, fondateur d'{{ site.agence }}, {{ site.ville }}, {{ site.pays }}. Téléphone : {{ site.telephone_affiche }}. E-mail : {{ site.email_nom }} [at] {{ site.email_domaine }}.</p>
 <h2>Hébergement</h2>
@@ -20,7 +20,7 @@ permalink: /mentions-legales/
 <p><strong>Vos droits :</strong> conformément à la loi ivoirienne n° 2013-450 du 19 juin 2013 relative à la protection des données à caractère personnel, vous pouvez demander l'accès, la rectification, l'opposition ou la suppression de vos données en écrivant au contact ci-dessus. Réponse sous 30 jours. Vous pouvez aussi saisir l'Autorité de régulation des télécommunications/TIC de Côte d'Ivoire (ARTCI), autorité de protection des données.</p>
 <h2>Cookies et mesure d'audience</h2>
 <p>Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience, de publicité ou de traçage tiers. Les liens vers Facebook, Instagram, TikTok et WhatsApp sont de simples liens : rien n'est chargé depuis ces réseaux tant que vous ne cliquez pas.</p>
-<p>L'assistant du site fonctionne entièrement dans votre navigateur, avec des réponses préparées à l'avance : vos questions ne sont ni envoyées ni enregistrées.</p>
+<p>L'assistant vocal d'accueil fonctionne entièrement dans votre navigateur : il lit un message préparé à l'avance avec la voix de synthèse de votre appareil. Il n'utilise pas votre micro et n'envoie aucune donnée.</p>
 <h2>Sécurité</h2>
 <p>Site statique, servi en HTTPS uniquement, sans base de données ni espace de connexion public. Pour signaler une faille : <a href="/.well-known/security.txt">security.txt</a>.</p>
 <h2>Propriété intellectuelle</h2>

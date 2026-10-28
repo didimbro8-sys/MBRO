@@ -27,6 +27,7 @@ resultats:
     indicateur: vues TikTok en 16 publications
 enseignement: "Facebook installe la crédibilité de l'institution, TikTok rajeunit son image : les deux réseaux se complètent. Pour faire monter les commentaires, il faut plus de vidéos courtes et plus de questions posées aux citoyens."
 couverture: /assets/uploads/osep-audit-facebook.jpg
+couverture_paysage: true
 couverture_alt: Résultats de l'audit de la page Facebook de l'OSEP, présentés en forces, faiblesses, opportunités et menaces
 galerie:
   - image: /assets/uploads/osep-strategie-couverture.jpg

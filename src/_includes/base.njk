@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-{%- set pageTitre = (titre_seo or (title + " | " + site.agence)) if title else (site.nom + " — Communication des organisations & digitale | " + site.agence + " " + site.ville) %}
+{%- set pageTitre = (titre_seo or (title + " | " + site.agence)) if title else (site.nom + " · " + site.titre_hero + " | " + site.agence + " " + site.ville) %}
 {%- set pageDesc = description or resume or (site.nom + ", fondateur d'" + site.agence + " à " + site.ville + " : communication des organisations, stratégie digitale, création de contenu, community management et branding. Portfolio et études de cas.") %}
 {%- set pageUrl = site.url + page.url %}
 {%- set cover = couverture | localUrl %}
-{%- set pageImage = (site.url + cover) if (cover and cover.startsWith("/")) else (cover or (site.url + "/assets/img/og-image.png")) %}
+{%- set pageImage = (site.url + cover) if (cover and cover.startsWith("/")) else (site.url + "/assets/img/og-image.png") %}
 <title>{{ pageTitre }}</title>
 <meta name="description" content="{{ pageDesc }}">
 <meta name="author" content="{{ site.nom }}">
 <meta name="robots" content="{{ robots or 'index, follow, max-image-preview:large' }}">
 <link rel="canonical" href="{{ pageUrl }}">
-<meta name="theme-color" content="#D39C16">
+<meta name="theme-color" content="#300024">
 <meta property="og:type" content="{{ og_type or 'website' }}">
 <meta property="og:locale" content="fr_CI">
 <meta property="og:site_name" content="{{ site.agence }}">
@@ -21,14 +21,13 @@
 <meta property="og:description" content="{{ pageDesc }}">
 <meta property="og:url" content="{{ pageUrl }}">
 <meta property="og:image" content="{{ pageImage }}">
-<meta property="og:image:alt" content="{{ couverture_alt or (site.agence + ' — portfolio du fondateur, ' + site.ville) }}">
+<meta property="og:image:alt" content="{{ couverture_alt or (site.agence + ', portfolio du fondateur, ' + site.ville) }}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/atom+xml" title="Journal {{ site.agence }}" href="/journal/flux.xml">
-<link rel="preload" href="/assets/fonts/sofia-sans-extra-condensed-latin-200-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/hanken-grotesk-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | v }}">
 <script type="application/ld+json">
 {
@@ -36,7 +35,7 @@
   "@graph": [
     {
       "@type": "Person", "@id": "{{ site.url }}/#moi", "name": {{ site.nom | json | safe }},
-      "jobTitle": {{ site.titre_pro | json | safe }}, "url": "{{ site.url }}/",{% if site.photo | localUrl %} "image": "{{ site.url }}{{ site.photo | localUrl }}",{% endif %}
+      "jobTitle": {{ site.titre_pro | json | safe }}, "url": "{{ site.url }}/",
       "address": { "@type": "PostalAddress", "addressLocality": {{ site.ville | json | safe }}, "addressCountry": "CI" },
       "worksFor": { "@id": "{{ site.url }}/#agence" },
       "knowsAbout": ["Communication des organisations", "Communication interne", "Communication institutionnelle", "Stratégie digitale", "Community management", "Création de contenu", "Publicité en ligne", "Branding"],
@@ -45,67 +44,49 @@
     {
       "@type": "ProfessionalService", "@id": "{{ site.url }}/#agence", "name": {{ site.agence | json | safe }},
       "slogan": {{ site.slogan | json | safe }}, "url": "{{ site.url }}/", "logo": "{{ site.url }}/assets/uploads/am-digital-logo.jpg",
-      "image": "{{ site.url }}/assets/img/og-image.png",
       "telephone": {{ site.telephone | json | safe }}, "founder": { "@id": "{{ site.url }}/#moi" },
       "address": { "@type": "PostalAddress", "addressLocality": {{ site.ville | json | safe }}, "addressCountry": "CI" },
-      "areaServed": { "@type": "Country", "name": "Côte d'Ivoire" },
-      "sameAs": [{{ site.facebook | safeUrl | json | safe }}, {{ site.instagram | safeUrl | json | safe }}, {{ site.tiktok | safeUrl | json | safe }}],
-      "makesOffer": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stratégie digitale"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Création de contenu"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Community management"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Publicité en ligne"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Branding & identité visuelle"}}
-      ]
+      "areaServed": { "@type": "Country", "name": "Côte d'Ivoire" }
     }{% if schema_page %},
     {{ schema_page | safe }}{% endif %}
   ]
 }
 </script>
-</head>
-{%- set rub = 'accueil' if page.url == '/' else ('realisations' if page.url and page.url.startsWith('/realisations/') else ('veille' if page.url and page.url.startsWith('/veille/') else ('journal' if page.url and page.url.startsWith('/journal/') else 'autre'))) %}
-<body class="{{ 'is-home' if page.url == '/' else 'is-page' }}{% if page_class %} {{ page_class }}{% endif %}">
-<a class="skip" href="#contenu">Aller au contenu</a>
-{#- Rideau de transition : se lève à chaque arrivée sur une page (CSS seul), retombe au clic sur un lien interne (JS) -#}
-<div class="curtain" aria-hidden="true">
-  <div class="curtain-panel"><span class="curtain-count"></span><span class="curtain-bar"><i></i></span><span class="curtain-brand">AM<b>.</b>Digital</span></div>
-</div>
-<div class="pointer" aria-hidden="true"><span class="pointer-dot"></span><span class="pointer-ring"><span class="pointer-text">Voir</span></span></div>
-<header class="site-header" id="site-header">
-  <div class="wrap header-in">
-    <a class="brand roll" href="/" aria-label="{{ site.agence }}, accueil">
-      <img src="/assets/img/logo-am.png" alt="" width="34" height="34">
-      <span class="roll-box" aria-hidden="true"><span class="roll-in">AM.Digital</span><span class="roll-in">AM.Digital</span></span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><span class="nav-toggle-l">Menu</span><i aria-hidden="true"></i></button>
-    <nav id="nav" class="nav" data-open="false" aria-label="Navigation principale">
-      <ul>
-        {%- for l in [["accueil","/","Accueil"],["realisations","/realisations/","Réalisations"],["veille","/veille/","Veille"],["journal","/journal/","Journal"],["contact","/#contact","Contact"]] %}
-        <li><a class="roll{% if rub == l[0] %} is-active{% endif %}" href="{{ l[1] }}"{% if rub == l[0] %} aria-current="page"{% endif %}><span class="roll-box"><span class="roll-in">{{ l[2] }}</span><span class="roll-in" aria-hidden="true">{{ l[2] }}</span></span></a></li>
-        {%- endfor %}
-      </ul>
-    </nav>
-  </div>
-</header>
-<main id="contenu">
-{{ content | safe }}
-</main>
-<footer class="site-footer">
-  <div class="wrap foot-in">
-    <p>© <span id="year">2026</span> {{ site.nom }}</p>
-    <p class="foot-status"><span class="live" aria-hidden="true"></span>{{ site.statut or (site.disponibilites | first) }}</p>
-    <p class="foot-links"><a href="/mentions-legales/">Mentions légales</a><span>Conçu par {{ site.agence }}</span></p>
-  </div>
-</footer>
-<dialog class="visionneuse" id="visionneuse" aria-label="Image agrandie">
-  <form method="dialog"><button class="fermer" type="submit" aria-label="Fermer">×</button></form>
-  <img id="visionneuse-img" src="data:," alt="">
-  <p id="visionneuse-legende"></p>
-</dialog>
-{% include "assistant.njk" %}
+<script src="/assets/js/vendor/gsap.min.js" defer></script>
+<script src="/assets/js/vendor/ScrollTrigger.min.js" defer></script>
 <script src="{{ '/assets/js/main.js' | v }}" defer></script>
 {%- for s in page_scripts %}
 <script src="{{ s | v }}" defer></script>
 {%- endfor %}
+</head>
+{%- set rub = 'accueil' if page.url == '/' else ('realisations' if page.url and page.url.startsWith('/realisations/') else ('veille' if page.url and page.url.startsWith('/veille/') else ('journal' if page.url and page.url.startsWith('/journal/') else 'autre'))) %}
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<header class="nav g" id="nav">
+  <div class="in">
+    <a class="brand" href="/" aria-label="{{ site.agence }}, accueil"><img src="/assets/uploads/am-digital-logo.jpg" alt="Logo {{ site.agence }}" width="44" height="44"><span>M'BRO <b>Israël</b></span></a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        {%- for l in [["realisations","/#realisations","Réalisations"],["methode","/#methode","Méthode"],["veille","/veille/","Veille"],["journal","/journal/","Journal"]] %}
+        <li><a href="{{ l[1] }}"{% if rub == l[0] %} aria-current="page"{% endif %}>{{ l[2] }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <a class="pill gold mag" href="/#contact">Me contacter</a>
+  </div>
+</header>
+
+<main id="contenu">
+{{ content | safe }}
+</main>
+
+<footer class="foot g"><div class="in"><span>© 2026 {{ site.nom }} · {{ site.agence }}, {{ site.ville }}</span><span><a href="/journal/flux.xml">Flux du Journal</a> · <a href="/mentions-legales/">Mentions légales</a></span></div></footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Visuel agrandi">
+  <form method="dialog"><button class="round close" aria-label="Fermer">×</button></form>
+  <img id="lightbox-img" src="data:," alt="">
+</dialog>
 </body>
 </html>

@@ -5,30 +5,13 @@ description: La Veille AM.Digital, chaque jour les signaux de la communication e
 permalink: /veille/
 publie: false
 ---
-<header class="study-head">
-  <div class="wrap">
-    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a></nav>
-    <p class="label">Veille stratégique · {{ collections.veille.length }} édition{% if collections.veille.length > 1 %}s{% endif %}</p>
-    <h1>La Veille AM.Digital</h1>
-    <p class="intro">Les signaux mondiaux de la communication et du marketing digital, décryptés pour les communicants, les entrepreneurs et les PME de Côte d'Ivoire. Pour chaque signal : le fait vérifié, et la décision à prendre.</p>
-  </div>
-</header>
-<section class="section first"><div class="wrap">
-  <ul class="veilles">
+{%- from "hero.njk" import hero %}
+{{ hero('<a href="/">Accueil</a><span aria-hidden="true">/</span><span>Veille stratégique</span>', 'Veille stratégique <span>·</span> ' + collections.veille.length + ' éditions', 'La Veille ' + site.agence, "Les signaux mondiaux de la communication et du marketing digital, décryptés pour les communicants, les entrepreneurs et les PME de Côte d'Ivoire. Pour chaque signal : le fait vérifié, et la décision à prendre.") }}
+<section class="case-sec g" aria-label="Toutes les éditions">
+  <div class="in ed-grid">
     {%- for v in collections.veille %}
-    <li>
-      <a class="veille-card" href="{{ v.url }}" data-cursor="Lire">
-        {%- if v.data.couverture | localUrl %}<img src="{{ v.data.couverture | localUrl }}" alt="" loading="lazy" decoding="async" width="1080" height="1350">{% endif %}
-        <div>
-          <p class="label"><time datetime="{{ v.date | iso }}">{{ v.date | dateFr }}</time></p>
-          <h2>{{ v.data.title }}</h2>
-          {%- if v.data.signaux and v.data.signaux.length %}
-          <ol class="veille-titres">{% for s in v.data.signaux %}<li>{{ s.titre }}</li>{% endfor %}</ol>
-          {%- else %}<p>{{ v.data.resume }}</p>{% endif %}
-          <span class="veille-lire">Lire la veille →</span>
-        </div>
-      </a>
-    </li>
+    <a class="ed{% if loop.first %} first{% endif %}" href="{{ v.url }}"><span class="th">{% if v.data.couverture | localUrl %}<img src="{{ v.data.couverture | localUrl }}" alt="" width="1080" height="1350"{% if loop.index > 3 %} loading="lazy"{% endif %}>{% endif %}</span><span class="bd"><span class="dt"><time datetime="{{ v.date | iso }}">{{ v.date | dateFr }}</time></span><h2>{{ v.data.title }}</h2><ul>{% for s in v.data.signaux %}<li>{{ s.titre }}</li>{% endfor %}</ul></span></a>
     {%- endfor %}
-  </ul>
-</div></section>
+  </div>
+</section>
+{% include "mini-cta.njk" %}

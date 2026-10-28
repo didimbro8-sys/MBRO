@@ -2,17 +2,15 @@
 layout: base.njk
 og_type: article
 ---
-<article class="study">
-  <header class="study-head">
-    <div class="wrap">
-      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">/</span> <a href="/journal/">Journal</a></nav>
-      <p class="label"><time datetime="{{ page.date | iso }}">{{ page.date | dateFr }}</time></p>
-      <h1>{{ title }}</h1>
-      {% if resume %}<p class="intro">{{ resume | todo | safe }}</p>{% endif %}
-    </div>
-  </header>
-  {% if couverture | localUrl %}<div class="wrap"><figure class="study-cover"><img src="{{ couverture | localUrl }}" alt="{{ couverture_alt }}" width="1200" height="700"></figure></div>{% endif %}
-  <div class="wrap"><div class="prose-body article-body">{{ content | todoHtml | safe }}</div>
-  <p class="signature">{{ site.nom | todo | safe }}, fondateur d'{{ site.agence }}</p></div>
-</article>
-{% include "contact.njk" %}
+{#- Une note du Journal -#}
+{%- from "hero.njk" import hero %}
+{{ hero('<a href="/">Accueil</a><span aria-hidden="true">/</span><a href="/journal/">Journal</a>', 'Journal <span>·</span> <time datetime="' + (page.date | iso) + '">' + (page.date | dateFr) + '</time>', title, resume, title.length > 60) }}
+<section class="case-sec g" aria-label="Article">
+  <div class="in">
+    {% if couverture | localUrl %}<figure class="article-cover"><img src="{{ couverture | localUrl }}" alt="{{ couverture_alt }}"></figure>{% endif %}
+    <div class="prose article-body">{{ content | todoHtml | safe }}</div>
+    <p class="signature">{{ site.nom }}, fondateur d'{{ site.agence }}</p>
+    <p class="row-links end"><a class="pill ghost" href="/journal/">Toutes les notes</a><a class="pill ghost" href="/veille/">La veille stratégique</a></p>
+  </div>
+</section>
+{% include "mini-cta.njk" %}
