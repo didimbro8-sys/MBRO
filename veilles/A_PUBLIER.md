@@ -12,3 +12,26 @@
 <!-- 28/10 09h28 Paris (08h28 Abidjan) : 2026-10-27-18h et 2026-10-28-06h publiées FB+IG (Meta Business Suite, vérifiées dans Publié, crossposté) + TikTok @am.digital204 (photos ; 27 visible, 28 en cours d'examen). -->
 
 <!-- 29/10 12h16 Paris (11h16 Abidjan) : 2026-10-29-06h publiée FB+IG (Meta Business Suite, vérifiée dans Publié, crossposté). ATTENTION : un autre passage l'avait déjà publiée à 12h06 (FB+IG, légende différente) et sur TikTok @am.digital204 à 12h08 : doublon FB+IG à supprimer manuellement par le fondateur ; TikTok non republié. -->
+
+## EN ATTENTE : 2026-10-29-18h (passage cloud du 29/10 18h30 Abidjan, Chrome indisponible)
+- Image : `veilles/img/AM-Digital_veille_2026-10-29-18h.jpg` (dans ce dépôt, branche am-digital-kit) ; copie sur le site : https://am-digital.pages.dev/assets/uploads/am-digital-veille-29-octobre-18h.jpg
+- Page du site : https://am-digital.pages.dev/veille/veille-29-octobre-2026-18h/
+- Publier sur : Facebook AM.Digital + Instagram amdigital204 (Meta Business Suite) ; TikTok @am.digital204 seulement si connecté.
+- Légende :
+
+🔎 La veille AM.Digital du 29 octobre (soir)
+L'IA aide, l'humain valide
+
+1️⃣ Meta : les pubs en partenariat avec des créateurs ont progressé de plus de 97 % en un an au 3e trimestre. Associez-vous à un créateur de votre quartier pour vos posts clés.
+2️⃣ LinkedIn : l'Economic Graph devient LinkedIn Pulse, les données de 1,4 milliard de membres et 71 millions d'entreprises. Appuyez vos posts sur des chiffres sourcés.
+3️⃣ Service client : 35 % des consommateurs américains ont déjà parlé à un agent IA, et 44 % disent qu'une IA a contredit l'entreprise (étude Capacity). Relisez chaque réponse automatique de votre WhatsApp Business.
+4️⃣ Outils IA du jour : Sprinklr lance 6 agents IA pour le marketing (idées, création, campagnes, conformité, communauté, budget), en bêta, avec validation humaine.
+
+💡 Pour les PME d'Abidjan : laissez l'IA vous faire gagner du temps, mais gardez une personne qui relit et valide chaque publication et chaque réponse client. Votre image en dépend.
+
+📌 Enregistrez et partagez cette veille. Commentez VEILLE pour recevoir le résumé de la semaine.
+
+Sources : Social Media Today (27 et 28 oct. 2026), Agile Brand Guide (28 oct. 2026)
+👉 La veille complète : am-digital.pages.dev/veille/veille-29-octobre-2026-18h/
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
