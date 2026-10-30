@@ -58,3 +58,26 @@ Sources : Metricool via Social Media Today (29 oct. 2026), Social Media Today (2
 👉 La veille complète : am-digital.pages.dev/veille/veille-30-octobre-2026-06h/
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## EN ATTENTE : 2026-10-30-13h (passage cloud du 30/10 13h35 Abidjan, Chrome indisponible)
+- Image : `veilles/img/AM-Digital_veille_2026-10-30-13h.jpg` (dans ce dépôt, branche am-digital-kit) ; copie sur le site : https://am-digital.pages.dev/assets/uploads/am-digital-veille-30-octobre-13h.jpg
+- Page du site : https://am-digital.pages.dev/veille/veille-30-octobre-2026-13h/
+- Publier sur : Facebook AM.Digital + Instagram amdigital204 (Meta Business Suite) ; TikTok @am.digital204 seulement si connecté.
+- Légende :
+
+🔎 La veille AM.Digital du 30 octobre (midi)
+Faites parler les autres
+
+1️⃣ Recherche IA : plus de 84 % des sources citées par ChatGPT, Claude, Gemini et Perplexity sont des médias et sites tiers, 15,2 % seulement les sites des marques (étude Muck Rack). Faites parler de vous : presse locale, partenaires, avis clients.
+2️⃣ Pinterest : 661 millions d'utilisateurs par mois (+21 millions en un trimestre), dont 57 % de Gen Z, et 80 milliards de recherches par mois. Épinglez vos visuels produits : c'est un moteur de recherche.
+3️⃣ Threads teste un « like » personnalisé (image, emoji, sticker ou GIF de votre choix). Préparez une version mini de votre logo, lisible en tout petit.
+4️⃣ Outils IA du jour : Fibr AI lance AXO, qui repère les agents IA qui visitent un site et leur présente un contenu adapté. Sur votre site, écrivez en texte clair services, prix de départ et contact.
+
+💡 Pour les PME d'Abidjan : votre réputation se joue aussi chez les autres. Un article dans un média local, un partenaire qui vous cite, un avis client : c'est ce que lisent les IA et ce que croient vos futurs clients.
+
+📌 Enregistrez et partagez cette veille. Commentez VEILLE pour recevoir le résumé de la semaine.
+
+Sources : Muck Rack via Agile Brand Guide (29 oct. 2026), Social Media Today (29 oct. 2026)
+👉 La veille complète : am-digital.pages.dev/veille/veille-30-octobre-2026-13h/
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
