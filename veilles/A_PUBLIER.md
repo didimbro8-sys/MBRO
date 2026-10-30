@@ -81,3 +81,26 @@ Sources : Muck Rack via Agile Brand Guide (29 oct. 2026), Social Media Today (29
 👉 La veille complète : am-digital.pages.dev/veille/veille-30-octobre-2026-13h/
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## EN ATTENTE : 2026-10-30-18h (passage cloud du 30/10 18h30 Abidjan, Chrome indisponible)
+- Image : `veilles/img/AM-Digital_veille_2026-10-30-18h.jpg` (dans ce dépôt, branche am-digital-kit) ; copie sur le site : https://am-digital.pages.dev/assets/uploads/am-digital-veille-30-octobre-18h.jpg
+- Page du site : https://am-digital.pages.dev/veille/veille-30-octobre-2026-18h/
+- Publier sur : Facebook AM.Digital + Instagram amdigital204 (Meta Business Suite) ; TikTok @am.digital204 seulement si connecté.
+- Légende :
+
+🔎 La veille AM.Digital du 30 octobre (soir)
+Les algorithmes vous font découvrir
+
+1️⃣ LinkedIn : le temps passé sur le réseau a augmenté de 15 % en un an ; les pubs avec créateurs +63 %, la vidéo +25 %. Si vous vendez aux entreprises, publiez une vidéo courte par semaine.
+2️⃣ Meta : au 2e trimestre, le nouveau classement des pubs a apporté 8,3 % de clics et 15,7 % de conversions en plus sur Facebook. Variez vos visuels : l'algorithme trouve lui-même le bon public.
+3️⃣ Reddit déploie dans le monde un fil « Pour vous » choisi par algorithme. Écrivez chaque post pour un inconnu : il peut vous découvrir en premier.
+4️⃣ Outils IA du jour : selon Meta, son assistant IA pour les entreprises génère 5 % de conversions en plus pour le même coût. Testez les outils IA intégrés, puis mesurez vos résultats.
+
+💡 Pour les PME d'Abidjan : vos posts sont de plus en plus vus par des gens qui ne vous suivent pas. Une accroche claire, qui vous êtes, et une raison de s'abonner : à chaque publication.
+
+📌 Enregistrez et partagez cette veille. Commentez VEILLE pour recevoir le résumé de la semaine.
+
+Sources : Social Media Today (28 et 29 oct. 2026)
+👉 La veille complète : am-digital.pages.dev/veille/veille-30-octobre-2026-18h/
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire

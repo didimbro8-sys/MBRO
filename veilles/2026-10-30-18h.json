@@ -1,0 +1,35 @@
+{
+"date_label": "30 octobre 2026",
+"titre": "Les algorithmes *vous font découvrir*",
+"sous_titre": "Tendances com & marketing, décryptées pour les PME",
+"signaux": [
+{
+"rubrique": "LinkedIn · Audience",
+"titre": "*+15 %* de temps passé sur LinkedIn",
+"decryptage": "Temps passé sur LinkedIn : +15 % en un an. Les pubs avec créateurs bondissent de 63 %, la vidéo de 25 % (résultats Microsoft, 28 oct.).",
+"decision": "publiez une vidéo courte par semaine sur LinkedIn.",
+"source": "Social Media Today, 29 oct. 2026"
+},
+{
+"rubrique": "Meta · Publicité",
+"titre": "L'IA de Meta *vise plus juste*",
+"decryptage": "Au 2e trimestre, le nouveau classement des pubs de Meta a apporté 8,3 % de clics et 15,7 % de conversions en plus sur Facebook.",
+"decision": "variez vos visuels : l'algorithme trouve lui-même le bon public.",
+"source": "Social Media Today, 28 oct. 2026"
+},
+{
+"rubrique": "Reddit · Découverte",
+"titre": "Reddit lance *son fil « Pour vous »*",
+"decryptage": "Reddit déploie dans le monde, d'ici quelques semaines, un fil « Pour vous » choisi par algorithme pour découvrir de nouvelles communautés.",
+"decision": "écrivez chaque post pour un inconnu : il peut le voir en premier.",
+"source": "Social Media Today, 28 oct. 2026"
+},
+{
+"rubrique": "Outils IA du jour · Conversion",
+"titre": "L'assistant IA *des entreprises Meta*",
+"decryptage": "Selon Meta, son assistant IA pour les entreprises génère 5 % de conversions en plus, pour le même coût (annonce du 28 oct.).",
+"decision": "testez les outils IA intégrés à Meta, puis mesurez vos résultats.",
+"source": "Social Media Today, 28 oct. 2026"
+}
+]
+}
