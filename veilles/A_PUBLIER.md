@@ -35,3 +35,26 @@ Sources : Social Media Today (27 et 28 oct. 2026), Agile Brand Guide (28 oct. 20
 👉 La veille complète : am-digital.pages.dev/veille/veille-29-octobre-2026-18h/
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## EN ATTENTE : 2026-10-30-06h (passage cloud du 30/10 06h30 Abidjan, Chrome indisponible)
+- Image : `veilles/img/AM-Digital_veille_2026-10-30-06h.jpg` (dans ce dépôt, branche am-digital-kit) ; copie sur le site : https://am-digital.pages.dev/assets/uploads/am-digital-veille-30-octobre-06h.jpg
+- Page du site : https://am-digital.pages.dev/veille/veille-30-octobre-2026-06h/
+- Publier sur : Facebook AM.Digital + Instagram amdigital204 (Meta Business Suite) ; TikTok @am.digital204 seulement si connecté.
+- Légende :
+
+🔎 La veille AM.Digital du 30 octobre
+Chaque réseau a son rôle
+
+1️⃣ Instagram : un post y obtient 293 interactions, contre 74 sur TikTok et 9 sur Facebook (étude Metricool, 72 marques e-commerce américaines). Faites d'Instagram votre vitrine principale.
+2️⃣ TikTok : ces marques ne mettent un lien de vente TikTok Shop que dans 1,8 % de leurs posts non sponsorisés. Sur TikTok, racontez votre marque ; concluez la vente sur WhatsApp.
+3️⃣ Edits : l'éditeur de carrousels arrive sur Android, avec 13 nouvelles animations de texte. Montez vos carrousels directement sur votre téléphone.
+4️⃣ Outils IA du jour : les agents IA Muse de Meta arrivent à Singapour ; plus de 25 % de leurs utilisateurs y cherchent de bonnes offres. Affichez prix et disponibilité clairs : l'IA compare pour vos clients.
+
+💡 Pour les PME d'Abidjan : ne faites pas la même chose partout. Donnez une mission à chaque réseau : Instagram pour échanger, TikTok pour vous faire connaître, WhatsApp pour vendre.
+
+📌 Enregistrez et partagez cette veille. Commentez VEILLE pour recevoir le résumé de la semaine.
+
+Sources : Metricool via Social Media Today (29 oct. 2026), Social Media Today (27 et 28 oct. 2026)
+👉 La veille complète : am-digital.pages.dev/veille/veille-30-octobre-2026-06h/
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
