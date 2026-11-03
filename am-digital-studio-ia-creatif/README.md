@@ -25,7 +25,7 @@ Fiche de production des shorts générés avec **Claude Opus 5.5** (orchestratio
 
 ---
 
-## Short 2 — Making-of « processus créatif » + signature AM.digital (15 s, 9:16) — ⏳ montage à relancer
+## Short 2 — Making-of « processus créatif » + signature AM.digital (15 s, 9:16) — ✅ terminé
 
 | Étape | Outil | ID | Statut |
 |---|---|---|---|
@@ -35,7 +35,7 @@ Fiche de production des shorts générés avec **Claude Opus 5.5** (orchestratio
 | Carton final logo or **AM.digital** + « Agence créative IA » | FLUX 3 Image | `2f6f0bf0-bcf5-422f-9920-d94b101f6c4e` | ✅ |
 | Vidéo storyboard 15 s (studio 0 s → flacon 5 s → AM.digital 11,5–15 s), musique électro | FLUX 3 Video (i2v, 3 keyframes) | `5c73b7f0-d6ef-43cf-880f-90b8778460ea` | ✅ |
 | Voix off dynamique « Gabriel – Confident French Ads » (14,3 s) | ElevenLabs v4 | nœud `5fyfwRAYEgwVijtP959C`, génération `w0I0YjRK77Fp8vug4c2W` | ✅ |
-| Montage final vidéo + voix | ElevenLabs Composition (gratuit) | nœud « Making-of AM.digital 15s » `6rW6MoZa5DOeIJ94wsps` | ⏳ refusé (file gratuite saturée) — cliquer **Run** sur ce nœud |
+| Montage final vidéo + voix (15,06 s, 704×1280) | ElevenLabs Composition (gratuit) | nœud « Making-of AM.digital 15s » `6rW6MoZa5DOeIJ94wsps`, génération `5IWLm9kfsGrlqkMbtrKp` | ✅ |
 
 **Script voix off (dynamique)**
 > Un simple brief… et Claude Opus 5.5 prend les commandes ! FLUX crée l'image, l'anime en vidéo, ElevenLabs pose la voix, et le montage tombe tout seul. Une pub pro en quelques minutes ! Votre prochaine campagne ? AM point digital.
@@ -62,6 +62,5 @@ Fiche de production des shorts générés avec **Claude Opus 5.5** (orchestratio
 | Kling | non utilisé (crédits insuffisants) |
 
 ## À faire
-1. Relancer le montage du Short 2 (nœud `6rW6MoZa5DOeIJ94wsps`, bouton **Run**).
-2. Télécharger les deux MP4 finaux (liens valables 24 h après rendu).
-3. Vérifier à l'œil la lisibilité des textes « Claude Opus 5.5 » et « AM.digital » générés par l'IA.
+1. Télécharger les deux MP4 finaux depuis le flow ElevenLabs (nœuds « Short final 15s » et « Making-of AM.digital 15s »).
+2. Vérifier à l'œil la lisibilité des textes « Claude Opus 5.5 » et « AM.digital » générés par l'IA.
