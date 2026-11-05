@@ -2,7 +2,19 @@
 
 Kit de production prêt à lancer, dérivé du *Plan de production v1.0 (5 nov. 2026)*. Version **teaser 20 s** choisie pour tenir dans le gratuit.
 
-## Statut (5 nov. 2026)
+## ✅ Résultat — rendu le 5 nov. 2026 (après abonnement ElevenLabs)
+
+| Élément | Détail |
+|---|---|
+| Vidéo finale | **20,06 s, 1280×704 (16:9)** — montage ElevenLabs, nœud « Au cœur de notre culture – teaser 20s » `JKeaVKqD8zilBC8Gj8UZ`, génération `pBodzRfHrZJdvvYK30QP` |
+| Plan-séquence | FLUX 3 Video i2v, 10 keyframes, `84f662da-2a0f-4009-ac7d-a8df4c25684a` (dernière vidéo FLUX gratuite) |
+| Images K01–K10 | ElevenLabs `flux-3-image`, 290,88 crédits chacune — sorties en **16:9** (le réglage par défaut du nœud a écrasé le 9:16 du prompt) |
+| Voix off | David, 19,2 s, 281 crédits, nœud `N5vPImPqtZAlxuCsqBbK` |
+| Total ElevenLabs | ≈ 3 190 crédits ; montage gratuit |
+
+**Format** : 16:9 choisi pour ne pas re-payer les images. Pour la version 9:16 (TikTok/Reels), régler `aspect_ratio: 9:16` **dans les paramètres du nœud image** (pas seulement dans le prompt), puis une vidéo payante (FLUX ou Kling).
+
+## Statut avant rendu (5 nov. 2026, matin)
 
 | Ressource | État | Conséquence |
 |---|---|---|
