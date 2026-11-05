@@ -63,9 +63,13 @@ og_type: article
 <section class="case-sec g" aria-labelledby="t-gal">
   <div class="in">
     <div class="sec-head"><span class="lbl">{{ galerie.length }} visuels · touchez une image pour l'agrandir</span><h2 id="t-gal" class="rv">Galerie</h2></div>
+    {%- for g in galerie %}{% if g.grand and (g.video | localUrl) %}
+    <figure class="feature-video"><video src="{{ g.video | localUrl }}"{% if g.image | localUrl %} poster="{{ g.image | localUrl }}"{% endif %} controls playsinline preload="metadata"></video><figcaption>{{ g.legende }}</figcaption></figure>
+    {%- endif %}{% endfor %}
     <div class="mosaic">
       {%- for g in galerie %}
-      {%- if g.video | localUrl %}
+      {%- if g.grand and (g.video | localUrl) %}
+      {%- elif g.video | localUrl %}
       <figure class="shot-btn"><video src="{{ g.video | localUrl }}"{% if g.image | localUrl %} poster="{{ g.image | localUrl }}"{% endif %} controls playsinline preload="none"></video><span>{{ g.legende }}</span></figure>
       {%- elif g.lien | safeUrl and not (g.image | localUrl) %}
       <a class="shot-btn" href="{{ g.lien | safeUrl }}" rel="noopener noreferrer" target="_blank"><span>{{ g.legende }}</span></a>

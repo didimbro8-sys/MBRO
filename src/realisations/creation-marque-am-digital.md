@@ -30,7 +30,8 @@ couverture: /assets/uploads/identite-am-digital/01-papeterie-ensemble.jpg
 couverture_alt: "Papeterie AM.Digital : papier à en-tête, carnet aubergine doré, cartes de visite, stylo et badge"
 couverture_paysage: true
 galerie:
-  - video: /assets/video/am-digital-presentation-marque.mp4
+  - grand: true
+    video: /assets/video/am-digital-presentation-marque.mp4
     image: /assets/video/am-digital-presentation-marque.jpg
     legende: Vidéo de présentation de la marque (30 s)
   - lien: /assets/uploads/identite-am-digital/charte-graphique-am-digital.pdf
