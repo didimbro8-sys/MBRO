@@ -1,6 +1,7 @@
 // AM.Digital · assistant vocal d'accueil
 // Une sphère de pixels or qui respire et pulse au rythme de la voix, avec sous-titres synchronisés.
-// La voix utilise la synthèse vocale du navigateur (aucun service externe, aucune donnée envoyée).
+// La voix est une voix off enregistrée (ElevenLabs, voix « Perle »), servie par le site lui-même :
+// un fichier MP3 par phrase dans /assets/audio/accueil/. Aucun service externe n'est appelé.
 (function () {
   'use strict';
   var root = document.getElementById('assistant');
@@ -15,10 +16,11 @@
   var h = new Date().getHours();
   var greet = h >= 18 || h < 5 ? 'Bonsoir' : 'Bonjour';
   root.querySelectorAll('[data-greet]').forEach(function (el) { el.textContent = greet; });
-  var lines = [].slice.call(document.querySelectorAll('#ast-script li')).map(function (li) {
+  var AUDIO = '/assets/audio/accueil/';
+  var lines = [].slice.call(document.querySelectorAll('#ast-script li')).map(function (li, i) {
     var show = li.textContent.replace(/\s+/g, ' ').trim();
-    var say = (li.dataset.say || show).replace('{salut}', greet);
-    return { show: show, say: say };
+    var file = i === 0 ? '01-' + greet.toLowerCase() : ('0' + (i + 1)).slice(-2);
+    return { show: show, src: AUDIO + file + '.mp3' };
   });
 
   // ---------- état partagé avec la sphère ----------
@@ -43,14 +45,30 @@
   };
 
   // ---------- voix ----------
-  var synth = window.speechSynthesis, voice = null, idx = 0, demoTimer = null;
-  var pickVoice = function () {
-    if (!synth) return null;
-    var vs = synth.getVoices().filter(function (v) { return /^fr/i.test(v.lang); });
-    var by = function (re) { return vs.filter(function (v) { return re.test(v.name); })[0]; };
-    return by(/Natural|Neural|Online/i) || vs.filter(function (v) { return /fr-FR/i.test(v.lang) && /Google/i.test(v.name); })[0] || vs.filter(function (v) { return /fr-FR/i.test(v.lang); })[0] || vs[0] || null;
+  var player = new Audio(), idx = 0, demoTimer = null, run = 0;
+  player.preload = 'auto';
+  // Préchargement de la phrase suivante pour enchaîner sans blanc
+  var preload = function (i) { if (lines[i]) { var a = new Audio(); a.preload = 'auto'; a.src = lines[i].src; } };
+
+  // La sphère suit le volume réel de la voix quand le navigateur le permet
+  var analyser = null, level = null;
+  var connectAnalyser = function () {
+    if (analyser || !(window.AudioContext || window.webkitAudioContext)) return;
+    try {
+      var ac = new (window.AudioContext || window.webkitAudioContext)();
+      var srcNode = ac.createMediaElementSource(player);
+      analyser = ac.createAnalyser(); analyser.fftSize = 256;
+      srcNode.connect(analyser); analyser.connect(ac.destination);
+      level = new Uint8Array(analyser.frequencyBinCount);
+      if (ac.state === 'suspended') ac.resume();
+    } catch (e) { analyser = null; }
   };
-  if (synth) { voice = pickVoice(); if (synth.addEventListener) synth.addEventListener('voiceschanged', function () { voice = pickVoice(); }); }
+  var voiceLevel = function () {
+    if (!analyser) return -1;
+    analyser.getByteFrequencyData(level);
+    var sum = 0; for (var i = 0; i < level.length; i++) sum += level[i];
+    return sum / level.length / 255;
+  };
 
   var finish = function (label) {
     speaking = false; target = 0.12; setState(label);
@@ -60,25 +78,24 @@
 
   var speakLine = function () {
     if (idx >= lines.length) { finish('· à votre écoute'); return; }
-    var L = lines[idx];
-    var u = new SpeechSynthesisUtterance(L.say);
-    u.lang = 'fr-FR'; if (voice) u.voice = voice; u.rate = 1; u.pitch = 1;
-    var bounded = false;
-    u.onstart = function () { speaking = true; target = 0.55; showLine(L.show); highlight(0); bump(0.8); setState('· vous parle'); };
-    u.onboundary = function (e) { if (e.name && e.name !== 'word') return; bounded = true; highlight(e.charIndex / L.say.length); bump(0.45); };
-    u.onend = function () { highlight(1); target = 0.3; idx++; setTimeout(speakLine, 280); };
-    u.onerror = function (e) {
-      if (e.error === 'not-allowed') { waitForGesture(); return; }
-      if (e.error === 'interrupted' || e.error === 'canceled') return;
+    var L = lines[idx], my = run;
+    player.onplaying = function () { if (my !== run) return; if (offGesture) offGesture(); waiting = false; btn.classList.remove('call'); btn.hidden = true; stopBtn.hidden = false; speaking = true; target = 0.55; showLine(L.show); highlight(0); bump(0.8); setState('· vous parle'); };
+    // Les sous-titres avancent au rythme de l'enregistrement
+    player.ontimeupdate = function () { if (my !== run || !player.duration) return; highlight(player.currentTime / player.duration); };
+    player.onended = function () { if (my !== run) return; highlight(1); target = 0.3; idx++; setTimeout(function () { if (my === run) speakLine(); }, 280); };
+    player.onerror = function () { if (my === run) demo(); };
+    player.src = L.src;
+    preload(idx + 1);
+    var p = player.play();
+    if (p && p.catch) p.catch(function (e) {
+      if (my !== run) return;
+      if (e && e.name === 'NotAllowedError') { waitForGesture(); return; }
+      if (e && e.name === 'AbortError') return;
       demo();
-    };
-    synth.speak(u);
-    // Si la voix ne donne pas le rythme mot à mot, on fait avancer les sous-titres au temps.
-    var t0 = Date.now(), dur = L.say.length * 62;
-    (function tick() { if (!speaking || bounded || idx >= lines.length || lines[idx] !== L) return; var r = (Date.now() - t0) / dur; highlight(Math.min(1, r)); if (Math.random() < 0.25) bump(0.3); setTimeout(tick, 120); })();
+    });
   };
 
-  // Lecture sans voix (navigateur sans synthèse vocale en français) : sous-titres seuls
+  // Lecture sans voix (fichier audio indisponible) : sous-titres seuls
   var demo = function () {
     clearTimeout(demoTimer); speaking = true; target = 0.45; setState('· lecture du texte');
     btn.hidden = true; stopBtn.hidden = false;
@@ -90,15 +107,14 @@
     })();
   };
 
-  var start = function () {
-    clearTimeout(demoTimer); idx = 0;
+  var start = function (fromGesture) {
+    clearTimeout(demoTimer); idx = 0; run++;
     btn.hidden = true; stopBtn.hidden = false;
-    if (!synth || !window.SpeechSynthesisUtterance) { demo(); return; }
-    synth.cancel(); voice = voice || pickVoice();
-    if (!voice && synth.getVoices().length) { demo(); return; }
+    player.pause();
+    if (fromGesture) connectAnalyser();
     speakLine();
   };
-  var stop = function () { clearTimeout(demoTimer); if (synth) synth.cancel(); idx = lines.length; finish('· en pause'); };
+  var stop = function () { run++; clearTimeout(demoTimer); player.pause(); idx = lines.length; finish('· en pause'); };
 
   // Les navigateurs exigent un premier geste avant de parler : le premier clic, toucher ou touche lance l'accueil.
   var waiting = false, offGesture = null;
@@ -108,27 +124,26 @@
     setState('· touchez pour m\'écouter');
     var go = function (e) {
       if (e && e.target && e.target.closest && e.target.closest('a, #ast-stop, #ast-play')) return;
-      off(); waiting = false; btn.classList.remove('call'); start();
+      off(); waiting = false; btn.classList.remove('call'); start(true);
     };
     var off = function () { ['pointerdown', 'keydown'].forEach(function (t) { document.removeEventListener(t, go, true); }); offGesture = null; };
     offGesture = off;
     ['pointerdown', 'keydown'].forEach(function (t) { document.addEventListener(t, go, true); });
   };
 
-  btn.addEventListener('click', function () { if (offGesture) offGesture(); waiting = false; btn.classList.remove('call'); start(); });
+  btn.addEventListener('click', function () { if (offGesture) offGesture(); waiting = false; btn.classList.remove('call'); start(true); });
   stopBtn.addEventListener('click', stop);
 
   // Accueil : première phrase affichée tout de suite, puis tentative de parler
   showLine(lines[0].show); highlight(-1);
   var seen = false; try { seen = sessionStorage.getItem('am-assistant') === 'vu'; } catch (e) {}
   if (seen) { setState('· en ligne'); btn.textContent = '▶ Écouter l\'accueil'; }
-  else if (synth && window.SpeechSynthesisUtterance) {
+  else {
     setTimeout(function () {
       if (navigator.userActivation && !navigator.userActivation.hasBeenActive) { waitForGesture(); return; }
       start();
-      setTimeout(function () { if (!synth.speaking && !synth.pending && idx === 0) waitForGesture(); }, 1200);
     }, 900);
-  } else { setTimeout(demo, 1200); }
+  }
 
   // ---------- la sphère ----------
   if (!cv || !cv.getContext) return;
@@ -144,6 +159,7 @@
 
   var rays = []; for (var q = 0; q < 120; q++) rays.push([q / 120 * 6.2832 + Math.random() * 0.05, Math.random() * 6.283, 0.4 + Math.random() * 0.9]);
   var draw = function (t) {
+    if (speaking) { var lv = voiceLevel(); if (lv >= 0) { target = 0.25 + Math.min(1, lv * 3) * 0.6; if (lv > 0.18 && Math.random() < 0.12) bump(0.45); } else if (Math.random() < 0.04) bump(0.35); }
     energy += (target - energy) * 0.06; pulse *= 0.9;
     var e = energy + pulse * 0.5, ts = t * 0.001;
     cx.clearRect(0, 0, W, H);

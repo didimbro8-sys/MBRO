@@ -29,7 +29,7 @@ page_scripts: ["/assets/js/assistant.js"]
     <div class="assistant" id="assistant" role="region" aria-label="Assistant vocal d'accueil">
       <div class="orb-wrap"><canvas id="orb" aria-hidden="true"></canvas></div>
       <div class="ast-panel">
-        <p class="ast-head"><b class="live" aria-hidden="true"></b>Assistant {{ site.agence }} <span id="ast-state">· en ligne</span></p>
+        <p class="ast-head"><b class="live" aria-hidden="true"></b>Assistante {{ site.agence }} <span id="ast-state">· en ligne</span></p>
         <p class="subs" id="subs" aria-live="polite"></p>
         <div class="ast-foot">
           <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -37,10 +37,10 @@ page_scripts: ["/assets/js/assistant.js"]
           <button class="round" id="ast-stop" type="button" aria-label="Couper la voix" hidden>■</button>
         </div>
         <details class="ast-text"><summary>Lire le message d'accueil</summary>
-          {#- Message de l'assistant : une ligne = une phrase prononcée et sous-titrée. data-say = version lue à voix haute (chiffres en lettres). -#}
+          {#- Message de l'assistant : une ligne = une phrase prononcée et sous-titrée. data-say = texte des sous-titres lus (chiffres en lettres). La voix vient des enregistrements ElevenLabs (voix « Perle ») rangés dans /assets/audio/accueil/, dans l'ordre des lignes : 01-bonjour ou 01-bonsoir, puis 02 à 08. Si une phrase change, il faut la réenregistrer. -#}
           <ol id="ast-script">
             <li data-say="{salut}, et bienvenue sur le site de M'BRO Israël Ébénézer."><span data-greet>Bonjour</span>, et bienvenue sur le site de M'BRO Israël Ébénézer.</li>
-            <li>Je suis son assistant, et c'est un plaisir de vous recevoir.</li>
+            <li>Je suis son assistante, et c'est un plaisir de vous recevoir.</li>
             <li>Israël est communicant, titulaire d'un master en communication des organisations, et spécialisé en marketing digital.</li>
             <li>Basé à Abidjan, il a fondé AM.Digital, une agence qui aide les entreprises à être visibles, et surtout à être choisies.</li>
             <li>Pour lui, ce site est bien plus qu'un portfolio : c'est la preuve de sa méthode, et la vitrine de ce qu'il peut apporter à votre organisation.</li>
