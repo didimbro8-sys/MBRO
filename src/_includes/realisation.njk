@@ -82,6 +82,28 @@ og_type: article
 </section>
 {%- endif %}
 
+{%- if galerie_groupes and galerie_groupes.length %}
+<section class="case-sec g" aria-labelledby="t-galg">
+  <div class="in">
+    <div class="sec-head"><span class="lbl">Touchez une affiche ou un carrousel pour l'agrandir</span><h2 id="t-galg" class="rv">Galerie</h2></div>
+    {%- for grp in galerie_groupes %}
+    <div class="gal-grp">
+      <div class="gal-grp-head"><h3>{{ grp.titre }}</h3>{% if grp.sous_titre %}<p>{{ grp.sous_titre }}</p>{% endif %}</div>
+      <div class="gal-grid fmt-{{ grp.format or 'post' }}">
+        {%- for g in grp.items %}
+        {%- if g.video | localUrl %}
+        <figure class="gal-item"><video src="{{ g.video | localUrl }}"{% if g.image | localUrl %} poster="{{ g.image | localUrl }}"{% endif %} controls playsinline preload="none"></video><figcaption>{% if g.quand %}<b>{{ g.quand }}</b>{% endif %}{{ g.legende }}</figcaption></figure>
+        {%- elif g.image | localUrl %}
+        <figure class="gal-item"><button type="button" data-full="{{ g.image | localUrl }}" aria-label="Agrandir : {{ g.legende }}"><img src="{{ g.image | localUrl }}" alt="{{ g.legende }}" loading="lazy"></button><figcaption>{% if g.quand %}<b>{{ g.quand }}</b>{% endif %}{{ g.legende }}</figcaption></figure>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
 {%- if enseignement %}
 <section class="lesson g" aria-label="Ce que j'en retiens">
   <div class="in"><span class="lbl">Ce que j'en retiens</span><blockquote class="rv">{{ enseignement | todo | safe }}</blockquote></div>
