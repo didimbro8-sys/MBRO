@@ -40,7 +40,7 @@ Prompts : ceux du plan §7, bloc de style inclus, sans modification (sauf « nea
 
 ## Reste à faire (hors outils IA, au montage — CapCut / Premiere / DaVinci)
 1. **Plan 11 (mosaïque)** : remonter 5 extraits d'1 s des plans déjà générés — aucun crédit.
-2. **Plan 12 (fin)** : fond violet + **fichier logo officiel am.digital** (jamais généré par IA), fondu lent, maintien ≥ 3 s, @am.digital, codes couleur du guide de marque. → total ≈ 60 s.
+2. **Plan 12 (fin) — ✅ carte prête** : `fin/carte-fin-am-digital-v3.mp4` (7 s, 1920×1080) et `fin/carte-fin-am-digital.png`, construits **sans IA** à partir du logo officiel `src/assets/uploads/am-digital-logo.jpg` et de la charte du site (`src/assets/css/style.css` : aubergine `#66004a`/`#300024`, or `#c79613`/`#f1bc18`, blanc). Fondu d'entrée 1,8 s puis maintien 5 s ; « Une création du studio créatif am.digital » + « @am.digital ». ElevenLabs refuse ce fichier dans son montage (« could not be checked against our content policy », 3 encodages essayés) : **la coller à la fin au montage** (CapCut/Premiere/DaVinci) → total ≈ 57 s.
 3. **Mixage** : la musique est au même volume que la voix (100 %) : la baisser vers 20–30 % sous la voix (réglage de piste du nœud de montage, ou au montage).
 4. **Sous-titres** blancs à contour sombre.
 5. **Validation** (plan §2, §3, §11) : hypothèse « Grands-Ponts » et « chefs », exactitude culturelle par des personnes de Dabou, Jacqueville, Grand-Lahou ; prononciation (Adioukrou, Alladian, Avikam, Bandama).
