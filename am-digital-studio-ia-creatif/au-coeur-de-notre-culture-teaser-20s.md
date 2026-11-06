@@ -1,4 +1,4 @@
-# « Au cœur de notre culture » — Teaser cinématographique 20 s (9:16)
+# « Au cœur de notre culture » — Teaser cinématographique 20 s (rendu en 16:9 — 9:16 prévu)
 
 Kit de production prêt à lancer, dérivé du *Plan de production v1.0 (5 nov. 2026)*. Version **teaser 20 s** choisie pour tenir dans le gratuit.
 
