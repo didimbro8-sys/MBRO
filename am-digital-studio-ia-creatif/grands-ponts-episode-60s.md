@@ -38,6 +38,16 @@ Prompts : ceux du plan §7, bloc de style inclus, sans modification (sauf « nea
 | Montage | 0 |
 | **Total** | **≈ 25 650** (≈ 5,13 $ au tarif affiché) |
 
+
+## ✅ Version finale avec signature am.digital (6 nov. 2026)
+
+**Fichier : `grands-ponts-am-digital-final.mp4` — 57,2 s, 1920×1080, H.264 + AAC, −16 LUFS** (envoyé directement ; non versionné car 74 Mo).
+Montage refait hors ElevenLabs (ffmpeg) à partir des 10 clips, de la voix et de la musique téléchargés :
+- Plans 1 → 10 enchaînés (50,4 s), **fondu enchaîné 1,2 s** du plan 10 vers le fond aubergine.
+- **Carte de fin animée** (`fin/carte-fin-am-digital-animee.mp4`, 8 s) : logo officiel **détouré** (fond violet retiré, or et blanc conservés) qui apparaît en fondu (0,8 → 2,6 s), puis « Une création du studio créatif am.digital » + « @am.digital » (2,4 → 3,6 s), maintien, fondu au noir final 0,8 s. Aucun zoom ni rebond (plan §9).
+- Voix d'Hélène décalée à **1 s** (plan §4) ; musique à **28 %** sous la voix, fondu de sortie 48 → 50,5 s (s'apaise à l'arrivée du logo) ; loudness normalisée −16 LUFS.
+- Calques réutilisables : `fin/fond-charte.png`, `fin/logo-am-digital-detoure-1920.png`, `fin/texte-signature.png`.
+
 ## Reste à faire (hors outils IA, au montage — CapCut / Premiere / DaVinci)
 1. **Plan 11 (mosaïque)** : remonter 5 extraits d'1 s des plans déjà générés — aucun crédit.
 2. **Plan 12 (fin) — ✅ carte prête** : `fin/carte-fin-am-digital-v3.mp4` (7 s, 1920×1080) et `fin/carte-fin-am-digital.png`, construits **sans IA** à partir du logo officiel `src/assets/uploads/am-digital-logo.jpg` et de la charte du site (`src/assets/css/style.css` : aubergine `#66004a`/`#300024`, or `#c79613`/`#f1bc18`, blanc). Fondu d'entrée 1,8 s puis maintien 5 s ; « Une création du studio créatif am.digital » + « @am.digital ». ElevenLabs refuse ce fichier dans son montage (« could not be checked against our content policy », 3 encodages essayés) : **la coller à la fin au montage** (CapCut/Premiere/DaVinci) → total ≈ 57 s.
