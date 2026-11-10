@@ -16,6 +16,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy("src/_redirects");
   eleventyConfig.addPassthroughCopy("src/.well-known");
+  eleventyConfig.addPassthroughCopy("src/studio"); // AM Studio Vidéo IA (outil interne, copié tel quel)
+  eleventyConfig.ignores.add("src/studio/**");
 
   const escape = (s) => String(s ?? "")
     .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");

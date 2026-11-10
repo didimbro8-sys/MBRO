@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AM Studio Vidéo IA</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside id="side">
+  <a class="brand" href="#accueil"><b>AM</b><span>Studio Vidéo IA</span></a>
+  <nav>
+    <a href="#accueil" data-nav="accueil">Tableau de bord</a>
+    <a href="#projets" data-nav="projets">Projets</a>
+    <a href="#casting" data-nav="casting">Casting</a>
+    <a href="#decors" data-nav="decors">Décors &amp; lumières</a>
+    <a href="#studio3d" data-nav="studio3d">Studio 3D</a>
+    <a href="#outils" data-nav="outils">Outils gratuits</a>
+    <a href="#reglages" data-nav="reglages">Sauvegarde</a>
+  </nav>
+  <div class="side-foot">0 FCFA dépensé · tout reste sur cet ordinateur</div>
+</aside>
+<main id="view"></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="app.js"></script>
+<script src="montage.js"></script>
+<script src="studio3d.js"></script>
+<script src="engine.js"></script>
+<script src="am-motion.js"></script>
+<script src="voice.js"></script>
+</body>
+</html>

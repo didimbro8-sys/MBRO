@@ -11,6 +11,14 @@
   X-Permitted-Cross-Domain-Policies: none
   Origin-Agent-Cluster: ?1
 
+# AM Studio Vidéo IA (outil interne) : modèles d'IA et voix chargés depuis des CDN open source, micro autorisé, jamais indexé
+/studio/*
+  ! Content-Security-Policy
+  ! Permissions-Policy
+  ! Cross-Origin-Opener-Policy
+  Permissions-Policy: camera=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+  X-Robots-Tag: noindex, nofollow
+
 # Les versions de prévisualisation (une par modification) ne doivent pas apparaître sur Google
 https://:version.:project.pages.dev/*
   X-Robots-Tag: noindex
