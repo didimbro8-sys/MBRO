@@ -36,3 +36,24 @@ Sources : TechCrunch (5 et 9 nov. 2026), Search Engine Roundtable (4 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
 
+
+## 2026-11-10-18h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-10-18h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-10-18h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-10-novembre-2026-18h/
+- Légende :
+
+🔎 La veille AM.Digital du 10 novembre (soir)
+Être pertinent, pas seulement suivi
+
+1️⃣ LinkedIn : sa nouvelle IA montre vos posts à des personnes qui ne vous suivent pas, selon sujet, ville, poste et secteur.
+2️⃣ TikTok : les pubs vidéo générées par IA passent à 30 secondes, à partir de 50 images, vidéos ou sons.
+3️⃣ Meta : l'appli IA Muse dépasse 10 millions de téléchargements, et le shopping est son 1er usage.
+4️⃣ Outil IA du jour : Effect Builder, pour créer vos effets Stories Instagram avec une simple phrase.
+
+💡 Le conseil pour les PME d'Abidjan : complétez vos profils (métier, ville, clients visés), gardez de vraies photos de vos produits et décrivez clairement vos prix : ce sont ces informations que les IA lisent pour vous recommander.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Social Media Today (8 et 9 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
