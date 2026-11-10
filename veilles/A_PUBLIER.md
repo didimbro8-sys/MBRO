@@ -15,4 +15,24 @@
 
 <!-- 05/11 ~13h45 Abidjan : vérification avant publication. 2026-10-29-18h, 2026-10-30-06h, 2026-10-30-13h et 2026-10-30-18h étaient DÉJÀ publiées le 03/11 (13h55-13h58, FB+IG crossposté, visibles dans Publié) et sur TikTok @am.digital204 (03/11 14h01-14h04). Retirées de la liste sans republier (pas de doublon). -->
 
-_Aucune veille en attente._
+## 2026-11-10-13h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-10-13h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-10-13h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-10-novembre-2026-13h/
+- Légende :
+
+🔎 La veille AM.Digital du 10 novembre
+L'IA trie le public, la pub entre dans l'IA
+
+1️⃣ Instagram : Meta étend à tous les pays son IA qui estime l'âge des utilisateurs ; un ado repéré passe en compte protégé.
+2️⃣ Google : jusqu'à 4 publicités dans une seule réponse du Mode IA.
+3️⃣ Meta, Google et TikTok attaquent une loi californienne qui interdit le fil personnalisé aux moins de 16 ans.
+4️⃣ Outil IA du jour : Otter passe à 31 langues pour transcrire vos réunions.
+
+💡 Le conseil pour les PME d'Abidjan : parlez aux adultes qui décident, soignez votre fiche Google (votre visibilité gratuite), et gardez un lien direct avec vos clients sur WhatsApp, sans dépendre d'un algorithme.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : TechCrunch (5 et 9 nov. 2026), Search Engine Roundtable (4 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+

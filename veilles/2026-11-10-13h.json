@@ -1,0 +1,35 @@
+{
+"date_label": "10 novembre 2026",
+"titre": "L'IA trie le public, *la pub entre dans l'IA*",
+"sous_titre": "Tendances com & marketing, décryptées pour les PME",
+"signaux": [
+{
+"rubrique": "Instagram · Comptes ados",
+"titre": "L'IA repère *les ados* partout",
+"decryptage": "Meta étend à tous les pays son IA qui estime l'âge sur Instagram : un ado repéré passe en compte protégé (9 nov.).",
+"decision": "visez les adultes qui décident : gérants, parents, acheteurs.",
+"source": "TechCrunch, 9 nov. 2026"
+},
+{
+"rubrique": "Google · Mode IA",
+"titre": "Jusqu'à *4 pubs* dans une réponse IA",
+"decryptage": "Google peut désormais afficher jusqu'à 4 annonces dans une réponse du Mode IA ; d'habitude 1 ou 2, parfois 3.",
+"decision": "soignez votre fiche Google : le gratuit doit aussi être visible.",
+"source": "Search Engine Roundtable, 4 nov. 2026"
+},
+{
+"rubrique": "Réglementation · Mineurs",
+"titre": "Le fil personnalisé *au tribunal*",
+"decryptage": "Meta, Google et TikTok attaquent une loi californienne qui interdit autoplay et fil personnalisé aux moins de 16 ans.",
+"decision": "ne misez pas tout sur l'algorithme : créez votre liste WhatsApp.",
+"source": "TechCrunch, 5 nov. 2026"
+},
+{
+"rubrique": "Outils IA du jour · Transcription",
+"titre": "Otter passe *à 31 langues*",
+"decryptage": "Otter ajoute 27 langues (13 dès maintenant) et annonce une transcription qui suit les changements de langue en réunion.",
+"decision": "testez en français avant d'utiliser un outil pour vos clients.",
+"source": "TechCrunch, 9 nov. 2026"
+}
+]
+}
