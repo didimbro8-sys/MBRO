@@ -119,3 +119,5 @@ const AMM = {
     return new Blob(ch, { type: mime.split(';')[0] });
   }
 };
+
+window.AMM = AMM;

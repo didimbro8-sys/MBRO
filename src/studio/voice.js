@@ -90,3 +90,5 @@ const VOX = {
     return new Blob([b], { type: 'audio/wav' });
   }
 };
+
+window.VOX = VOX;
