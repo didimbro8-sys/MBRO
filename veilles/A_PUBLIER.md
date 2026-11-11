@@ -57,3 +57,24 @@ Sources : TechCrunch (5 et 9 nov. 2026), Search Engine Roundtable (4 nov. 2026)
 Sources : Social Media Today (8 et 9 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-11-06h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-11-06h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-11-06h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-11-novembre-2026-06h/
+- Légende :
+
+🔎 La veille AM.Digital du 11 novembre
+Gardez la main sur vos messages
+
+1️⃣ Meta : ses outils de pub IA ont ajouté des promos tirées du site d'une boutique, même quand elle les avait désactivées.
+2️⃣ YouTube teste des suggestions de marques aux créateurs, avec la commission estimée de chaque partenariat.
+3️⃣ Google Holiday 100 : les recherches de fêtes s'envolent, « micro podcast » +115 % sur un an.
+4️⃣ Outil IA du jour : Zoho Campaigns se reconstruit avec des agents IA, et WhatsApp en natif.
+
+💡 Le conseil pour les PME d'Abidjan : relisez tout ce qui part en votre nom, préparez une offre simple pour les créateurs, partez des vraies recherches de vos clients et tenez un fichier de contacts propre, avec leur accord.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Social Media Today (8 et 9 nov. 2026), MarTech (5 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
