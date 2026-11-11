@@ -1,0 +1,35 @@
+{
+"date_label": "11 novembre 2026",
+"titre": "Être repris, *être recommandé*",
+"sous_titre": "Tendances com & marketing, décryptées pour les PME",
+"signaux": [
+{
+"rubrique": "X · Vidéo",
+"titre": "Vos vidéos *découpées en extraits*",
+"decryptage": "X permet de couper un extrait de 5 à 60 s d'une vidéo de 2 min ou plus ; le compte d'origine reste affiché.",
+"decision": "placez votre nom et votre logo dans chaque minute.",
+"source": "Social Media Today, 10 nov. 2026"
+},
+{
+"rubrique": "Reddit · Avis clients",
+"titre": "L'IA résume *les avis*",
+"decryptage": "Reddit teste « Reddit Reviews » : l'IA transforme les commentaires en fiches produits, sans placement payant.",
+"decision": "demandez à vos clients un avis écrit et détaillé.",
+"source": "Social Media Today, 10 nov. 2026"
+},
+{
+"rubrique": "Recherche IA · GEO",
+"titre": "Votre marque *suivie dans 11 IA*",
+"decryptage": "Winseed suit chaque jour les mentions des marques dans 11 IA (ChatGPT, Gemini, Claude…). Conférence GEO les 21-22 nov.",
+"decision": "demandez chaque mois à ChatGPT qui il recommande.",
+"source": "GlobeNewswire via Agile Brand Guide, 9 nov. 2026"
+},
+{
+"rubrique": "Outils IA du jour · Campagnes",
+"titre": "ChatGPT et Claude *créent vos campagnes*",
+"decryptage": "Attentive ouvre un serveur MCP : ChatGPT et Claude créent segments et campagnes e-mail/SMS, validées avant envoi.",
+"decision": "laissez l'IA préparer, relisez toujours avant d'envoyer.",
+"source": "Business Wire via Agile Brand Guide, 9 nov. 2026"
+}
+]
+}

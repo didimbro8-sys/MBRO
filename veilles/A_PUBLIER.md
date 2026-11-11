@@ -99,3 +99,24 @@ Servir vite, garder l'humain
 Sources : Agile Brand Guide / Twilio (10 nov. 2026), Social Media Today (8 et 10 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-11-18h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-11-18h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-11-18h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-11-novembre-2026-18h/
+- Légende :
+
+🔎 La veille AM.Digital du 11 novembre (18h30)
+Être repris, être recommandé
+
+1️⃣ X : chacun peut découper un extrait de 5 à 60 s de vos vidéos de 2 min ou plus ; votre compte reste affiché.
+2️⃣ Reddit teste « Reddit Reviews » : l'IA transforme les commentaires en fiches d'avis produits, sans placement payant.
+3️⃣ Recherche IA : Winseed suit chaque jour les mentions des marques dans 11 assistants (ChatGPT, Gemini, Claude…).
+4️⃣ Outil IA du jour : avec le serveur MCP d'Attentive, ChatGPT et Claude préparent des campagnes e-mail et SMS, validées avant envoi.
+
+💡 Le conseil pour les PME d'Abidjan : vos contenus vivent sans vous. Mettez votre nom dans chaque minute de vidéo, demandez des avis clients écrits et précis, vérifiez chaque mois ce que ChatGPT répond sur votre métier à Abidjan, et relisez toujours ce que l'IA prépare.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Social Media Today (10 nov. 2026), GlobeNewswire et Business Wire via Agile Brand Guide (9 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
