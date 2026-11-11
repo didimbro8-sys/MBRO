@@ -78,3 +78,24 @@ Gardez la main sur vos messages
 Sources : Social Media Today (8 et 9 nov. 2026), MarTech (5 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-11-13h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-11-13h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-11-13h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-11-novembre-2026-13h/
+- Légende :
+
+🔎 La veille AM.Digital du 11 novembre (midi)
+Servir vite, garder l'humain
+
+1️⃣ Service client : 78 % des clients ont déjà tenté d'éviter un agent IA, et 63 % veulent vite parler à un humain (étude Twilio).
+2️⃣ TikTok teste Shop Plus aux États-Unis : un abonnement à 9,99 $/mois avec livraison offerte, remises et remboursement immédiat.
+3️⃣ Threads ajoute des filtres de recherche : date, type de post, sujet, profil et correspondance exacte.
+4️⃣ Outil IA du jour : Muse Spaces, l'IA de Meta crée des mini-applis de suivi (colis, sujets à surveiller).
+
+💡 Le conseil pour les PME d'Abidjan : l'IA pour répondre vite, mais toujours un humain joignable sur WhatsApp ; un petit avantage pour les clients qui reviennent ; et des posts qui disent clairement votre métier et votre ville.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Agile Brand Guide / Twilio (10 nov. 2026), Social Media Today (8 et 10 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire

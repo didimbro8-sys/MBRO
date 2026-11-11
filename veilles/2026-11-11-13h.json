@@ -1,0 +1,35 @@
+{
+"date_label": "11 novembre 2026",
+"titre": "Servir vite, *garder l'humain*",
+"sous_titre": "Tendances com & marketing, décryptées pour les PME",
+"signaux": [
+{
+"rubrique": "Service client · IA",
+"titre": "*78 %* contournent l'agent IA",
+"decryptage": "Étude Twilio (9 nov.) : 78 % des clients ont déjà tenté d'éviter un agent IA, 63 % veulent vite un humain.",
+"decision": "gardez toujours un bouton « parler à un conseiller ».",
+"source": "Agile Brand Guide, 10 nov. 2026"
+},
+{
+"rubrique": "TikTok · Commerce",
+"titre": "Un abonnement *pour acheter*",
+"decryptage": "TikTok teste Shop Plus aux États-Unis : 9,99 $ par mois, livraison offerte, remises et remboursement immédiat.",
+"decision": "récompensez vos clients fidèles : livraison ou remise.",
+"source": "Social Media Today, 10 nov. 2026"
+},
+{
+"rubrique": "Threads · Recherche",
+"titre": "Des filtres *pour vous trouver*",
+"decryptage": "Threads ajoute des filtres de recherche : date, type de post, communauté ou sujet, profil, et la correspondance exacte.",
+"decision": "nommez votre métier et votre ville dans vos posts.",
+"source": "Social Media Today, 10 nov. 2026"
+},
+{
+"rubrique": "Outils IA du jour · Organisation",
+"titre": "Muse Spaces, *vos mini-applis*",
+"decryptage": "Meta ajoute à Muse les Spaces : l'IA crée une mini-appli de suivi sur un sujet, rangée dans le menu de Muse.",
+"decision": "testez l'IA pour suivre commandes et relances clients.",
+"source": "Social Media Today, 8 nov. 2026"
+}
+]
+}
