@@ -69,7 +69,7 @@
     <a class="brand" href="/" aria-label="{{ site.agence }}, accueil"><img src="/assets/uploads/am-digital-logo.jpg" alt="Logo {{ site.agence }}" width="44" height="44"><span>M'BRO <b>Israël</b></span></a>
     <nav aria-label="Navigation principale">
       <ul>
-        {%- for l in [["realisations","/#realisations","Réalisations"],["methode","/#methode","Méthode"],["veille","/veille/","Veille"],["journal","/journal/","Journal"]] %}
+        {%- for l in [["realisations","/#realisations","Réalisations"],["methode","/#methode","Méthode"],["cv","/#cv","CV"],["veille","/veille/","Veille"],["journal","/journal/","Journal"]] %}
         <li><a href="{{ l[1] }}"{% if rub == l[0] %} aria-current="page"{% endif %}>{{ l[2] }}</a></li>
         {%- endfor %}
       </ul>

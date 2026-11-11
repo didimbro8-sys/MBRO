@@ -153,6 +153,20 @@ page_scripts: ["/assets/js/assistant.js"]
   </div>
 </section>
 
+{%- if profil.cv | localUrl %}
+<section class="profile g" id="cv" aria-labelledby="t-cv">
+  <div class="in">
+    <div class="sec-head">
+      <span class="lbl">Mon CV</span>
+      <h2 id="t-cv" class="rv">Chargé de communication <span class="or">institutionnelle &amp; digitale</span></h2>
+      <p class="muted">Titulaire d'un Master en Communication des Organisations &amp; Territoires / Marketing Digital (Bac+5, UCAO-UUA) et fondateur de l'agence AM.Digital, j'accompagne les organisations de la stratégie à l'exécution : communication institutionnelle, ligne éditoriale, création de contenus, animation de communautés sur Facebook, Instagram et TikTok, publicité en ligne et suivi des performances.</p>
+      <p class="muted">Une double expérience en agence (AM.Digital) et en institution (stage à l'Observatoire du Service Public, de janvier à juin 2026), deux certificats en Digital Marketing GOMYCODE (2024). Le CV complet est à télécharger en PDF.</p>
+      <p><a class="pill gold mag" href="{{ profil.cv | localUrl }}" download="CV_MBRO_Israel_Ebenezer.pdf" type="application/pdf">Télécharger mon CV (PDF)</a></p>
+    </div>
+  </div>
+</section>
+{%- endif %}
+
 {%- set v = collections.veille | first %}
 {%- if v %}
 <section class="veille g" id="veille" aria-labelledby="t-veille">

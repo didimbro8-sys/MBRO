@@ -13,7 +13,6 @@ dispositif:
   - Audit digital de Facebook, TikTok, Instagram et X avec une analyse forces, faiblesses, opportunités, menaces
   - Cibles définies, des usagers du service public aux jeunes et aux entreprises
   - 8 types de contenus et leurs formats (informatif, éducatif, émotionnel, immersif, interactif, événementiel)
-  - Calendrier éditorial d'avril à juin 2026 organisé en 14 rubriques, de « Minute vérité » à « Cas résolu »
   - Campagne de mars 2026 sur Facebook et TikTok, avec des capsules en français, en baoulé et en malinké
   - Bilan chiffré de la campagne et recommandations pour la suite
 resultats:
@@ -38,10 +37,6 @@ galerie:
     legende: Objectif principal et objectifs secondaires de la stratégie
   - image: /assets/uploads/osep-formats.jpg
     legende: Types et formats de contenus retenus
-  - image: /assets/uploads/osep-calendrier-editorial.jpg
-    legende: Calendrier éditorial OSEP 2026
-  - image: /assets/uploads/osep-rubriques.jpg
-    legende: Les rubriques du calendrier éditorial
 a_la_une: true
 priorite: 1
 publie: true
@@ -60,10 +55,6 @@ L'audit a mesuré chaque réseau sur ses abonnés, son taux d'engagement, ses fo
 ## Les recommandations
 
 Diversifier les formats (carrousels, réels, stories), ajouter des appels à l'action, publier aux heures de forte audience et raconter des histoires de citoyens plutôt que d'aligner des communiqués.
-
-## Le calendrier éditorial
-
-Quatorze rubriques récurrentes donnent un rendez-vous au public : « Minute vérité sur les services publics », « 1 clic, 1 solution », « Ça, ce n'est pas normal », « Dans les coulisses OSEP », « Cas résolu », « Visage des CFP »… Chaque mois prévoit 25 publications réparties sur les quatre réseaux.
 
 ## Le bilan de mars 2026
 
