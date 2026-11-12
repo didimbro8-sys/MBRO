@@ -162,3 +162,24 @@ Le public choisit, soyez choisi
 Sources : Moncarnet (10 nov. 2026), Social Media Today (8 et 11 nov. 2026), TechCrunch via UA.NEWS (10 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-12-18h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-12-18h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-12-18h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-12-novembre-2026-18h/
+- Légende :
+
+🔎 La veille AM.Digital du 12 novembre (soir)
+Être trouvé partout, rester crédible
+
+1️⃣ Recherche : 65 % des adultes sondés aux États-Unis ont déjà quitté Google pour Reddit ou TikTok (80 % chez la Gen Z).
+2️⃣ Google Ads : une pub qui imite une célébrité par IA = compte suspendu sans avertissement, même avec la mention « IA ».
+3️⃣ Microsoft Clarity (gratuit) : les produits des boutiques éligibles apparaissent dans Copilot et Bing.
+4️⃣ Outil IA du jour : Edits, le montage vidéo d'Instagram, arrive gratuitement sur Mac, export 4K sans filigrane.
+
+💡 Le conseil pour les PME d'Abidjan : soyez présents sur Google, TikTok et votre site à la fois, mesurez qui vous visite, et montrez toujours de vrais visages : jamais une célébrité imitée par l'IA.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : PPC Land (5, 11 et 12 nov. 2026), The Next Web (5 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
