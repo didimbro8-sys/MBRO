@@ -141,3 +141,24 @@ Vendre là où sont vos clients
 Sources : TechCrunch (5 nov. 2026), Social Media Today (4 nov. 2026), PPC Land (8 nov. 2026), The Neuron (11 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-12-13h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-12-13h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-12-13h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-12-novembre-2026-13h/
+- Légende :
+
+🔎 La veille AM.Digital du 12 novembre (midi)
+Le public choisit, soyez choisi
+
+1️⃣ Côte d'Ivoire : accord avec la GSMA pour passer de 40 % à 80 % d'habitants équipés d'un smartphone d'ici fin 2027.
+2️⃣ Facebook : avec « Votre algorithme », chacun règle son fil ; demander moins d'un créateur filtre ses posts.
+3️⃣ TikTok : 70 % des consommateurs prévoient d'acheter la semaine après Noël.
+4️⃣ Outil IA du jour : Adobe ouvre Photoshop et Premiere à ChatGPT, Claude et Gemini.
+
+💡 Le conseil pour les PME d'Abidjan : pensez vos contenus pour le mobile, rendez chaque post utile, et préparez une offre pour la semaine du 26 au 31 décembre.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Moncarnet (10 nov. 2026), Social Media Today (8 et 11 nov. 2026), TechCrunch via UA.NEWS (10 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
