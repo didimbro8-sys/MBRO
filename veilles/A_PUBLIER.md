@@ -120,3 +120,24 @@ Sources : Agile Brand Guide / Twilio (10 nov. 2026), Social Media Today (8 et 10
 Sources : Social Media Today (10 nov. 2026), GlobeNewswire et Business Wire via Agile Brand Guide (9 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-12-06h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-12-06h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-12-06h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-12-novembre-2026-06h/
+- Légende :
+
+🔎 La veille AM.Digital du 12 novembre
+Vendre là où sont vos clients
+
+1️⃣ TikTok lance une appli TikTok Shop à part en Asie du Sud-Est : lives, vidéos, offres exclusives, paiement et suivi de commande.
+2️⃣ Instagram offrirait jusqu'à 500 000 $ à des créateurs pour publier des vidéos longues (jusqu'à 90 min).
+3️⃣ WhatsApp Events : vos invités peuvent répondre par un simple lien, même sans compte WhatsApp.
+4️⃣ Outil IA du jour : OpenAI teste un espace où les entreprises gèrent leur profil dans ChatGPT.
+
+💡 Le conseil pour les PME d'Abidjan : montrez vos produits en vidéo avec le prix et la façon de commander, testez une vidéo explicative de quelques minutes, invitez vos clients par un lien WhatsApp, et décrivez clairement votre activité et votre ville partout : c'est ce que lisent les IA.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : TechCrunch (5 nov. 2026), Social Media Today (4 nov. 2026), PPC Land (8 nov. 2026), The Neuron (11 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
