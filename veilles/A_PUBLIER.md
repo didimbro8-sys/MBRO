@@ -226,3 +226,24 @@ Sources : Social Media Today (11 et 12 nov. 2026), Afriksoir (8 nov. 2026), Digi
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
 
+
+## 2026-11-13-18h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-13-18h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-13-18h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-13-novembre-2026-18h/
+- Légende :
+
+🔎 La veille AM.Digital du 13 novembre (soir)
+Soyez le nom que l'on retient
+
+1️⃣ 60 % des acheteurs commencent leur recherche sans citer de marque ; les achats lancés dans une IA se concluent en 5,2 jours (médiane).
+2️⃣ Google : le bouton « Réserver » apparaît sur plus de fiches d'entreprise, parfois vers la simple page contact du site.
+3️⃣ X teste des étiquettes IA automatiques qui expliquent pourquoi un post est signalé ; l'auteur peut contester.
+4️⃣ Outil IA du jour : Edits équilibre désormais le son tout seul, avec des courbes de vitesse pour vos Reels.
+
+💡 Le conseil pour les PME d'Abidjan : dites clairement quel problème vous réglez et pour qui, vérifiez que le bouton de votre fiche Google mène au bon endroit, et annoncez vous-même quand un visuel est fait avec l'IA.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Profound via Agile Brand Guide (11 nov. 2026), Search Engine Roundtable (9 nov. 2026), Social Media Today (11 et 12 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire

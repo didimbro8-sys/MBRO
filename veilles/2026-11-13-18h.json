@@ -1,0 +1,35 @@
+{
+"date_label": "13 novembre 2026",
+"titre": "Soyez le nom *que l'on retient*",
+"sous_titre": "Tendances com & marketing, décryptées pour les PME",
+"signaux": [
+{
+"rubrique": "Recherche IA · Achats",
+"titre": "*60 %* des acheteurs partent sans marque",
+"decryptage": "Profound : 60 % commencent sans citer de marque ; achats via l'IA conclus en 5,2 jours (médiane).",
+"decision": "décrivez le problème que vous réglez, pas seulement votre nom.",
+"source": "GlobeNewswire via Agile Brand Guide, 11 nov. 2026"
+},
+{
+"rubrique": "Google · Fiche entreprise",
+"titre": "Un bouton *Réserver* sur votre fiche",
+"decryptage": "Google ajoute des liens de réservation à plus de fiches, parfois vers la page contact du site.",
+"decision": "vérifiez votre fiche : le bouton doit mener au bon endroit.",
+"source": "Search Engine Roundtable, 9 nov. 2026"
+},
+{
+"rubrique": "X · Transparence IA",
+"titre": "Les posts IA *étiquetés et expliqués*",
+"decryptage": "X teste des étiquettes IA automatiques qui expliquent pourquoi un post est signalé ; l'auteur peut contester.",
+"decision": "visuels IA ? Dites-le avant qu'on le dise pour vous.",
+"source": "Social Media Today, 11 nov. 2026"
+},
+{
+"rubrique": "Outils IA du jour · Vidéo",
+"titre": "Edits *équilibre le son* tout seul",
+"decryptage": "Edits ajoute l'équilibrage automatique du son, des courbes de vitesse et la durée des textes animés.",
+"decision": "un son propre retient : testez-le sur votre prochain Reel.",
+"source": "Social Media Today, 12 nov. 2026"
+}
+]
+}
