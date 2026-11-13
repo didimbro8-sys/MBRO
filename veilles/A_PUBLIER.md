@@ -183,3 +183,24 @@ Sources : Moncarnet (10 nov. 2026), Social Media Today (8 et 11 nov. 2026), Tech
 Sources : PPC Land (5, 11 et 12 nov. 2026), The Next Web (5 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-13-06h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-13-06h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-13-06h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-13-novembre-2026-06h/
+- Légende :
+
+🔎 La veille AM.Digital du 13 novembre
+Votre site d'abord, vos clients en direct
+
+1️⃣ Recherche IA : les sites d'entreprise représentent désormais 58 % des sources citées par les IA (contre 52 % en juillet), selon Peec AI.
+2️⃣ Google Maps : le bouton Message des fiches d'établissement passe au premier plan, et la réservation arrive sur plus de fiches.
+3️⃣ Instagram teste une option pour suivre ses sports et ligues en temps réel.
+4️⃣ Outil IA du jour : VibeDM permet d'essayer un produit par IA et de payer directement dans les messages Instagram.
+
+💡 Le conseil pour les PME d'Abidjan : une page claire par service sur votre site, une fiche Google qui reçoit des messages, et des réponses rapides en DM avec photos, prix et lien de paiement prêts.
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Agile Brand Guide (12 nov. 2026, d'après GlobeNewswire et Business Wire), SocialBee (12 nov. 2026), Social Media Today (12 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
