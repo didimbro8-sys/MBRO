@@ -204,3 +204,25 @@ Votre site d'abord, vos clients en direct
 Sources : Agile Brand Guide (12 nov. 2026, d'après GlobeNewswire et Business Wire), SocialBee (12 nov. 2026), Social Media Today (12 nov. 2026)
 
 #VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
+## 2026-11-13-13h (en attente de Chrome)
+- Image : `veilles/img/AM-Digital_veille_2026-11-13-13h.jpg` (aussi /mnt/user-data/uploads/amd/AM-Digital_veille_2026-11-13-13h.jpg)
+- Page du site : https://am-digital.pages.dev/veille/veille-13-novembre-2026-13h/
+- Légende :
+
+🔎 La veille AM.Digital du 13 novembre
+L'expertise rassure, l'IA compare
+
+1️⃣ B2B : selon Edelman, 82 % des acheteurs jugent les contenus d'expertise de plus en plus utiles, et s'en servent pour vérifier ce que dit l'IA.
+2️⃣ Pinterest : son assistant IA compare les produits et prépare des guides cadeaux ; listes d'envies avec alerte de prix en test.
+3️⃣ Côte d'Ivoire : 32 entreprises du numérique retenues par Ivoire Tech, accompagnées 24 mois.
+4️⃣ Outil IA du jour : Gemini 4 Hydrogen alimente désormais la recherche Google partout dans le monde.
+
+💡 Le conseil pour les PME d'Abidjan : montrez votre savoir-faire (conseils, méthodes, cas réels) et rendez vos offres faciles à comparer (photos nettes, prix, détails). Puis tapez votre nom dans Google : l'IA dit-elle vrai sur vous ?
+
+📌 Enregistrez et partagez. Écrivez DIAGNOSTIC sur WhatsApp au +225 01 71 95 45 23 pour un diagnostic gratuit de votre page.
+
+Sources : Social Media Today (11 et 12 nov. 2026), Afriksoir (8 nov. 2026), Digital Trends (12 nov. 2026)
+
+#VeilleAMDigital #MarketingDigital #RéseauxSociaux #Abidjan #CôteDIvoire
+
